@@ -14,8 +14,8 @@ import java.net.URL;
 
 public class magicLeap {
 
-    public String username = "prateeks";
-    public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
+    public String username = System.getProperty("LT_USERNAME");
+    public String accesskey = System.getProperty("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
     public String gridURL = "@hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
@@ -76,8 +76,6 @@ public class magicLeap {
     @BeforeTest
     public void setUp() throws Exception {
         System.out.println(this.TestName);
-
-        //  for (int i = 0; i < 80; i++) {
         try {
 
 
@@ -200,7 +198,7 @@ public class magicLeap {
             }
 
             System.out.println(hub);*/
-System.out.println(driver.getCapabilities());
+            System.out.println(driver.getCapabilities());
 
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver);
