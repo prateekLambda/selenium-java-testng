@@ -16,7 +16,7 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
-    <!--
+    
             <test name="2">
                 <parameter name="browser" value="Chrome"/>
                 <parameter name="version" value="80.0"/>
@@ -32,7 +32,7 @@
             </test>
 
             <test name="3">
-                <parameter name="browser" value="safari"/>
+                <parameter name="browser" value="Chrome"/>
                 <parameter name="version" value="13.0"/>
                 <parameter name="platform" value="macos catalina"/>
                 <parameter name="fixedIp" value="10.253.33.27"/>
@@ -200,7 +200,7 @@
                     <class name="magicleapTesting.magicLeap"/>
                 </classes>
             </test>
-
+<!--
             <test name="18">
                 <parameter name="browser" value="Firefox"/>
                 <parameter name="version" value="79.0"/>

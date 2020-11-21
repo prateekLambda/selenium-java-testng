@@ -17,7 +17,7 @@ public class magicLeap {
     public String username = "prateeks";
     public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
     public RemoteWebDriver driver;
-    public String gridURL = "@us-east-2-hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "@stage-hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -78,15 +78,16 @@ public class magicLeap {
         System.out.println(this.TestName);
 
           for (int i = 0; i < 5000; i++) {
+              for(int j=0;j<10;j++){
         try {
 
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("browserName", this.BrowserValue);
-            capabilities.setCapability("version", "latest");
-            //capabilities.setCapability("version", "latest" + "-" + i);
+         //   capabilities.setCapability("version", "latest");
+            capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Performance/Jenkins-14 " + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build", "Performance/Jenkins-16 " + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
@@ -151,18 +152,23 @@ public class magicLeap {
             float timeElapsed = driverStart.getTime() / 1000f;
             System.out.println("Driver initiate time" + "   " + timeElapsed);
                 
-                    TodoApp TodoAppTestObject = new TodoApp();
-                    TodoAppTestObject.TodoAppTest(driver);
-                    ResolutionTest ResolutionTestObject = new ResolutionTest();
-                    ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-                    StreamTest stream = new StreamTest();
-                    stream.TestStream(driver, status);
-                    NetSpeed NetSpeedTestObject = new NetSpeed();
-                    NetSpeedTestObject.NetSpeed(driver, status, Nettotalspeedtest);
-                    LambdaTestLogin lambdaTest= new LambdaTestLogin();
-                    lambdaTest.Lambda(driver,status);
-                    
-                    ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+                TodoApp TodoAppTestObject = new TodoApp();
+                TodoAppTestObject.TodoAppTest(driver);
+                TakeScreenShot shot = new TakeScreenShot();
+                shot.Screenshot(driver, status);
+                ResolutionTest ResolutionTestObject = new ResolutionTest();
+                ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
+                shot.Screenshot(driver, status);
+                StreamTest stream = new StreamTest();
+                stream.TestStream(driver, status);
+                shot.Screenshot(driver, status);
+                NetSpeed NetSpeedTestObject = new NetSpeed();
+                NetSpeedTestObject.NetSpeed(driver, status, Nettotalspeedtest);
+                shot.Screenshot(driver, status);
+                LambdaTestLogin lambdaTest = new LambdaTestLogin();
+                lambdaTest.Lambda(driver, status);
+                shot.Screenshot(driver, status);
+                ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
                 
                 driver.quit();
            /* SessionTest SessionTestObject = new SessionTest();
@@ -177,7 +183,7 @@ public class magicLeap {
             // System.out.println(f.getMessage() + browser + version + fixedIp);
         }
           }
-
+          }
 
     }
 
