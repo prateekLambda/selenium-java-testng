@@ -17,7 +17,7 @@ public class magicLeap {
     public String username = "prateeks";
     public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
     public RemoteWebDriver driver;
-    public String gridURL = "@stage-hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "@us-east-2-hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -77,24 +77,22 @@ public class magicLeap {
     public void setUp() throws Exception {
         System.out.println(this.TestName);
 
-        for (int i = 0; i < 5000; i++) {
-
-            for (int j = 0; j < 10; j++) {
-                try {
+          for (int i = 0; i < 5000; i++) {
+        try {
 
 
-                    DesiredCapabilities capabilities = new DesiredCapabilities();
-                    capabilities.setCapability("browserName", this.BrowserValue);
-                  //  capabilities.setCapability("version", "latest");
-                    capabilities.setCapability("version", "latest" + "-" + j);
-                    capabilities.setCapability("platform", this.PlatformValue);
-                    capabilities.setCapability("build", "Performance/Jenkins-16" + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
-                    capabilities.setCapability("name", this.TestName);
-                    capabilities.setCapability("resolution", this.ResolutionValueCap);
-                    capabilities.setCapability("console", true);
-                    capabilities.setCapability("network", false);
-                    capabilities.setCapability("visual", false);
-                    // capabilities.setCapability("fixedIP", this.FixedIpValue);
+            DesiredCapabilities capabilities = new DesiredCapabilities();
+            capabilities.setCapability("browserName", this.BrowserValue);
+            capabilities.setCapability("version", "latest");
+            //capabilities.setCapability("version", "latest" + "-" + i);
+            capabilities.setCapability("platform", this.PlatformValue);
+            capabilities.setCapability("build", "Performance/Jenkins-14 " + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("name", this.TestName);
+            capabilities.setCapability("resolution", this.ResolutionValueCap);
+            capabilities.setCapability("console", true);
+            capabilities.setCapability("network", false);
+            capabilities.setCapability("visual", false);
+           // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
 
@@ -102,14 +100,14 @@ public class magicLeap {
             capabilities.setCapability("tags", Tags);*/
 
 
-                    //      capabilities.setCapability("safari.cookies", true);
+            //      capabilities.setCapability("safari.cookies", true);
 
 
-                    //  capabilities.setCapability("video", true);
+            //  capabilities.setCapability("video", true);
 
-                    //        capabilities.setCapability("tunnel", true);
+            //        capabilities.setCapability("tunnel", true);
 
-                    //   capabilities.setCapability("selenium_version", "4.0.0-alpha-1");
+            //   capabilities.setCapability("selenium_version", "4.0.0-alpha-1");
 
           /*  System.out.println(Tunnel);
             if (this.Tunnel.matches("true")) {
@@ -120,72 +118,67 @@ public class magicLeap {
                 Thread.sleep(20000);
                 capabilities.setCapability("tunnel", "true");
             }*/
-                    //      capabilities.setCapability("safari.cookies",true);
-                    //   capabilities.setCapability("region", "eu");
-                    //
-                    //   capabilities.setCapability("tunnel", "true");
+            //      capabilities.setCapability("safari.cookies",true);
+            //   capabilities.setCapability("region", "eu");
+            //
+            //   capabilities.setCapability("tunnel", "true");
         /*capabilities.setCapability("ie.driver","3.4.0");
         capabilities.setCapability("ie.compatibility",11001);*/
-                    //     capabilities.setCapability("tunnelName", "prateek");
-                    //           capabilities.setCapability("geoLocation", geoLocation);
-                    //    capabilities.setCapability("unboundRegion", "PUSE-EU");
-                    //       capabilities.setCapability("timezone", this.TimeZoneValue);
-                    //        capabilities.setCapability("geoLocation", this.GeoLocationValue);
-                    //     capabilities.setCapability("headless", true);
-                    //   capabilities.setCapability("networkThrottling", "Regular 4G");
-                    //  capabilities.setCapability("prerun", "lambda:BasicAuthChrome/pre/httpdialog.au3");
+            //     capabilities.setCapability("tunnelName", "prateek");
+            //           capabilities.setCapability("geoLocation", geoLocation);
+            //    capabilities.setCapability("unboundRegion", "PUSE-EU");
+            //       capabilities.setCapability("timezone", this.TimeZoneValue);
+            //        capabilities.setCapability("geoLocation", this.GeoLocationValue);
+            //     capabilities.setCapability("headless", true);
+            //   capabilities.setCapability("networkThrottling", "Regular 4G");
+            //  capabilities.setCapability("prerun", "lambda:BasicAuthChrome/pre/httpdialog.au3");
 //            String[] Tags = new String[]{"myproject", "myproject2","myproject3"};
 //
 //            capabilities.setCapability("tags", Tags);
 
-                    StopWatch driverStart = new StopWatch();
-                    driverStart.start();
+            StopWatch driverStart = new StopWatch();
+            driverStart.start();
 
-                    hub = "http://" + username + ":" + accesskey + gridURL;
-                    System.out.println(hub);
+            hub = "http://" + username + ":" + accesskey + gridURL;
+            System.out.println(hub);
 
-                    driver = new RemoteWebDriver(new URL(hub), capabilities);
-                    session = driver.getSessionId();
+            driver = new RemoteWebDriver(new URL(hub), capabilities);
+            session = driver.getSessionId();
 
-                    //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
-                    driverStart.stop();
+            //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
+            driverStart.stop();
 
-                    float timeElapsed = driverStart.getTime() / 1000f;
-                    System.out.println("Driver initiate time" + "   " + timeElapsed);
-
+            float timeElapsed = driverStart.getTime() / 1000f;
+            System.out.println("Driver initiate time" + "   " + timeElapsed);
+                
                     TodoApp TodoAppTestObject = new TodoApp();
                     TodoAppTestObject.TodoAppTest(driver);
-                    TakeScreenShot shot = new TakeScreenShot();
-                    shot.Screenshot(driver, status);
                     ResolutionTest ResolutionTestObject = new ResolutionTest();
                     ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-                    shot.Screenshot(driver, status);
                     StreamTest stream = new StreamTest();
                     stream.TestStream(driver, status);
-                    shot.Screenshot(driver, status);
                     NetSpeed NetSpeedTestObject = new NetSpeed();
                     NetSpeedTestObject.NetSpeed(driver, status, Nettotalspeedtest);
-                    shot.Screenshot(driver, status);
-                    LambdaTestLogin lambdaTest = new LambdaTestLogin();
-                    lambdaTest.Lambda(driver, status);
-                    shot.Screenshot(driver, status);
+                    LambdaTestLogin lambdaTest= new LambdaTestLogin();
+                    lambdaTest.Lambda(driver,status);
+                    
                     ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-
-                    driver.quit();
+                
+                driver.quit();
            /* SessionTest SessionTestObject = new SessionTest();
             SessionTestObject.SessionLaunch(driver, status);*/
 
-                } catch (
-                        MalformedURLException e) {
-                    System.out.println("Invalid grid URL");
-                } catch (Exception f) {
-                    status = "failed";
-                    System.out.println(f);
-                    // System.out.println(f.getMessage() + browser + version + fixedIp);
-                }
-            }
-
+        } catch (
+                MalformedURLException e) {
+            System.out.println("Invalid grid URL");
+        } catch (Exception f) {
+            status = "failed";
+            System.out.println(f);
+            // System.out.println(f.getMessage() + browser + version + fixedIp);
         }
+          }
+
+
     }
 
     @Test
@@ -210,7 +203,7 @@ public class magicLeap {
             }
 
             System.out.println(hub);*/
-            System.out.println(driver.getCapabilities());
+System.out.println(driver.getCapabilities());
 
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver);
@@ -222,11 +215,11 @@ public class magicLeap {
             upTest.upload(driver, status);*/
             NetSpeed NetSpeedTestObject = new NetSpeed();
             NetSpeedTestObject.NetSpeed(driver, status, Nettotalspeedtest);
-            //   LambdaTestLogin lambdaTest= new LambdaTestLogin();
-            //  lambdaTest.Lambda(driver,status);
+         //   LambdaTestLogin lambdaTest= new LambdaTestLogin();
+          //  lambdaTest.Lambda(driver,status);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
-            System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
+            System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime/1000f);
           /*  UserTest Testuser = new UserTest();
             Testuser.TestCase(driver, status);*/
            /* TunnelTest TunnelTestObject = new TunnelTest();
