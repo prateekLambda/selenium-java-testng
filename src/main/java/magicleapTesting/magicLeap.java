@@ -107,7 +107,7 @@ public class magicLeap {
 
             //  capabilities.setCapability("video", true);
 
-            //        capabilities.setCapability("tunnel", true);
+                    capabilities.setCapability("tunnel", true);
 
             //   capabilities.setCapability("selenium_version", "4.0.0-alpha-1");
 
