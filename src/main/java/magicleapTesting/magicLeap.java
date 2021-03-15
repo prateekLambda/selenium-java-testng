@@ -234,8 +234,8 @@ System.out.println(driver.getCapabilities());
 
 
     @AfterTest
-    @org.testng.annotations.Parameters(value = {"browser", "version", "platform"})
-    public void tearDown(String version, String platform, String browser) throws Exception {
+   // @org.testng.annotations.Parameters(value = {"browser", "version", "platform"})
+    public void tearDown() throws Exception {
         long quitetimestart;
         long quitetimestop;
 
@@ -250,7 +250,7 @@ System.out.println(driver.getCapabilities());
         }
         quitestoptime = System.currentTimeMillis();
         quitetimestop = quitestoptime - quitetimestart;
-        System.out.println(platform + "  " + browser + "  " + version + "\n" + "Driver Quite time" + "   " + quitetimestop / 1000f + "Sec.");
+        //System.out.println(platform + "  " + browser + "  " + version + "\n" + "Driver Quite time" + "   " + quitetimestop / 1000f + "Sec.");
 
     }
 
