@@ -17,7 +17,7 @@ public class magicLeap {
     public String username = "prateeks";
     public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
     public RemoteWebDriver driver;
-    public String gridURL = "@stage-hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "@hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -77,22 +77,22 @@ public class magicLeap {
     public void setUp() throws Exception {
         System.out.println(this.TestName);
 
-//           for (int i = 0; i < 2000; i++) {
-//               for(int j=0;j<10;j++){
+           for (int i = 0; i < 2000; i++) {
+               for(int j=0;j<10;j++){
          try {
 
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("browserName", this.BrowserValue);
-            capabilities.setCapability("version", this.versionValue);
-          //  capabilities.setCapability("version", "latest" + "-" + j);
+          //  capabilities.setCapability("version", this.versionValue);
+            capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
             capabilities.setCapability("build", "Jenkins-16 Win10 load Testing US" + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
             capabilities.setCapability("network", true);
-            capabilities.setCapability("tunnel", true);
+         //   capabilities.setCapability("tunnel", true);
             capabilities.setCapability("visual", true);
            // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
@@ -107,7 +107,7 @@ public class magicLeap {
 
             //  capabilities.setCapability("video", true);
 
-                    capabilities.setCapability("tunnel", true);
+              //      capabilities.setCapability("tunnel", true);
 
             //   capabilities.setCapability("selenium_version", "4.0.0-alpha-1");
 
@@ -152,7 +152,8 @@ public class magicLeap {
 
             float timeElapsed = driverStart.getTime() / 1000f;
             System.out.println("Driver initiate time" + "   " + timeElapsed);
-                
+            DesktopScript();
+            tearDown();
               
            /* SessionTest SessionTestObject = new SessionTest();
             SessionTestObject.SessionLaunch(driver, status);*/
@@ -165,8 +166,8 @@ public class magicLeap {
             System.out.println(f);
             // System.out.println(f.getMessage() + browser + version + fixedIp);
         }
-//           }
-//           }
+           }
+           }
 
     }
 
@@ -243,8 +244,7 @@ System.out.println(driver.getCapabilities());
             System.out.println(driver + "Session ID" + "  " + session.toString());
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
-            RunTunnelListener TunnelInitateObjectToStop = new RunTunnelListener();
-            TunnelInitateObjectToStop.onExecutionFinish();
+           
 
 
         }
