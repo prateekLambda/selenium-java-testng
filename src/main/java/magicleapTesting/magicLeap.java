@@ -87,7 +87,7 @@ public class magicLeap {
           //  capabilities.setCapability("version", this.versionValue);
             capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Jenkins-16 Win10 load Testing US" + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build", "Jenkins-16 Win10 load Testing EU" + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
@@ -199,7 +199,8 @@ System.out.println(driver.getCapabilities());
             TodoAppTestObject.TodoAppTest(driver);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-           
+            NetSpeed net = new NetSpeed();
+            net.NetSpeed(driver, status, Nettotalspeedtest);
            /* uploadTest upTest = new uploadTest();
             upTest.upload(driver, status);*/
            
