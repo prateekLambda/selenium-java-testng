@@ -184,7 +184,7 @@
             <parameter name="version" value="65.0"/>
             <parameter name="platform" value=",macos catalina"/>
             <parameter name="fixedIp" value="10.81.100.82"/>
-            <parameter name="resolution" value="1600x1200"/>
+            <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="RU"/>
             <parameter name="tunnelName" value="prateekSingh"/>
@@ -199,7 +199,7 @@
             <parameter name="version" value="65.0"/>
             <parameter name="platform" value="macos catalina"/>
             <parameter name="fixedIp" value="10.81.100.82"/>
-            <parameter name="resolution" value="1366x768"/>
+            <parameter name="resolution" value="2048x1536"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="ES"/>
             <parameter name="tunnelName" value="prateekSingh"/>
@@ -214,7 +214,7 @@
             <parameter name="version" value="78.0"/>
             <parameter name="platform" value="macos catalina"/>
             <parameter name="fixedIp" value="10.5.0.34"/>
-            <parameter name="resolution" value="1366x768"/>
+            <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="SE"/>
             <parameter name="tunnelName" value="prateekSingh"/>
