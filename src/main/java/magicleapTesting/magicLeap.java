@@ -87,7 +87,7 @@ public class magicLeap {
           //  capabilities.setCapability("version", this.versionValue);
             capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Jenkins-16 Win10 load Testing EU" + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build", "Jenkins-16 Win10 load Testing EU" + " 22-03-2021 " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
