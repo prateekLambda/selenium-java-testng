@@ -14,8 +14,8 @@ import java.net.URL;
 
 public class magicLeap {
 
-    public String username = "prateeks";
-    public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
+    public String username = System.getenv("LT_USERNAME");
+    public String accesskey = System.getenv("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
     public String gridURL = "@hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
@@ -87,12 +87,12 @@ public class magicLeap {
           //  capabilities.setCapability("version", this.versionValue);
             capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Jenkins-17 US" + " selenium_version " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build", "Jenkins-18 US" + " selenium_version " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
             capabilities.setCapability("network", true);
-             capabilities.setCapability("selenium_version","3.141.59");
+            // capabilities.setCapability("selenium_version","3.141.59");
          //   capabilities.setCapability("tunnel", true);
             capabilities.setCapability("visual", true);
            // capabilities.setCapability("fixedIP", this.FixedIpValue);
@@ -200,13 +200,11 @@ System.out.println(driver.getCapabilities());
             TodoAppTestObject.TodoAppTest(driver);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-            NetSpeed net = new NetSpeed();
-            net.NetSpeed(driver, status, Nettotalspeedtest);
+           
            /* uploadTest upTest = new uploadTest();
             upTest.upload(driver, status);*/
            
-            LambdaTestLogin lambdaTest= new LambdaTestLogin();
-            lambdaTest.Lambda(driver,status);
+           
 //}
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
