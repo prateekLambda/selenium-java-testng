@@ -95,7 +95,7 @@ public class magicLeap {
             // capabilities.setCapability("selenium_version","3.141.59");
          //   capabilities.setCapability("tunnel", true);
             capabilities.setCapability("visual", true);
-           // capabilities.setCapability("fixedIP", this.FixedIpValue);
+            capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
 
