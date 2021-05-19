@@ -283,8 +283,8 @@
                 <class name="magicleapTesting.magicLeap"/>
             </classes>
         </test>
-    <!--
-
+    
+<!--
                                <test name="25">
                                    <parameter name="browser" value="Chrome"/>
                                    <parameter name="version" value="79.0"/>
