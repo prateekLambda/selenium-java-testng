@@ -148,7 +148,7 @@ public class magicLeap {
             driver = new RemoteWebDriver(new URL(hub), capabilities);
             session = driver.getSessionId();
             
-            System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version);
+            System.out.println(driver + "Session ID" + "  " + session.toString());
             driverStart.stop();
 
             float timeElapsed = driverStart.getTime() / 1000f;
