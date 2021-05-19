@@ -87,7 +87,7 @@ public class magicLeap {
           //  capabilities.setCapability("version", this.versionValue);
             capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Jenkins-20 US" + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build", "Jenkins-21 US" + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
@@ -148,7 +148,7 @@ public class magicLeap {
             driver = new RemoteWebDriver(new URL(hub), capabilities);
             session = driver.getSessionId();
             
-            //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
+            System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version);
             driverStart.stop();
 
             float timeElapsed = driverStart.getTime() / 1000f;
@@ -194,7 +194,7 @@ public class magicLeap {
             }
 
             System.out.println(hub);*/
-System.out.println(driver.getCapabilities());
+
 //for (int k=0; k<2000;k++){
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver);
