@@ -7,7 +7,7 @@
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="win10"/>
-        <parameter name="fixedIp" value="10.82.3.224"/>
+        <parameter name="fixedIp" value="10.82.4.230"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="IN"/>
@@ -24,7 +24,7 @@
             <parameter name="browser" value="Firefox"/>
             <parameter name="version" value="11.0"/>
             <parameter name="platform" value="win10"/>
-            <parameter name="fixedIp" value="10.82.3.220"/>
+            <parameter name="fixedIp" value="10.82.4.231"/>
             <parameter name="resolution" value="1920x1080"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="RO"/>
@@ -40,7 +40,7 @@
             <parameter name="browser" value="IE"/>
             <parameter name="version" value="latest"/>
             <parameter name="platform" value="Win10"/>
-            <parameter name="fixedIp" value="10.82.3.196"/>
+            <parameter name="fixedIp" value="10.82.4.233"/>
             <parameter name="resolution" value="1680x1050"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="NI"/>
@@ -56,7 +56,7 @@
             <parameter name="browser" value="MicrosoftEdge"/>
             <parameter name="version" value="latest"/>
             <parameter name="platform" value="win10"/>
-            <parameter name="fixedIp" value="10.80.26.214"/>
+            <parameter name="fixedIp" value="10.82.4.234"/>
             <parameter name="resolution" value="1920x1080"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="RO"/>
@@ -72,7 +72,7 @@
             <parameter name="browser" value="Chrome"/>
             <parameter name="version" value="11.0"/>
             <parameter name="platform" value="win7"/>
-            <parameter name="fixedIp" value="10.80.26.214"/>
+            <parameter name="fixedIp" value="10.82.6.201"/>
             <parameter name="resolution" value="1440x900"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="HN"/>
@@ -88,7 +88,7 @@
             <parameter name="browser" value="Firefox"/>
             <parameter name="version" value="74.0"/>
             <parameter name="platform" value="win7"/>
-            <parameter name="fixedIp" value="10.80.100.111"/>
+            <parameter name="fixedIp" value="10.82.6.203"/>
             <parameter name="resolution" value="1440x900"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="NI"/>
@@ -105,7 +105,7 @@
             <parameter name="browser" value="IE"/>
             <parameter name="version" value="79.0"/>
             <parameter name="platform" value="win7"/>
-            <parameter name="fixedIp" value="10.80.100.111"/>
+            <parameter name="fixedIp" value="10.82.6.204"/>
             <parameter name="resolution" value="1440x900"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="AE"/>
@@ -121,7 +121,7 @@
             <parameter name="browser" value="MicrosoftEdge"/>
             <parameter name="version" value="72.0"/>
             <parameter name="platform" value="win7"/>
-            <parameter name="fixedIp" value="10.80.102.100"/>
+            <parameter name="fixedIp" value="10.82.6.205"/>
             <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="MA"/>
@@ -137,7 +137,7 @@
             <parameter name="browser" value="Chrome"/>
             <parameter name="version" value="11.0"/>
             <parameter name="platform" value="macos catalina"/>
-            <parameter name="fixedIp" value="10.80.102.100"/>
+            <parameter name="fixedIp" value="10.243.32.235"/>
             <parameter name="resolution" value="1600x1200"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="MY"/>
@@ -152,7 +152,7 @@
             <parameter name="browser" value="Firefox"/>
             <parameter name="version" value="71.0"/>
             <parameter name="platform" value="macos catalina"/>
-            <parameter name="fixedIp" value="10.81.0.231"/>
+            <parameter name="fixedIp" value="10.243.32.236"/>
             <parameter name="resolution" value="1600x1200"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="NZ"/>
@@ -167,7 +167,7 @@
             <parameter name="browser" value="safari"/>
             <parameter name="version" value="79.0"/>
             <parameter name="platform" value="macos catalina"/>
-            <parameter name="fixedIp" value="10.81.0.231"/>
+            <parameter name="fixedIp" value="10.243.32.237"/>
             <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="NO"/>
@@ -183,7 +183,7 @@
             <parameter name="browser" value="Chrome"/>
             <parameter name="version" value="65.0"/>
             <parameter name="platform" value="macos big sur"/>
-            <parameter name="fixedIp" value="10.81.100.82"/>
+            <parameter name="fixedIp" value="10.243.32.64"/>
             <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="RU"/>
@@ -198,7 +198,7 @@
             <parameter name="browser" value="Firefox"/>
             <parameter name="version" value="65.0"/>
             <parameter name="platform" value="macos big sur"/>
-            <parameter name="fixedIp" value="10.81.100.82"/>
+            <parameter name="fixedIp" value="10.243.32.62"/>
             <parameter name="resolution" value="2048x1536"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="ES"/>
@@ -213,7 +213,7 @@
             <parameter name="browser" value="safari"/>
             <parameter name="version" value="78.0"/>
             <parameter name="platform" value="macos big sur"/>
-            <parameter name="fixedIp" value="10.5.0.34"/>
+            <parameter name="fixedIp" value="10.243.32.61"/>
             <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="SE"/>
@@ -228,7 +228,7 @@
             <parameter name="browser" value="MicrosoftEdge"/>
             <parameter name="version" value="70.0"/>
             <parameter name="platform" value="macos big sur"/>
-            <parameter name="fixedIp" value="10.81.100.114"/>
+            <parameter name="fixedIp" value="10.243.32.60"/>
             <parameter name="resolution" value="1280x960"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="CH"/>
@@ -243,7 +243,7 @@
             <parameter name="browser" value="MicrosoftEdge"/>
             <parameter name="version" value="78.0"/>
             <parameter name="platform" value="macos catalina"/>
-            <parameter name="fixedIp" value="10.81.100.114"/>
+            <parameter name="fixedIp" value="10.243.32.238"/>
             <parameter name="resolution" value="1680x1050"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="GB"/>
@@ -253,7 +253,7 @@
                 <class name="magicleapTesting.magicLeap"/>
             </classes>
         </test>
-
+<!--
         <test name="23">
             <parameter name="browser" value="Chrome"/>
             <parameter name="version" value="84.0"/>
@@ -284,7 +284,7 @@
             </classes>
         </test>
     
-<!--
+
                                <test name="25">
                                    <parameter name="browser" value="Chrome"/>
                                    <parameter name="version" value="79.0"/>
