@@ -182,7 +182,7 @@
         <test name="18">
             <parameter name="browser" value="Chrome"/>
             <parameter name="version" value="65.0"/>
-            <parameter name="platform" value=","macos big sur"/>
+            <parameter name="platform" value="macos big sur"/>
             <parameter name="fixedIp" value="10.81.100.82"/>
             <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
