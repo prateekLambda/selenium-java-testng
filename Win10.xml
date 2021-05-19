@@ -138,7 +138,7 @@
             <parameter name="version" value="11.0"/>
             <parameter name="platform" value="macos catalina"/>
             <parameter name="fixedIp" value="10.80.102.100"/>
-            <parameter name="resolution" value="1680x1050"/>
+            <parameter name="resolution" value="1600x1200"/>
             <parameter name="timezone" value="UTC+04:00"/>
             <parameter name="geoLocation" value="MY"/>
             <parameter name="tunnelName" value="prateekSingh"/>
