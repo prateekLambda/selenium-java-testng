@@ -19,7 +19,7 @@
         </classes>
     </test>
 
-<!--
+
         <test name="2">
             <parameter name="browser" value="chrome"/>
             <parameter name="version" value="11.0"/>
@@ -100,7 +100,7 @@
             </classes>
         </test>
 
-
+<!--
         <test name="8">
             <parameter name="browser" value="Chrome"/>
             <parameter name="version" value="79.0"/>
