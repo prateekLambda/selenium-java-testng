@@ -7,7 +7,7 @@
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="win10"/>
-        <parameter name="fixedIp" value="10.82.3.225"/>
+        <parameter name="fixedIp" value="10.82.3.224"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="IN"/>
@@ -19,7 +19,7 @@
         </classes>
     </test>
 
-
+<!--
         <test name="2">
             <parameter name="browser" value="chrome"/>
             <parameter name="version" value="11.0"/>
@@ -51,7 +51,7 @@
                 <class name="magicleapTesting.magicLeap"/>
             </classes>
         </test>
-<!--
+
         <test name="4">
             <parameter name="browser" value="MicrosoftEdge"/>
             <parameter name="version" value="latest"/>
