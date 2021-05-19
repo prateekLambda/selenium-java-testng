@@ -17,7 +17,7 @@ public class magicLeap {
     public String username = System.getenv("LT_USERNAME");
     public String accesskey = System.getenv("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
-    public String gridURL = "@eu-central-1-hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "@hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
