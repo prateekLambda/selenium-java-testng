@@ -87,7 +87,7 @@ public class magicLeap {
           //  capabilities.setCapability("version", this.versionValue);
             capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Jenkins-27 EU" + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build", "Jenkins-28 US" + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
@@ -95,7 +95,7 @@ public class magicLeap {
             //capabilities.setCapability("selenium_version","3.141.59");
          //   capabilities.setCapability("tunnel", true);
             capabilities.setCapability("visual", true);
-            capabilities.setCapability("fixedIP", this.FixedIpValue);
+           // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
 
