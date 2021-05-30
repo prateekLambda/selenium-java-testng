@@ -77,7 +77,7 @@ public class magicLeap {
     public void setUp() throws Exception {
         System.out.println(this.TestName);
 
-           for (int i = 0; i < 2000; i++) {
+           for (int i = 0; i < 500; i++) {
                for(int j=0;j<10;j++){
          try {
 
@@ -87,7 +87,7 @@ public class magicLeap {
           //  capabilities.setCapability("version", this.versionValue);
             capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Jenkins-30 AUS" + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build", "Jenkins-31 US" + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
