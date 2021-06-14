@@ -83,7 +83,7 @@ public class magicLeap {
         System.out.println(this.TestName);
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
+        date = new Date();
         for (int i = 0; i < 5000; i++) {
             for (int j = 0; j < 10; j++) {
                 try {
