@@ -14,10 +14,10 @@ import java.net.URL;
 
 public class magicLeap {
 
-    public String username = "prateeks";
-    public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
+    public String username = System.getenv("LT_USERNAME");
+    public String accesskey = System.getenv("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
-    public String gridURL = "@stage-hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "@hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -77,22 +77,24 @@ public class magicLeap {
     public void setUp() throws Exception {
         System.out.println(this.TestName);
 
-          for (int i = 0; i < 5000; i++) {
-              for(int j=0;j<10;j++){
-        try {
+           for (int i = 0; i < 500; i++) {
+               for(int j=0;j<10;j++){
+         try {
 
 
             DesiredCapabilities capabilities = new DesiredCapabilities();
             capabilities.setCapability("browserName", this.BrowserValue);
-         //   capabilities.setCapability("version", "latest");
+          //  capabilities.setCapability("version", this.versionValue);
             capabilities.setCapability("version", "latest" + "-" + j);
             capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", "Performance/Jenkins-16 " + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+            capabilities.setCapability("build",  this.PlatformValue);
             capabilities.setCapability("name", this.TestName);
             capabilities.setCapability("resolution", this.ResolutionValueCap);
             capabilities.setCapability("console", true);
-            capabilities.setCapability("network", false);
-            capabilities.setCapability("visual", false);
+            capabilities.setCapability("network", true);
+            //capabilities.setCapability("selenium_version","3.141.59");
+         //   capabilities.setCapability("tunnel", true);
+            capabilities.setCapability("visual", true);
            // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
@@ -106,7 +108,7 @@ public class magicLeap {
 
             //  capabilities.setCapability("video", true);
 
-            //        capabilities.setCapability("tunnel", true);
+              //      capabilities.setCapability("tunnel", true);
 
             //   capabilities.setCapability("selenium_version", "4.0.0-alpha-1");
 
@@ -145,32 +147,15 @@ public class magicLeap {
 
             driver = new RemoteWebDriver(new URL(hub), capabilities);
             session = driver.getSessionId();
-
-            //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
+            
+            System.out.println(driver + "Session ID" + "  " + session.toString());
             driverStart.stop();
 
             float timeElapsed = driverStart.getTime() / 1000f;
             System.out.println("Driver initiate time" + "   " + timeElapsed);
-                
-                TodoApp TodoAppTestObject = new TodoApp();
-                TodoAppTestObject.TodoAppTest(driver);
-                TakeScreenShot shot = new TakeScreenShot();
-                shot.Screenshot(driver, status);
-                ResolutionTest ResolutionTestObject = new ResolutionTest();
-                ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-                shot.Screenshot(driver, status);
-                StreamTest stream = new StreamTest();
-                stream.TestStream(driver, status);
-                shot.Screenshot(driver, status);
-                NetSpeed NetSpeedTestObject = new NetSpeed();
-                NetSpeedTestObject.NetSpeed(driver, status, Nettotalspeedtest);
-                shot.Screenshot(driver, status);
-                LambdaTestLogin lambdaTest = new LambdaTestLogin();
-                lambdaTest.Lambda(driver, status);
-                shot.Screenshot(driver, status);
-                ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-                
-                driver.quit();
+            DesktopScript();
+            tearDown();
+              
            /* SessionTest SessionTestObject = new SessionTest();
             SessionTestObject.SessionLaunch(driver, status);*/
 
@@ -182,8 +167,8 @@ public class magicLeap {
             System.out.println(f);
             // System.out.println(f.getMessage() + browser + version + fixedIp);
         }
-          }
-          }
+           }
+           }
 
     }
 
@@ -209,20 +194,18 @@ public class magicLeap {
             }
 
             System.out.println(hub);*/
-System.out.println(driver.getCapabilities());
 
+//for (int k=0; k<2000;k++){
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-            StreamTest stream = new StreamTest();
-            stream.TestStream(driver, status);
+           
            /* uploadTest upTest = new uploadTest();
             upTest.upload(driver, status);*/
-            NetSpeed NetSpeedTestObject = new NetSpeed();
-            NetSpeedTestObject.NetSpeed(driver, status, Nettotalspeedtest);
-         //   LambdaTestLogin lambdaTest= new LambdaTestLogin();
-          //  lambdaTest.Lambda(driver,status);
+           
+           
+//}
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime/1000f);
@@ -251,8 +234,8 @@ System.out.println(driver.getCapabilities());
 
 
     @AfterTest
-    @org.testng.annotations.Parameters(value = {"browser", "version", "platform"})
-    public void tearDown(String version, String platform, String browser) throws Exception {
+   // @org.testng.annotations.Parameters(value = {"browser", "version", "platform"})
+    public void tearDown() throws Exception {
         long quitetimestart;
         long quitetimestop;
 
@@ -261,14 +244,13 @@ System.out.println(driver.getCapabilities());
             System.out.println(driver + "Session ID" + "  " + session.toString());
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
-            RunTunnelListener TunnelInitateObjectToStop = new RunTunnelListener();
-            TunnelInitateObjectToStop.onExecutionFinish();
+           
 
 
         }
         quitestoptime = System.currentTimeMillis();
         quitetimestop = quitestoptime - quitetimestart;
-        System.out.println(platform + "  " + browser + "  " + version + "\n" + "Driver Quite time" + "   " + quitetimestop / 1000f + "Sec.");
+        //System.out.println(platform + "  " + browser + "  " + version + "\n" + "Driver Quite time" + "   " + quitetimestop / 1000f + "Sec.");
 
     }
 
