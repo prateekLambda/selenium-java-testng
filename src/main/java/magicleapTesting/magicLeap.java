@@ -11,6 +11,10 @@ import org.testng.annotations.Test;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 public class magicLeap {
 
@@ -43,6 +47,7 @@ public class magicLeap {
     long SuiteStop;
     long SuiteTotalTime;
     Long AllVersions = null;
+    Date date;
 
 
     @org.testng.annotations.Parameters(value = {"browser", "version", "platform", "fixedIp", "resolution", "timezone", "geoLocation", "tunnel"})
@@ -76,6 +81,8 @@ public class magicLeap {
     @BeforeTest
     public void setUp() throws Exception {
         System.out.println(this.TestName);
+        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
 
         for (int i = 0; i < 5000; i++) {
             for (int j = 0; j < 10; j++) {
@@ -87,7 +94,7 @@ public class magicLeap {
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
-                    capabilities.setCapability("build", "Performance/Jenkins-16 " + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins" + date + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
@@ -140,7 +147,8 @@ public class magicLeap {
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
 
-                    hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
+                    hub = System.getenv("hub");
+
                     System.out.println(hub);
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
@@ -151,7 +159,8 @@ public class magicLeap {
 
                     float timeElapsed = driverStart.getTime() / 1000f;
                     System.out.println("Driver initiate time" + "   " + timeElapsed);
-
+                    DesktopScript();
+                    tearDown();
 
 
 
@@ -198,7 +207,7 @@ public class magicLeap {
 
     @AfterTest
     @org.testng.annotations.Parameters(value = {"browser", "version", "platform"})
-    public void tearDown(String version, String platform, String browser) throws Exception {
+    public void tearDown() throws Exception {
         long quitetimestart;
         long quitetimestop;
 
@@ -214,7 +223,6 @@ public class magicLeap {
         }
         quitestoptime = System.currentTimeMillis();
         quitetimestop = quitestoptime - quitetimestart;
-        System.out.println(platform + "  " + browser + "  " + version + "\n" + "Driver Quite time" + "   " + quitetimestop / 1000f + "Sec.");
 
     }
 
