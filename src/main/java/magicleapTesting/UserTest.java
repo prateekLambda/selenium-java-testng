@@ -1,5 +1,6 @@
 package magicleapTesting;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class UserTest {
@@ -7,49 +8,36 @@ public class UserTest {
     public void TestCase(RemoteWebDriver driver, String status) {
         try {
 
-            driver.get("https://161.202.167.2/funrep/");
-            Thread.sleep(100000);
-          //  driver.findElement(By.xpath("@//XCUIElementTypeAlert//XCUIElementTypeButton[@name='Allow']")).click();
-            System.out.println(driver.getTitle());
-            Thread.sleep(100000);
 
+            String username = "storefront";
+            String password = "storefront";
+            driver.get("https://shop-stage.scholastic.com/teachers-ecommerce/teacher/tsohomepage.html");
+            Thread.sleep(5000);
+            driver.findElement(By.className("sch-global-profile-icon")).click();
+            driver.findElement(By.linkText("Sign In")).click();
+            Thread.sleep(15000);
+            driver.switchTo().frame(driver.findElement(By.className("loginframe")));
+            driver.switchTo().frame("loginIframe");
+            Thread.sleep(5000);
+            driver.findElement(By.id("signin-email-input")).sendKeys("testqa@test.com");
+            Thread.sleep(10000);
+            driver.findElement(By.id("signin-email-submit-button")).click();
 
-         /*  LogEntries browserLOgs= driver.manage().logs().get(LogType.BROWSER);
-           System.out.println("Safari browser logs Enteries"+"---------------"+ browserLOgs);
-*/
-            //   for (int i = 0; i < 10; i++)
-            // {
-           /* Thread.sleep(5000);
-            System.out.println(driver.getTitle());
+            Thread.sleep(10000);
+            driver.findElement(By.id("signin-password-input")).sendKeys("test1234");
+            driver.findElement(By.id("signin-password-submit-button")).click();
+            Thread.sleep(10000);
+            driver.navigate().refresh();
+            Thread.sleep(8000);
+            driver.findElement(By.className("sch-global-username")).click();
 
-            driver.findElement(By.id("imgBtnRefreshCaptcha")).click();
-            Thread.sleep(15000);*/
-
-            //}
-          /*  //driver.findElement(By.className("teachablesnav-search--field")).sendKeys("hello");
-            String val = "hello";
-
-            Actions actions = new Actions(driver);
-            actions.moveToElement(driver.findElement(By.className("teachablesnav-search--field")));
-            actions.click();
-
-
-            for (int i = 0; i < val.length(); i++){
-
-                char c = val.charAt(i);
-                String s = new StringBuilder().append(c).toString();
-                System.out.println(s);
-                actions.sendKeys(s);
-
-                actions.build().perform();
-            }*/
 
         } catch (Exception T) {
             System.out.println(T);
             status = "failed";
 
         }
-        //   ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+        // ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
 
     }
 }

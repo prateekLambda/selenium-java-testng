@@ -3,476 +3,476 @@
 <suite thread-count="100" name="New Browsers" parallel="tests">
 
 
-        <test name="magicleapTesting.Random 1">
-            <parameter name="browser" value="Chrome"/>
-            <parameter name="platformVersion" value="9"/>
-            <parameter name="platform" value="Android"/>
-            <parameter name="fixedIp" value="10.92.181.113"/>
-            <parameter name="deviceName" value="Galaxy S9"/>
-            <parameter name="geoLocation" value="US"/>
-            <classes>
-                <class name="magicleapTesting.Random"/>
-            </classes>
-        </test>
+    <test name="magicleapTesting.Random 1">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="11"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.113"/>
+        <parameter name="deviceName" value="Galaxy S10"/>
+        <parameter name="geoLocation" value="US"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+<!--
 
-    <!--
-                    <test name="magicleapTesting.Random 3">
-                        <parameter name="browser" value="Chrome"/>
-                        <parameter name="platformVersion" value="9"/>
-                        <parameter name="platform" value="Android"/>
-                        <parameter name="fixedIp" value="10.92.181.113"/>
-                        <parameter name="deviceName" value="Galaxy S9"/>
-                        <parameter name="geoLocation" value="AU"/>
-                        <classes>
-                            <class name="magicleapTesting.Random"/>
-                        </classes>
-                    </test>
+    <test name="magicleapTesting.Random 3">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.113"/>
+        <parameter name="deviceName" value="Google Pixel 3 XL"/>
+        <parameter name="geoLocation" value="AU"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-                                        <test name="magicleapTesting.Random 4">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="9"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.113"/>
-                                            <parameter name="deviceName" value="One Plus 6"/>
-                                            <parameter name="geoLocation" value="NI"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 4">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.113"/>
+        <parameter name="deviceName" value="Galaxy Note 10"/>
+        <parameter name="geoLocation" value="NI"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-                                        <test name="magicleapTesting.Random 5">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="9"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.115"/>
-                                            <parameter name="deviceName" value="One Plus 6T"/>
-                                            <parameter name="geoLocation" value="PY"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 5">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.115"/>
+        <parameter name="deviceName" value="Galaxy S9 plus"/>
+        <parameter name="geoLocation" value="PY"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-                                        <test name="magicleapTesting.Random 6">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="9"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.116"/>
-                                            <parameter name="deviceName" value="One Plus 5T"/>
-                                            <parameter name="geoLocation" value="QA"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 6">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.116"/>
+        <parameter name="deviceName" value="Galaxy S9"/>
+        <parameter name="geoLocation" value="QA"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-                                        <test name="magicleapTesting.Random 7">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="9"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.116"/>
-                                            <parameter name="deviceName" value="Google Pixel XL"/>
-                                            <parameter name="geoLocation" value="RS"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 7">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.116"/>
+        <parameter name="deviceName" value="Google Pixel XL"/>
+        <parameter name="geoLocation" value="RS"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-                                        <test name="magicleapTesting.Random 8">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="9"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.117"/>
-                                            <parameter name="deviceName" value="Google Pixel 3"/>
-                                            <parameter name="geoLocation" value="RU"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
-
-
-                                        <test name="magicleapTesting.Random 9">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="9"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.122"/>
-                                            <parameter name="deviceName" value="Huawei P20 Pro"/>
-                                            <parameter name="geoLocation" value="SA"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
-
-                                        <test name="magicleapTesting.Random 10">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="8"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.20"/>
-                                            <parameter name="deviceName" value="Galaxy S7"/>
-                                            <parameter name="geoLocation" value="SE"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
-
-                                        <test name="magicleapTesting.Random 11">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="8"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.125"/>
-                                            <parameter name="deviceName" value="HTC 10"/>
-                                            <parameter name="geoLocation" value="SG"/>
-                                            <classes>
-
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 8">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.117"/>
+        <parameter name="deviceName" value="Google Pixel 3"/>
+        <parameter name="geoLocation" value="RU"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
 
-                                        <test name="magicleapTesting.Random 12">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="8"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.26.39.16"/>
-                                            <parameter name="deviceName" value="Sony Xperia XZ2"/>
-                                            <parameter name="geoLocation" value="SI"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 9">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.122"/>
+        <parameter name="deviceName" value="Huawei P20 Pro"/>
+        <parameter name="geoLocation" value="SA"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-                                        <test name="magicleapTesting.Random 13">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="8"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.26.39.16"/>
-                                            <parameter name="deviceName" value="One Plus 5"/>
-                                            <parameter name="geoLocation" value="SK"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 10">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.20"/>
+        <parameter name="deviceName" value="Galaxy S7"/>
+        <parameter name="geoLocation" value="SE"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-                                        <test name="magicleapTesting.Random 14">
-                                            <parameter name="browser" value="chrome"/>
-                                            <parameter name="platformVersion" value="8"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="159.69.76.182"/>
-                                            <parameter name="deviceName" value="One Plus 5T"/>
-                                            <parameter name="geoLocation" value="SV"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
+    <test name="magicleapTesting.Random 11">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.125"/>
+        <parameter name="deviceName" value="HTC 10"/>
+        <parameter name="geoLocation" value="SG"/>
+        <classes>
 
-                                        <test name="magicleapTesting.Random 15">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="8"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.39"/>
-                                            <parameter name="deviceName" value="One Plus 5T"/>
-                                            <parameter name="geoLocation" value="TH"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
-                                        <test name="magicleapTesting.Random 16">
-                                            <parameter name="browser" value="Chrome"/>
-                                            <parameter name="platformVersion" value="8"/>
-                                            <parameter name="platform" value="Android"/>
-                                            <parameter name="fixedIp" value="10.92.181.39"/>
-                                            <parameter name="deviceName" value="Galaxy S9 Plus"/>
-                                            <parameter name="geoLocation" value="TN"/>
-                                            <classes>
-                                                <class name="magicleapTesting.Random"/>
-                                            </classes>
-                                        </test>
-
-                                            <test name="magicleapTesting.Random 17">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="8"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.92.181.39"/>
-                                                <parameter name="deviceName" value="Galaxy S9"/>
-                                                <parameter name="geoLocation" value="TR"/>
-
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-                                            <test name="magicleapTesting.Random 18">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="8"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.92.181.39"/>
-                                                <parameter name="deviceName" value="Google Pixel 2"/>
-                                                <parameter name="geoLocation" value="TZ"/>
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-                                            <test name="magicleapTesting.Random 19">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="8"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.92.181.39"/>
-                                                <parameter name="deviceName" value="Google Pixel"/>
-                                                <parameter name="geoLocation" value="UA"/>
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-                                            <test name="magicleapTesting.Random 20">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="8.1"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.92.181.39"/>
-                                                <parameter name="deviceName" value="HTC U12 Life"/>
-                                                <parameter name="geoLocation" value="KW"/>
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-                                            <test name="21">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="8.1"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.92.181.39"/>
-                                                <parameter name="deviceName" value="Galaxy Tab S4"/>
-                                                <parameter name="geoLocation" value="US"/>
-
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-
-                                            <test name="22">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="8.1"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.92.181.39"/>
-                                                <parameter name="deviceName" value="Galaxy Note 9"/>
-                                                <parameter name="geoLocation" value="UY"/>
-
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-
-                                            <test name="23">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="7"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.92.181.21"/>
-                                                <parameter name="deviceName" value="Moto G5 Plus"/>
-                                                <parameter name="geoLocation" value="UZ"/>
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-
-                                            <test name="24">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="7"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.24.236.206"/>
-                                                <parameter name="deviceName" value="HTC 10"/>
-                                                <parameter name="geoLocation" value="VE"/>
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-
-                                            <test name="25">
-                                                <parameter name="browser" value="Chrome"/>
-                                                <parameter name="platformVersion" value="7.1"/>
-                                                <parameter name="platform" value="Android"/>
-                                                <parameter name="fixedIp" value="10.24.236.206"/>
-                                                <parameter name="deviceName" value="Galaxy Note 8"/>
-                                                <parameter name="geoLocation" value="VN"/>
-                                                <classes>
-                                                    <class name="magicleapTesting.Random"/>
-                                                </classes>
-                                            </test>
-
-        <test name="26">
-            <parameter name="browser" value="Chrome"/>
-            <parameter name="platformVersion" value="9"/>
-            <parameter name="platform" value="Android"/>
-            <parameter name="fixedIp" value="10.24.236.206"/>
-            <parameter name="deviceName" value="Galaxy S9"/>
-            <parameter name="geoLocation" value="ZA"/>
-            <classes>
-                <class name="magicleapTesting.Random"/>
-            </classes>
-        </test>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
 
-        <test name="27">
-            <parameter name="browser" value="Chrome"/>
-            <parameter name="platformVersion" value="9"/>
-            <parameter name="platform" value="Android"/>
-            <parameter name="fixedIp" value="10.24.236.206"/>
-            <parameter name="deviceName" value="OnePlus 6"/>
-            <parameter name="geoLocation" value="DE"/>
-            <classes>
-                <class name="magicleapTesting.Random"/>
-            </classes>
-        </test>
-        <test name="101">
-            <parameter name="browser" value="Chrome"/>
-            <parameter name="platformVersion" value="9"/>
-            <parameter name="platform" value="Android"/>
-            <parameter name="fixedIp" value="10.24.236.206"/>
-            <parameter name="deviceName" value="Galaxy S9"/>
-            <parameter name="geoLocation" value="ZA"/>
-            <classes>
-                <class name="magicleapTesting.Random"/>
-            </classes>
-        </test>
+    <test name="magicleapTesting.Random 12">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.26.39.16"/>
+        <parameter name="deviceName" value="Sony Xperia XZ2"/>
+        <parameter name="geoLocation" value="SI"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="magicleapTesting.Random 13">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.26.39.16"/>
+        <parameter name="deviceName" value="One Plus 5"/>
+        <parameter name="geoLocation" value="SK"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="magicleapTesting.Random 14">
+        <parameter name="browser" value="chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="159.69.76.182"/>
+        <parameter name="deviceName" value="One Plus 5T"/>
+        <parameter name="geoLocation" value="SV"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="magicleapTesting.Random 15">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="One Plus 5T"/>
+        <parameter name="geoLocation" value="TH"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="magicleapTesting.Random 16">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="Galaxy S9 Plus"/>
+        <parameter name="geoLocation" value="TN"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="magicleapTesting.Random 17">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="Galaxy S9"/>
+        <parameter name="geoLocation" value="TR"/>
+
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="magicleapTesting.Random 18">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="Google Pixel 2"/>
+        <parameter name="geoLocation" value="TZ"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="magicleapTesting.Random 19">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="Google Pixel"/>
+        <parameter name="geoLocation" value="UA"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="magicleapTesting.Random 20">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8.1"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="HTC U12 Life"/>
+        <parameter name="geoLocation" value="KW"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="21">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8.1"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="Galaxy Tab S4"/>
+        <parameter name="geoLocation" value="US"/>
+
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="22">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="8.1"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.39"/>
+        <parameter name="deviceName" value="Galaxy Note 9"/>
+        <parameter name="geoLocation" value="UY"/>
+
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="23">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="7"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.21"/>
+        <parameter name="deviceName" value="Moto G5 Plus"/>
+        <parameter name="geoLocation" value="UZ"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="24">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="7"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.24.236.206"/>
+        <parameter name="deviceName" value="HTC 10"/>
+        <parameter name="geoLocation" value="VE"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="25">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="7.1"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.24.236.206"/>
+        <parameter name="deviceName" value="Galaxy Note 8"/>
+        <parameter name="geoLocation" value="VN"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="26">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.24.236.206"/>
+        <parameter name="deviceName" value="Galaxy S9"/>
+        <parameter name="geoLocation" value="ZA"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
 
-        <test name="100">
-            <parameter name="browser" value="Chrome"/>
-            <parameter name="platformVersion" value="9"/>
-            <parameter name="platform" value="Android"/>
-            <parameter name="fixedIp" value="10.24.236.206"/>
-            <parameter name="deviceName" value="OnePlus 6"/>
-            <parameter name="geoLocation" value="DE"/>
-            <classes>
-                <class name="magicleapTesting.Random"/>
-            </classes>
-        </test>
-
-            <test name="28">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.24.236.210"/>
-                <parameter name="deviceName" value="Google Pixel 2"/>
-                <parameter name="geoLocation" value="MN"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
-
-            <test name="29">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.113"/>
-                <parameter name="deviceName" value="Google Pixel 3"/>
-                <parameter name="geoLocation" value="MT"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
-            <test name="30">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.114"/>
-                <parameter name="deviceName" value="Google Pixel 3a"/>
-                <parameter name="geoLocation" value="MX"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
-
-            <test name="31">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.115"/>
-                <parameter name="deviceName" value="Google Pixel 3 XL"/>
-                <parameter name="geoLocation" value="MY"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
+    <test name="27">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.24.236.206"/>
+        <parameter name="deviceName" value="OnePlus 6"/>
+        <parameter name="geoLocation" value="DE"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="101">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.24.236.206"/>
+        <parameter name="deviceName" value="Galaxy S9"/>
+        <parameter name="geoLocation" value="ZA"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
 
-            <test name="32">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.116"/>
-                <parameter name="deviceName" value="Google Pixel 3a XL"/>
-                <parameter name="geoLocation" value="NG"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
+    <test name="100">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="9"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.24.236.206"/>
+        <parameter name="deviceName" value="OnePlus 6"/>
+        <parameter name="geoLocation" value="DE"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-            <test name="33">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.116"/>
-                <parameter name="deviceName" value="Galaxy S9"/>
-                <parameter name="geoLocation" value="NL"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
+    <test name="28">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.24.236.210"/>
+        <parameter name="deviceName" value="Google Pixel 2"/>
+        <parameter name="geoLocation" value="MN"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-            <test name="34">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.117"/>
-                <parameter name="deviceName" value="Galaxy S9 Plus"/>
-                <parameter name="geoLocation" value="NO"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
+    <test name="29">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.113"/>
+        <parameter name="deviceName" value="Google Pixel 3"/>
+        <parameter name="geoLocation" value="MT"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="30">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.114"/>
+        <parameter name="deviceName" value="Google Pixel 3a"/>
+        <parameter name="geoLocation" value="MX"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-            <test name="35">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.118"/>
-                <parameter name="deviceName" value="Galaxy S10"/>
-                <parameter name="geoLocation" value="NZ"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
+    <test name="31">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.115"/>
+        <parameter name="deviceName" value="Google Pixel 3 XL"/>
+        <parameter name="geoLocation" value="MY"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-            <test name="36">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.122"/>
-                <parameter name="deviceName" value="Galaxy S10 Plus"/>
-                <parameter name="geoLocation" value="PA"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
-            <test name="37">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.122"/>
-                <parameter name="geoLocation" value="PE"/>
-                <parameter name="deviceName" value="Galaxy Note 10"/>
-                <classes>
 
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
+    <test name="32">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.116"/>
+        <parameter name="deviceName" value="Google Pixel 3a XL"/>
+        <parameter name="geoLocation" value="NG"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
-            <test name="38">
-                <parameter name="browser" value="Chrome"/>
-                <parameter name="platformVersion" value="10"/>
-                <parameter name="platform" value="Android"/>
-                <parameter name="fixedIp" value="10.92.181.123"/>
-                <parameter name="deviceName" value="Galaxy S10E"/>
-                <parameter name="geoLocation" value="FR"/>
-                <classes>
-                    <class name="magicleapTesting.Random"/>
-                </classes>
-            </test>
-    -->
+    <test name="33">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.116"/>
+        <parameter name="deviceName" value="Galaxy S9"/>
+        <parameter name="geoLocation" value="NL"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
 
+    <test name="34">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.117"/>
+        <parameter name="deviceName" value="Galaxy S9 Plus"/>
+        <parameter name="geoLocation" value="NO"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="35">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.118"/>
+        <parameter name="deviceName" value="Galaxy S10"/>
+        <parameter name="geoLocation" value="NZ"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="36">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.122"/>
+        <parameter name="deviceName" value="Galaxy S10 Plus"/>
+        <parameter name="geoLocation" value="PA"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+    <test name="37">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.122"/>
+        <parameter name="geoLocation" value="PE"/>
+        <parameter name="deviceName" value="Galaxy Note 10"/>
+        <classes>
+
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+    <test name="38">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="platformVersion" value="10"/>
+        <parameter name="platform" value="Android"/>
+        <parameter name="fixedIp" value="10.92.181.123"/>
+        <parameter name="deviceName" value="Galaxy S10E"/>
+        <parameter name="geoLocation" value="FR"/>
+        <classes>
+            <class name="magicleapTesting.Random"/>
+        </classes>
+    </test>
+
+-->
 </suite>

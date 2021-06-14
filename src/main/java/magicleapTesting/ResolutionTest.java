@@ -17,7 +17,9 @@ public class ResolutionTest {
             long ResolutionStop;
 
             ResolutionStart = System.currentTimeMillis();
-
+           /* ((JavascriptExecutor) driver).executeScript("window.open()");
+            ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
+            driver.switchTo().window(tabs.get(2));*/
             driver.get("http://whatismyscreenresolution.net/");
             // for (int i = 0; i < 50; i++) {
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -27,14 +29,14 @@ public class ResolutionTest {
 
             ResolutionValue = browserResolution.getAttribute("innerText");
             ResolutionValue.trim().replaceAll("\\s", "");
-            System.out.println("Given resolution in capabilities" + "  " + ResolutionValueCap);
 
-            System.out.println("Resolution value get from the Website " + " " + browserResolution.getAttribute("innerText"));
+
+
             if (ResolutionValueCap.equalsIgnoreCase(ResolutionValue)) {
 
 
                 status = "passed";
-                System.out.println("Resolution Matched");
+
             } else {
 
                 System.out.println("Resolution does not Matched");

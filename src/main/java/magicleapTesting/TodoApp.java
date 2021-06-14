@@ -2,7 +2,6 @@ package magicleapTesting;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -16,11 +15,10 @@ public class TodoApp {
     long SendKeysStop;
 
 
-    public void TodoAppTest(RemoteWebDriver driver) {
+    public void TodoAppTest(RemoteWebDriver driver, String status) {
         try {
 
-
-            Actions action = new Actions(driver);
+                    //   Actions action = new Actions(driver);
 
             System.out.println(driver.getTitle());
             driver.get("https://lambdatest.github.io/sample-todo-app/");
@@ -34,20 +32,20 @@ public class TodoApp {
             CommandStart = System.currentTimeMillis();
             firstItem.click();
             secondItem.click();
+            TakeScreenShot todo = new TakeScreenShot();
+            todo.Screenshot(driver, status);
             thirdItem.click();
             fifthElement.click();
             CommandStop = System.currentTimeMillis();
-            ClickCommandTime = CommandStop - CommandStop/1000f;
-            System.out.println("Time taken to perform 4 clicks" + "  " + "=" + ClickCommandTime);
+            ClickCommandTime = CommandStop - CommandStop / 1000f;
            /* WebElement firstOption = driver.findElement(By.cssSelector("body > div > div > div > ul > li:nth-child(3) > input"));
             action.moveToElement(firstOption).click().perform();*/
             SendKeysStart = System.currentTimeMillis();
             driver.findElement(By.xpath("//*[@id=\"sampletodotext\"]")).sendKeys("new item added");
             SendKeysStop = System.currentTimeMillis();
-            SendKeyCommand = SendKeysStop - SendKeysStart/1000f;
-            System.out.println("SendKeys 14 char value Command to execute" + "  " + "=" + SendKeyCommand);
+            SendKeyCommand = SendKeysStop - SendKeysStart / 1000f;
 
-            driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).isDisplayed();
+            driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).isEnabled();
             driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).click();
         } catch (Exception t) {
             System.out.println(t);

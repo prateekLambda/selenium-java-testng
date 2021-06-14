@@ -17,7 +17,7 @@ public class magicLeap {
     public String username = System.getenv("LT_USERNAME");
     public String accesskey = System.getenv("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
-    public String gridURL = "@hub.lambdatest.com/wd/hub"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = System.getenv("hub"); //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -77,25 +77,23 @@ public class magicLeap {
     public void setUp() throws Exception {
         System.out.println(this.TestName);
 
-           for (int i = 0; i < 500; i++) {
-               for(int j=0;j<10;j++){
-         try {
+        for (int i = 0; i < 5000; i++) {
+            for (int j = 0; j < 10; j++) {
+                try {
 
 
-            DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("browserName", this.BrowserValue);
-          //  capabilities.setCapability("version", this.versionValue);
-            capabilities.setCapability("version", "latest" + "-" + j);
-            capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build",  this.PlatformValue);
-            capabilities.setCapability("name", this.TestName);
-            capabilities.setCapability("resolution", this.ResolutionValueCap);
-            capabilities.setCapability("console", true);
-            capabilities.setCapability("network", true);
-            //capabilities.setCapability("selenium_version","3.141.59");
-         //   capabilities.setCapability("tunnel", true);
-            capabilities.setCapability("visual", true);
-           // capabilities.setCapability("fixedIP", this.FixedIpValue);
+                    DesiredCapabilities capabilities = new DesiredCapabilities();
+                    capabilities.setCapability("browserName", this.BrowserValue);
+                    //   capabilities.setCapability("version", "latest");
+                    capabilities.setCapability("version", "latest" + "-" + j);
+                    capabilities.setCapability("platform", this.PlatformValue);
+                    capabilities.setCapability("build", "Performance/Jenkins-16 " + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("name", this.TestName);
+                    capabilities.setCapability("resolution", this.ResolutionValueCap);
+                    capabilities.setCapability("console", true);
+                    capabilities.setCapability("network", false);
+                    capabilities.setCapability("visual", false);
+                    // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
 
@@ -103,14 +101,14 @@ public class magicLeap {
             capabilities.setCapability("tags", Tags);*/
 
 
-            //      capabilities.setCapability("safari.cookies", true);
+                    //      capabilities.setCapability("safari.cookies", true);
 
 
-            //  capabilities.setCapability("video", true);
+                    //  capabilities.setCapability("video", true);
 
-              //      capabilities.setCapability("tunnel", true);
+                    //        capabilities.setCapability("tunnel", true);
 
-            //   capabilities.setCapability("selenium_version", "4.0.0-alpha-1");
+                    //   capabilities.setCapability("selenium_version", "4.0.0-alpha-1");
 
           /*  System.out.println(Tunnel);
             if (this.Tunnel.matches("true")) {
@@ -121,54 +119,55 @@ public class magicLeap {
                 Thread.sleep(20000);
                 capabilities.setCapability("tunnel", "true");
             }*/
-            //      capabilities.setCapability("safari.cookies",true);
-            //   capabilities.setCapability("region", "eu");
-            //
-            //   capabilities.setCapability("tunnel", "true");
+                    //      capabilities.setCapability("safari.cookies",true);
+                    //   capabilities.setCapability("region", "eu");
+                    //
+                    //   capabilities.setCapability("tunnel", "true");
         /*capabilities.setCapability("ie.driver","3.4.0");
         capabilities.setCapability("ie.compatibility",11001);*/
-            //     capabilities.setCapability("tunnelName", "prateek");
-            //           capabilities.setCapability("geoLocation", geoLocation);
-            //    capabilities.setCapability("unboundRegion", "PUSE-EU");
-            //       capabilities.setCapability("timezone", this.TimeZoneValue);
-            //        capabilities.setCapability("geoLocation", this.GeoLocationValue);
-            //     capabilities.setCapability("headless", true);
-            //   capabilities.setCapability("networkThrottling", "Regular 4G");
-            //  capabilities.setCapability("prerun", "lambda:BasicAuthChrome/pre/httpdialog.au3");
+                    //     capabilities.setCapability("tunnelName", "prateek");
+                    //           capabilities.setCapability("geoLocation", geoLocation);
+                    //    capabilities.setCapability("unboundRegion", "PUSE-EU");
+                    //       capabilities.setCapability("timezone", this.TimeZoneValue);
+                    //        capabilities.setCapability("geoLocation", this.GeoLocationValue);
+                    //     capabilities.setCapability("headless", true);
+                    //   capabilities.setCapability("networkThrottling", "Regular 4G");
+                    //  capabilities.setCapability("prerun", "lambda:BasicAuthChrome/pre/httpdialog.au3");
 //            String[] Tags = new String[]{"myproject", "myproject2","myproject3"};
 //
 //            capabilities.setCapability("tags", Tags);
 
-            StopWatch driverStart = new StopWatch();
-            driverStart.start();
+                    StopWatch driverStart = new StopWatch();
+                    driverStart.start();
 
-            hub = "http://" + username + ":" + accesskey + gridURL;
-            System.out.println(hub);
+                    hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
+                    System.out.println(hub);
 
-            driver = new RemoteWebDriver(new URL(hub), capabilities);
-            session = driver.getSessionId();
-            
-            System.out.println(driver + "Session ID" + "  " + session.toString());
-            driverStart.stop();
+                    driver = new RemoteWebDriver(new URL(hub), capabilities);
+                    session = driver.getSessionId();
 
-            float timeElapsed = driverStart.getTime() / 1000f;
-            System.out.println("Driver initiate time" + "   " + timeElapsed);
-            DesktopScript();
-            tearDown();
-              
+                    //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
+                    driverStart.stop();
+
+                    float timeElapsed = driverStart.getTime() / 1000f;
+                    System.out.println("Driver initiate time" + "   " + timeElapsed);
+
+
+
+
            /* SessionTest SessionTestObject = new SessionTest();
             SessionTestObject.SessionLaunch(driver, status);*/
 
-        } catch (
-                MalformedURLException e) {
-            System.out.println("Invalid grid URL");
-        } catch (Exception f) {
-            status = "failed";
-            System.out.println(f);
-            // System.out.println(f.getMessage() + browser + version + fixedIp);
+                } catch (
+                        MalformedURLException e) {
+                    System.out.println("Invalid grid URL");
+                } catch (Exception f) {
+                    status = "failed";
+                    System.out.println(f);
+                    // System.out.println(f.getMessage() + browser + version + fixedIp);
+                }
+            }
         }
-           }
-           }
 
     }
 
@@ -176,57 +175,21 @@ public class magicLeap {
     public void DesktopScript() {
         try {
             SuiteStart = System.currentTimeMillis();
-          /*  SessionTest SessionTestObject = new SessionTest();
-            SessionTestObject.SessionLaunch(driver, status);*/
-            //   driver.manage().window().maximize();
-           /* ChromeBrowserVersion ChromeVersionObject = new ChromeBrowserVersion();
-            ChromeVersionObject.BrowserVersion(driver);*/
-//            uploadTest UPFile = new uploadTest();
-//            UPFile.upload(driver, status);
-
-
-/*
-
-           /* if (this.BrowserValue.matches("Chrome")) {
-                ChromeBrowserVersion ChromeVersionObject = new ChromeBrowserVersion();
-                ChromeVersionObject.BrowserVersion(driver);
-
-            }
-
-            System.out.println(hub);*/
-
-//for (int k=0; k<2000;k++){
             TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver);
+            TodoAppTestObject.TodoAppTest(driver, status);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-           
-           /* uploadTest upTest = new uploadTest();
-            upTest.upload(driver, status);*/
-           
-           
-//}
+            StreamTest stream = new StreamTest();
+            stream.TestStream(driver, status);
+            uploadTest upTest = new uploadTest();
+            upTest.upload(driver, status);
+            TestCase SeleniumTest = new TestCase();
+            SeleniumTest.LongCase(driver);
+            GoogleSpace space = new GoogleSpace();
+            space.GSpace(driver);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
-            System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime/1000f);
-          /*  UserTest Testuser = new UserTest();
-            Testuser.TestCase(driver, status);*/
-           /* TunnelTest TunnelTestObject = new TunnelTest();
-            TunnelTestObject.tunnelTest(driver, status, totaltimeforlocaltest);
-            System.out.println(Tunnel);*/
-            /*if (this.Tunnel.matches("true")) {
-                TunnelTest TunnelTestObject = new TunnelTest();
-                TunnelTestObject.tunnelTest(driver, status, totaltimeforlocaltest);
-            }*/
-
-        /*    TunnelTest TunnelTestObject = new TunnelTest();
-            TunnelTestObject.tunnelTest(driver, status, totaltimeforlocaltest);*/
-           /* UserTest test = new UserTest();
-            test.TestCase(driver, status);*/
-           /* DownloadTest downLoad= new DownloadTest();
-            downLoad.FileDownload(driver);*/
-           /* ResolutionTest ResolutionTestObject = new ResolutionTest();
-            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);*/
+            System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
         } catch (Exception e) {
             System.out.println(e);
         }
@@ -234,8 +197,8 @@ public class magicLeap {
 
 
     @AfterTest
-   // @org.testng.annotations.Parameters(value = {"browser", "version", "platform"})
-    public void tearDown() throws Exception {
+    @org.testng.annotations.Parameters(value = {"browser", "version", "platform"})
+    public void tearDown(String version, String platform, String browser) throws Exception {
         long quitetimestart;
         long quitetimestop;
 
@@ -244,13 +207,14 @@ public class magicLeap {
             System.out.println(driver + "Session ID" + "  " + session.toString());
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
-           
+            RunTunnelListener TunnelInitateObjectToStop = new RunTunnelListener();
+            TunnelInitateObjectToStop.onExecutionFinish();
 
 
         }
         quitestoptime = System.currentTimeMillis();
         quitetimestop = quitestoptime - quitetimestart;
-        //System.out.println(platform + "  " + browser + "  " + version + "\n" + "Driver Quite time" + "   " + quitetimestop / 1000f + "Sec.");
+        System.out.println(platform + "  " + browser + "  " + version + "\n" + "Driver Quite time" + "   " + quitetimestop / 1000f + "Sec.");
 
     }
 

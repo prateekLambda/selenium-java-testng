@@ -7,7 +7,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import java.util.concurrent.TimeUnit;
 
 public class GeolocationTest {
-    public void Geolocation(RemoteWebDriver driver, String status, String geoLocation, long GeolocationTotal) {
+    public void Geolocation(RemoteWebDriver driver, String status,  long GeolocationTotal) {
 
         try {
 
@@ -20,7 +20,6 @@ public class GeolocationTest {
             WebElement ipLocation = driver.findElement(By.xpath("/html/body/div[1]/section/div/div/div[1]/div[5]/div[3]/div/table/tbody/tr[2]/td"));
             ipLocation.getAttribute("innerText");
             System.out.println("Location of the machine" + "  " + ipLocation.getAttribute("innerText"));
-            System.out.println("Given Geolocation in the TestSuite " + "    " + geoLocation);
             status = "passed";
             GeolocationStop = System.currentTimeMillis();
             GeolocationTotal = GeolocationStop - Geolocationstart;

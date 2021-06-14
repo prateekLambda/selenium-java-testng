@@ -1,7 +1,6 @@
 package magicleapTesting;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 public class SessionTest {
@@ -11,7 +10,7 @@ public class SessionTest {
             driver.findElement(By.name("q")).click();
             driver.findElement(By.name("q")).sendKeys("LambdaTest");
             driver.findElement(By.name("btnK")).click();
-            System.out.println(driver.getTitle());
+
             String TitleValue = "LambdaTest - Google Search";
             String GoogleTitleValue = driver.getTitle();
             if (TitleValue.equals(GoogleTitleValue)) {
@@ -25,7 +24,7 @@ public class SessionTest {
             System.out.println(b);
 
         }
-        ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+       // ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
 
     }
 

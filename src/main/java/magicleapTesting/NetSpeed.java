@@ -16,7 +16,8 @@ public class NetSpeed {
             driver.get("https://testmy.net/");
 
 
-            driver.manage().window().maximize();
+            //  driver.findElement(By.cssSelector("#qc-cmp2-ui>div.qc-cmp2-footer.qc-cmp2-footer-overlay.qc-cmp2-footer-scrolled>div>button.css-47secv")).click();
+
             WebElement NetSpeed = driver.findElement(By.xpath("/html/body/div[1]/div/p[2]/a[2]"));
             NetSpeed.click();
             JavascriptExecutor scroll = (JavascriptExecutor) driver;
