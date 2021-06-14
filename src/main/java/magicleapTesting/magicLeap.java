@@ -94,7 +94,7 @@ public class magicLeap {
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
-                    capabilities.setCapability("build", "Jenkins" + date + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins" + formatter.format(date) + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
@@ -152,6 +152,7 @@ public class magicLeap {
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
                     session = driver.getSessionId();
+                    System.out.println("========================================================" + session + "========================================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
                     driverStart.stop();
@@ -161,10 +162,6 @@ public class magicLeap {
                     DesktopScript();
                     tearDown();
 
-
-
-           /* SessionTest SessionTestObject = new SessionTest();
-            SessionTestObject.SessionLaunch(driver, status);*/
 
                 } catch (
                         MalformedURLException e) {
@@ -212,7 +209,7 @@ public class magicLeap {
 
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
-            System.out.println(driver + "Session ID" + "  " + session.toString());
+            System.out.println("========================================================" + session + "========================================================");
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
             RunTunnelListener TunnelInitateObjectToStop = new RunTunnelListener();
