@@ -94,7 +94,7 @@ public class magicLeap {
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
-                    capabilities.setCapability("build",System.getenv("LT_BUILD_NAME"));
+                    capabilities.setCapability("build", System.getenv("LT_BUILD_NAME"));
                     //capabilities.setCapability("build", "Jenkins" + formatter.format(date) + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     capabilities.setCapability("resolution", this.ResolutionValueCap);
@@ -153,7 +153,7 @@ public class magicLeap {
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
                     session = driver.getSessionId();
-                    System.out.println("========================================================" + session + "========================================================");
+                    System.out.println("========================================================DriverStart-up" + session + "DriverStart-up========================================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
                     driverStart.stop();
@@ -180,6 +180,8 @@ public class magicLeap {
     @Test
     public void DesktopScript() {
         try {
+            System.out.println("========================================================TestStart" + session + "TestStart========================================================");
+
             SuiteStart = System.currentTimeMillis();
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status);
@@ -196,6 +198,8 @@ public class magicLeap {
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
+            System.out.println("========================================================TestStop" + session + "TestStop========================================================");
+
         } catch (Exception e) {
             System.out.println(e);
         }
