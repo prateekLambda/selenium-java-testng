@@ -189,8 +189,6 @@ public class magicLeap {
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
             StreamTest stream = new StreamTest();
             stream.TestStream(driver, status);
-            uploadTest upTest = new uploadTest();
-            upTest.upload(driver, status);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver);
             GoogleSpace space = new GoogleSpace();
