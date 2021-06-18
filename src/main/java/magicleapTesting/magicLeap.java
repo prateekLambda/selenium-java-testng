@@ -84,7 +84,7 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 2; j++) {
                 try {
 
@@ -183,8 +183,10 @@ public class magicLeap {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
 
             SuiteStart = System.currentTimeMillis();
-            TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status);
+            driver.get("https://www.google.com");
+            System.out.println(driver.getTitle());
+           /* TodoApp TodoAppTestObject = new TodoApp();
+            TodoAppTestObject.TodoAppTest(driver, status);*/
           /*  ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
             StreamTest stream = new StreamTest();
