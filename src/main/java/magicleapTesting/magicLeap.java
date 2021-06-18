@@ -84,7 +84,7 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 5000; i++) {
+        for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 10; j++) {
                 try {
 
@@ -153,7 +153,7 @@ public class magicLeap {
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
                     session = driver.getSessionId();
-                    System.out.println("========================================================DriverStart-up" + session + "DriverStart-up========================================================");
+                    System.out.println("====================DriverStart-up+++++++++++" + session + "+++++++++++DriverStart-up===================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
                     driverStart.stop();
@@ -180,7 +180,7 @@ public class magicLeap {
     @Test
     public void DesktopScript() {
         try {
-            System.out.println("========================================================TestStart" + session + "TestStart========================================================");
+            System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
 
             SuiteStart = System.currentTimeMillis();
             TodoApp TodoAppTestObject = new TodoApp();
@@ -196,7 +196,7 @@ public class magicLeap {
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
-            System.out.println("========================================================TestStop" + session + "TestStop========================================================");
+            System.out.println("=======================TestStop++++++++++++++" + session + "++++++++++++++++TestStop==============");
 
         } catch (Exception e) {
             System.out.println(e);
@@ -212,7 +212,7 @@ public class magicLeap {
 
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
-            System.out.println("========================================================" + session + "========================================================");
+            System.out.println("=============" + session + "================");
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
             RunTunnelListener TunnelInitateObjectToStop = new RunTunnelListener();
