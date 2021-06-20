@@ -84,8 +84,8 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 4; i++) {
-            for (int j = 0; j < 2; j++) {
+        for (int i = 0; i < 300; i++) {
+            for (int j = 0; j < 12; j++) {
                 try {
 
 
@@ -94,13 +94,13 @@ public class magicLeap {
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
-                    capabilities.setCapability("build", System.getenv("LT_BUILD_NAME"));
-                    //capabilities.setCapability("build", "Jenkins" + formatter.format(date) + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+                    //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
+                    capabilities.setCapability("build", "Jenkins" + formatter.format(date) + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
-                    capabilities.setCapability("visual", false);
+                    capabilities.setCapability("visual", true);
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
@@ -183,18 +183,17 @@ public class magicLeap {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
 
             SuiteStart = System.currentTimeMillis();
-            driver.get("https://www.google.com");
-            System.out.println(driver.getTitle());
-           /* TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status);*/
-          /*  ResolutionTest ResolutionTestObject = new ResolutionTest();
+
+            TodoApp TodoAppTestObject = new TodoApp();
+            TodoAppTestObject.TodoAppTest(driver, status);
+            ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-            StreamTest stream = new StreamTest();
-            stream.TestStream(driver, status);
+            uploadTest up = new uploadTest();
+            up.upload(driver, status);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver);
             GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver);*/
+            space.GSpace(driver);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
