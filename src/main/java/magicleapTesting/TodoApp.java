@@ -30,6 +30,7 @@ public class TodoApp {
             WebElement fifthElement = driver.findElement(By.cssSelector("body > div > div > div > ul > li:nth-child(5) > input"));
 
             CommandStart = System.currentTimeMillis();
+
             firstItem.click();
             secondItem.click();
             TakeScreenShot todo = new TakeScreenShot();
@@ -45,7 +46,7 @@ public class TodoApp {
             SendKeysStop = System.currentTimeMillis();
             SendKeyCommand = SendKeysStop - SendKeysStart / 1000f;
 
-            driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).isEnabled();
+            driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).isDisplayed();
             driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).click();
         } catch (Exception t) {
             System.out.println(t);

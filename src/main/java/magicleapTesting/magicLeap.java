@@ -21,7 +21,7 @@ public class magicLeap {
     public String username = "prateeks";
     public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
     public RemoteWebDriver driver;
-    public String gridURL = "hub.lambdatest.com"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "stage-hub.lambdatest.com"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -84,8 +84,8 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 300; i++) {
-            for (int j = 0; j < 12; j++) {
+        for (int i = 0; i < 4; i++) {
+            for (int j = 0; j < 5; j++) {
                 try {
 
 
@@ -95,12 +95,12 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins" + formatter.format(date) + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Stage-Jenkins" + formatter.format(date) + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
-                    capabilities.setCapability("visual", true);
+                    capabilities.setCapability("visual", false);
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
@@ -188,12 +188,14 @@ public class magicLeap {
             TodoAppTestObject.TodoAppTest(driver, status);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
-            uploadTest up = new uploadTest();
-            up.upload(driver, status);
+            GeolocationTest geo = new GeolocationTest();
+            geo.Geolocation(driver, status, GeolocationTotal);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver);
+            VideoUpload video = new VideoUpload();
+            video.vidupload(driver);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
