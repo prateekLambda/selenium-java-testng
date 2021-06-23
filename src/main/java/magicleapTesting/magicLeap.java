@@ -18,10 +18,10 @@ import java.util.TimeZone;
 
 public class magicLeap {
 
-    public String username = "prateeks";
-    public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
+    public String username = "prateek.delguy";
+    public String accesskey = "9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE";
     public RemoteWebDriver driver;
-    public String gridURL = "stage-hub.lambdatest.com"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "hub.lambdatest.com"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
