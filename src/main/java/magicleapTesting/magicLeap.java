@@ -18,8 +18,8 @@ import java.util.TimeZone;
 
 public class magicLeap {
 
-    public String username = "prateeks";
-    public String accesskey = "lvF4drFWBItNhamTk2CP7fVioGBU4GZqaK67khwpKcQA9jeQUo";
+    public String username = "prateek.delguy";
+    public String accesskey = "9DjIGDAUAnyqaNELLFGeGyLCcdW2W4diRXje0U5yaHr8nAReqE";
     public RemoteWebDriver driver;
     public String gridURL = "hub-virginia.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
@@ -153,6 +153,7 @@ public class magicLeap {
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
                     session = driver.getSessionId();
+
                     System.out.println("====================DriverStart-up+++++++++++" + session + "+++++++++++DriverStart-up===================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
