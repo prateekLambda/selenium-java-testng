@@ -2,10 +2,11 @@ package magicleapTesting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 
 public class TestCase {
 
-    public void LongCase(RemoteWebDriver driver) {
+    public void LongCase(RemoteWebDriver driver, SessionId session) {
 
         try {
             driver.get("https://www.seleniumeasy.com/test/");
@@ -42,7 +43,7 @@ public class TestCase {
             driver.findElement(By.linkText("25")).click();
         } catch (Exception L) {
 
-            System.out.println(L);
+            System.out.println(L+"    "+" SessionID --->"+"  "+session);
         }
 //        try {
 //            driver.get("https://www.rockdoor.com/");

@@ -185,22 +185,22 @@ public class magicLeap {
             SuiteStart = System.currentTimeMillis();
 
             TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status);
+            TodoAppTestObject.TodoAppTest(driver, status, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
-            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap);
+            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal);
+            geo.Geolocation(driver, status, GeolocationTotal, session);
             TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver);
+            SeleniumTest.LongCase(driver, session);
             GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver);
+            space.GSpace(driver, session);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
             System.out.println("=======================TestStop++++++++++++++" + session + "++++++++++++++++TestStop==============");
 
         } catch (Exception e) {
-            System.out.println(e);
+            System.out.println(e + "    " + " SessionID --->" + "  " + session);
         }
     }
 

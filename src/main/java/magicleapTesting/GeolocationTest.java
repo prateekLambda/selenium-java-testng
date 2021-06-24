@@ -3,11 +3,12 @@ package magicleapTesting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 
 import java.util.concurrent.TimeUnit;
 
 public class GeolocationTest {
-    public void Geolocation(RemoteWebDriver driver, String status,  long GeolocationTotal) {
+    public void Geolocation(RemoteWebDriver driver, String status, long GeolocationTotal, SessionId session) {
 
         try {
 
@@ -25,7 +26,7 @@ public class GeolocationTest {
             GeolocationTotal = GeolocationStop - Geolocationstart;
             System.out.println("Total time took for geolocation test" + " " + GeolocationTotal / 1000f + "Sec.");
         } catch (Exception t) {
-            System.out.println(t);
+            System.out.println(t+"    "+" SessionID --->"+"  "+session);
         }
         try {
             driver.get("http://ip-api.com/json");
@@ -43,7 +44,7 @@ public class GeolocationTest {
             }
 
         } catch (Exception g) {
-            System.out.println(g);
+            System.out.println(g+"    "+" SessionID --->"+"  "+session);
             status = "failed";
             WebElement location = driver.findElement(By.xpath("/html/body/pre"));
             location.getAttribute("innerText");

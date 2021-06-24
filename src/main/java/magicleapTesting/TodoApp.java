@@ -3,6 +3,7 @@ package magicleapTesting;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -15,7 +16,7 @@ public class TodoApp {
     long SendKeysStop;
 
 
-    public void TodoAppTest(RemoteWebDriver driver, String status) {
+    public void TodoAppTest(RemoteWebDriver driver, String status, SessionId session) {
         try {
 
                     //   Actions action = new Actions(driver);
@@ -49,7 +50,7 @@ public class TodoApp {
             driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).isDisplayed();
             driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).click();
         } catch (Exception t) {
-            System.out.println(t);
+            System.out.println(t +"    "+" SessionID --->"+"  "+session);
         }
     }
 

@@ -3,9 +3,10 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 
 public class GoogleSpace {
-    public void GSpace(RemoteWebDriver driver) {
+    public void GSpace(RemoteWebDriver driver, SessionId session) {
         try {
             driver.get("https://mrdoob.com/projects/chromeexperiments/google-space/");
 
@@ -31,7 +32,7 @@ public class GoogleSpace {
             //   slider.dragAndDropBy(daylight, -20, 400).build().perform();
             Thread.sleep(5000);
         } catch (Exception G) {
-            System.out.println(G);
+            System.out.println(G+"    "+" SessionID --->"+"  "+session);
         }
 
     }

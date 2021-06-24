@@ -4,12 +4,13 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 
 import java.util.concurrent.TimeUnit;
 
 public class ResolutionTest {
 
-    public void Resolution(RemoteWebDriver driver, String ResolutionValue, String status, long ResolutionTotal, String ResolutionValueCap) {
+    public void Resolution(RemoteWebDriver driver, String ResolutionValue, String status, long ResolutionTotal, String ResolutionValueCap, SessionId session) {
         try {
 
 
@@ -53,8 +54,7 @@ public class ResolutionTest {
 
             //}
         } catch (Exception R) {
-
-            System.out.println(R);
+            System.out.println(R+"    "+" SessionID --->"+"  "+session);
         }
 
     }
