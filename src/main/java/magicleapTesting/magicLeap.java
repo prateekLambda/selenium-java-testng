@@ -84,8 +84,8 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 2; i++) {
-            for (int j = 0; j < 2; j++) {
+        for (int i = 0; i < 10; i++) {
+            for (int j = 0; j < 5; j++) {
                 try {
 
 
@@ -97,7 +97,7 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", "Stage-Jenkins" + formatter.format(date) + "  " + this.PlatformValue + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
-                    capabilities.setCapability("resolution", this.ResolutionValueCap);
+                    //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
                     capabilities.setCapability("visual", false);
@@ -194,8 +194,6 @@ public class magicLeap {
             SeleniumTest.LongCase(driver);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver);
-            VideoUpload video = new VideoUpload();
-            video.vidupload(driver);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
