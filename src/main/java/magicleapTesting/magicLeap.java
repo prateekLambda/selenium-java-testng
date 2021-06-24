@@ -216,8 +216,7 @@ public class magicLeap {
             System.out.println("=============" + session + "================");
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
-            RunTunnelListener TunnelInitateObjectToStop = new RunTunnelListener();
-            TunnelInitateObjectToStop.onExecutionFinish();
+
 
 
         }
