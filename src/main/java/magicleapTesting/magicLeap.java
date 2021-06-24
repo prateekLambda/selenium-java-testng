@@ -21,7 +21,7 @@ public class magicLeap {
     public String username = "prateeks";
     public String accesskey = "lvF4drFWBItNhamTk2CP7fVioGBU4GZqaK67khwpKcQA9jeQUo";
     public RemoteWebDriver driver;
-    public String gridURL = "hub.lambdatest.com"; //"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "hub-virginia.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
