@@ -202,8 +202,8 @@ public class Random {
             teststarted.start();
             driver.get("https://www.google.com");
             driver.getTitle();
-            ResolutionTest deviceRes = new ResolutionTest();
-            deviceRes.Resolution(driver, ResolutionValue, status, ResolutionTotal, ResolutionValueCap);
+//            ResolutionTest deviceRes = new ResolutionTest();
+//            deviceRes.Resolution(driver, ResolutionValue, status, ResolutionTotal, ResolutionValueCap);
            /* TunnelTest tunnel = new TunnelTest();
             tunnel.tunnelTest(driver, status, totaltimeforlocaltest);
 
@@ -215,8 +215,8 @@ public class Random {
 
           /*  IpConfig ip = new IpConfig();
             ip.IPData(driver);*/
-            TodoApp Todo = new TodoApp();
-            Todo.TodoAppTest(driver, status);
+//            TodoApp Todo = new TodoApp();
+//            Todo.TodoAppTest(driver, status);
 
 
             //driver.findElement(MobileBy.xpath("//*[@class='android.widget.Button'][2]")).click();
