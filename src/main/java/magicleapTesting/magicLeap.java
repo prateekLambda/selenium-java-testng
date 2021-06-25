@@ -148,7 +148,7 @@ public class magicLeap {
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
 
-                    hub = "";//"https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
+                    hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     System.out.println(hub);
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
