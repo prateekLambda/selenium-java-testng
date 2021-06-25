@@ -15,7 +15,9 @@ magicleapTesting\UserTest.class
 magicleapTesting\StreamTest.class
 magicleapTesting\GeolocationTest.class
 magicleapTesting\uploadTest.class
+magicleapTesting\VideoUpload.class
 magicleapTesting\RunTunnelListener.class
+magicleapTesting\browserStack.class
 magicleapTesting\AnroidVersion.class
 magicleapTesting\BasicAuth.class
 magicleapTesting\BadSslTest.class
