@@ -19,9 +19,9 @@ import java.util.TimeZone;
 public class magicLeap {
 
     public String username = "prateeks";
-    public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
+    public String accesskey = "lvF4drFWBItNhamTk2CP7fVioGBU4GZqaK67khwpKcQA9jeQUo";
     public RemoteWebDriver driver;
-    public String gridURL = "hub.issue-rep-japneet.dev.lambdatest.io"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -95,7 +95,7 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins Dev Hub"+"  " + formatter.format(date) + "  " + this.PlatformValue +"  "+ System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins Dev Hub" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
@@ -153,7 +153,10 @@ public class magicLeap {
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
                     session = driver.getSessionId();
-
+                    if (i > 8) {
+                        System.out.println("API call for sessionID logs");
+                        new aPiCalls(username, accesskey).getSessionDetails(session.toString());
+                    }
                     System.out.println("====================DriverStart-up+++++++++++" + session + "+++++++++++DriverStart-up===================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
@@ -217,7 +220,6 @@ public class magicLeap {
             System.out.println("=============" + session + "================");
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
-
 
 
         }
