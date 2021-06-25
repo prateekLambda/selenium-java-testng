@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" name="DesktopBrowsers" parallel="tests">
+
+
+    <test name="1">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="10"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="2">
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="10"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="3">
+        <parameter name="browser" value="Edge"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="10"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="4">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="7"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="5">
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="7"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="6">
+        <parameter name="browser" value="Edge"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="7"/>
+        <parameter name="os" value="Windows"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="7">
+        <parameter name="browser" value="Chrome"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="Big Sur"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="8">
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="Big Sur"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+    <test name="9">
+        <parameter name="browser" value="Edge"/>
+        <parameter name="version" value="14.0"/>
+        <parameter name="os_version" value="Big Sur"/>
+        <parameter name="os" value="OS X"/>
+        <parameter name="resolution" value="1280x800"/>
+        <parameter name="timezone" value="UTC+00:00"/>
+        <parameter name="geoLocation" value="IN"/>
+        <parameter name="tunnel" value="false"/>
+        <classes>
+            <class name="magicleapTesting.browserStack"/>
+        </classes>
+    </test>
+
+</suite>

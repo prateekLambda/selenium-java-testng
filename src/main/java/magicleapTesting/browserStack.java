@@ -1,5 +1,7 @@
 package magicleapTesting;
 
+
+
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
@@ -16,12 +18,12 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
 
-public class magicLeap {
+public class browserStack {
 
-    public String username = "prateeks";
-    public String accesskey = "lvF4drFWBItNhamTk2CP7fVioGBU4GZqaK67khwpKcQA9jeQUo";
+    public String username = "falconmagicleap_vci1oa";
+    public String accesskey = "JxzszpGVzPndo6ySxp3r";
     public RemoteWebDriver driver;
-    public String gridURL = "hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "hub-cloud.browserstack.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -34,8 +36,8 @@ public class magicLeap {
     SessionId session;
     String BrowserValue;
     String versionValue;
-    String PlatformValue;
-    String FixedIpValue;
+    String BSos_version;
+    String Bsos;
     String ResolutionValueCap;
     String TimeZoneValue;
     String GeoLocationValue;
@@ -50,25 +52,25 @@ public class magicLeap {
     Date date;
 
 
-    @org.testng.annotations.Parameters(value = {"browser", "version", "platform", "fixedIp", "resolution", "timezone", "geoLocation", "tunnel"})
-    public magicLeap(String browser, String version, String platform, String fixedIp, String resolution, String timezone, String geoLocation, String tunnel) {
+    @org.testng.annotations.Parameters(value = {"browser", "version", "os_version", "os", "resolution", "timezone", "geoLocation", "tunnel"})
+    public browserStack(String browser, String version, String os_version, String os, String resolution, String timezone, String geoLocation, String tunnel) {
         try {
             BrowserValue = browser;
             versionValue = version;
-            PlatformValue = platform;
-            FixedIpValue = fixedIp;
+            BSos_version = os_version;
+            Bsos = os;
             ResolutionValueCap = resolution;
             TimeZoneValue = timezone;
             GeoLocationValue = geoLocation;
             Tunnel = System.getProperty("tunnel");
             if (BrowserValue != null) {
                 TestName = BrowserValue;
-                if (PlatformValue != null) {
-                    TestName = BrowserValue + Space + PlatformValue;
+                if (BSos_version != null) {
+                    TestName = BrowserValue + Space + BSos_version;
                     if (versionValue != null) {
-                        TestName = BrowserValue + Space + PlatformValue + Space + versionValue;
-                        if (FixedIpValue != null)
-                            TestName = BrowserValue + Space + PlatformValue + Space + versionValue + Space + FixedIpValue;
+                        TestName = BrowserValue + Space + BSos_version + Space + versionValue;
+                        if (Bsos != null)
+                            TestName = BrowserValue + Space + BSos_version + Space + versionValue + Space + Bsos;
 
                     }
                 }
@@ -91,11 +93,12 @@ public class magicLeap {
 
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
+                    capabilities.setCapability("os_version",this.BSos_version);
                     //   capabilities.setCapability("version", "latest");
-                    capabilities.setCapability("version", "latest" + "-" + j);
-                    capabilities.setCapability("platform", this.PlatformValue);
+                    capabilities.setCapability("browser_version", "latest" + "-" + j);
+                    capabilities.setCapability("os", this.Bsos);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins"+"  " + formatter.format(date) + "  " + this.PlatformValue +"  "+ System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins"+"  " + formatter.format(date) + "  " + this.BSos_version +"  "+ System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
@@ -215,7 +218,7 @@ public class magicLeap {
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
             System.out.println("=============" + session + "================");
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
             driver.quit();
 
 
