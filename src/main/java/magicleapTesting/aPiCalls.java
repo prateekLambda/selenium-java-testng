@@ -27,9 +27,6 @@ public class aPiCalls {
         //https://${apiCredentials}@api.lambdatest.com/automation/api/v1/builds/${buildId}/sessions
 
 
-
-
-
     }
 
     // Create new file to save output Data
