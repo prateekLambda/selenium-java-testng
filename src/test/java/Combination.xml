@@ -5,7 +5,7 @@
     <test name="macos bigsur">
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="14.0"/>
-        <parameter name="platform" value="macos bigsur"/>
+        <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.25"/>
         <parameter name="resolution" value="1280x800"/>
         <parameter name="timezone" value="UTC+00:00"/>
@@ -18,7 +18,7 @@
     <test name="mac Firefox">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="13.0"/>
-        <parameter name="platform" value="macos catalina"/>
+        <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.25"/>
         <parameter name="resolution" value="1280x800"/>
         <parameter name="timezone" value="UTC+00:00"/>
@@ -31,7 +31,7 @@
     <test name="macmojave chrome">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="12.0"/>
-        <parameter name="platform" value="macos mojave"/>
+        <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.25"/>
         <parameter name="resolution" value="1280x800"/>
         <parameter name="timezone" value="UTC+00:00"/>
@@ -42,9 +42,9 @@
         </classes>
     </test>
     <test name="22">
-        <parameter name="browser" value="safari"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="14.0"/>
-        <parameter name="platform" value="macos bigsur"/>
+        <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.25"/>
         <parameter name="resolution" value="1280x800"/>
         <parameter name="timezone" value="UTC+00:00"/>
@@ -55,9 +55,9 @@
         </classes>
     </test>
     <test name="21">
-        <parameter name="browser" value="safari"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="13.0"/>
-        <parameter name="platform" value="macos catalina"/>
+        <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.25"/>
         <parameter name="resolution" value="1280x800"/>
         <parameter name="timezone" value="UTC+00:00"/>
@@ -67,6 +67,8 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
+
+    <!--
     <test name="20">
         <parameter name="browser" value="safari"/>
         <parameter name="version" value="12.0"/>
@@ -327,5 +329,5 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
-
+-->
 </suite>
