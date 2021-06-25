@@ -95,7 +95,7 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins"+"  " + formatter.format(date) + "  " + this.PlatformValue +"  "+ System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins Existing" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
@@ -153,7 +153,9 @@ public class magicLeap {
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
                     session = driver.getSessionId();
-
+                    if (i > 8) {
+                        new aPiCalls(username, accesskey).getSessionDetails(session.toString());
+                    }
                     System.out.println("====================DriverStart-up+++++++++++" + session + "+++++++++++DriverStart-up===================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
@@ -217,7 +219,6 @@ public class magicLeap {
             System.out.println("=============" + session + "================");
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             driver.quit();
-
 
 
         }
