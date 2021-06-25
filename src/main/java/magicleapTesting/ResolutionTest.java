@@ -49,7 +49,8 @@ public class ResolutionTest {
             ResolutionStop = System.currentTimeMillis();
             ResolutionTotal = ResolutionStop - ResolutionStart;
             System.out.println("Total time took for resolution" + "  " + ResolutionTotal / 1000f + "Sec.");
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+          //  ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
 
 
             //}
