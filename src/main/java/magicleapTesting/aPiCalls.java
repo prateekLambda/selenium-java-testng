@@ -35,11 +35,11 @@ public class aPiCalls {
     // Create new file to save output Data
     private FileOutputStream createLogFile(String sid) throws FileNotFoundException {
 
-        if (new File("APIData\\" + sid + ".json").exists()) {
+        if (new File( sid + ".json").exists()) {
             System.out.println("file already exists");
 
         } else {
-            return new FileOutputStream("APIData\\" + sid + ".json");
+            return new FileOutputStream( sid + ".json");
         }
         return null;
     }
