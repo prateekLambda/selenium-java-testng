@@ -153,9 +153,9 @@ public class magicLeap {
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
                     session = driver.getSessionId();
-                    if (i > 8) {
-                        new aPiCalls(username, accesskey).getSessionDetails(session.toString());
-                    }
+//                    if (i > 8) {
+//                        new aPiCalls(username, accesskey).getSessionDetails(session.toString());
+//                    }
                     System.out.println("====================DriverStart-up+++++++++++" + session + "+++++++++++DriverStart-up===================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
