@@ -100,7 +100,8 @@ public class magicLeap {
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
-                    capabilities.setCapability("visual", false);
+                    capabilities.setCapability("tunnel", true);
+                   // capabilities.setCapability("tunnelName","prateek");
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
