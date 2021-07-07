@@ -95,7 +95,7 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Tunnel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Stat_Map" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
