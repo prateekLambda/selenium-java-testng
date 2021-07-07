@@ -95,13 +95,13 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "New Jenkins Hub" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Tunnel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
-                    capabilities.setCapability("tunnel", true);
-                   // capabilities.setCapability("tunnelName","prateek");
+                    /*capabilities.setCapability("tunnel", true);
+                    capabilities.setCapability("tunnelName", "prateek");*/
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
@@ -188,7 +188,10 @@ public class magicLeap {
 
             SuiteStart = System.currentTimeMillis();
 
-            TodoApp TodoAppTestObject = new TodoApp();
+            TunnelTest tunnel = new TunnelTest();
+            tunnel.tunnelTest(driver, status, totaltimeforlocaltest);
+
+          /*  TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
@@ -197,7 +200,7 @@ public class magicLeap {
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
             GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver, session);
+            space.GSpace(driver, session);*/
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
