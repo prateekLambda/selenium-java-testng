@@ -187,11 +187,11 @@ public class magicLeap {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
 
             SuiteStart = System.currentTimeMillis();
-
+/*
             TunnelTest tunnel = new TunnelTest();
-            tunnel.tunnelTest(driver, status, totaltimeforlocaltest);
+            tunnel.tunnelTest(driver, status, totaltimeforlocaltest);*/
 
-          /*  TodoApp TodoAppTestObject = new TodoApp();
+            TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
@@ -200,7 +200,7 @@ public class magicLeap {
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
             GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver, session);*/
+            space.GSpace(driver, session);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
