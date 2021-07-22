@@ -188,11 +188,17 @@ public class magicLeap {
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
+            DesignPlane plane = new DesignPlane();
+            plane.plane(driver);
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
+            DownloadTest down = new DownloadTest();
+            down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
+            LambdaTutrial tut = new LambdaTutrial();
+            tut.Lambdacert(driver);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             SuiteStop = System.currentTimeMillis();
