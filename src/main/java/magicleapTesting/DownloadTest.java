@@ -26,10 +26,9 @@ public class DownloadTest {
 
             Assert.assertEquals(((JavascriptExecutor) driver).executeScript("lambda-file-exists=international-trade-march-2021-quarter-csv-corrected.zip"), true); //file exist check
 
-            System.out.println(((JavascriptExecutor) driver).executeScript("lambda-file-stats=international-trade-march-2021-quarter-csv-corrected.zip")); //retrieve file stats
+            ((JavascriptExecutor) driver).executeScript("lambda-file-stats=international-trade-march-2021-quarter-csv-corrected.zip"); //retrieve file stats
 
             String base64EncodedFile = ((JavascriptExecutor) driver).executeScript("lambda-file-content=international-trade-march-2021-quarter-csv-corrected.zip").toString(); // file content download
-            System.out.println(base64EncodedFile);
 
 
             byte[] data = Base64.getDecoder().decode(base64EncodedFile);
