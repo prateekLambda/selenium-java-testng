@@ -5,12 +5,13 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LambdaTutrial {
-    public void Lambdacert(RemoteWebDriver driver) {
+    public void Lambdacert(RemoteWebDriver driver, SessionId session) {
         try {
             driver.get("https://www.lambdatest.com/automation-demos/");
             driver.manage().window().maximize();
@@ -44,6 +45,7 @@ public class LambdaTutrial {
             driver.findElement(By.cssSelector("#file")).sendKeys("5mb.jpg");
         } catch (Exception t) {
             System.out.println(t);
+            System.out.println(t + "    " + " SessionID --->" + "  " + session);
         }
 
     }

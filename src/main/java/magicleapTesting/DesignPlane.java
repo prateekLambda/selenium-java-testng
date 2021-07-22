@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -11,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 
 public class DesignPlane {
 
-    public void plane(RemoteWebDriver driver) {
+    public void plane(RemoteWebDriver driver, SessionId session) {
         try {
             driver.get("https://designyourown.newairplane.com/");
             driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -50,6 +51,8 @@ public class DesignPlane {
 
         } catch (Exception p) {
             System.out.println(p);
+            System.out.println(p+"    "+" SessionID --->"+"  "+session);
+
         }
 
 

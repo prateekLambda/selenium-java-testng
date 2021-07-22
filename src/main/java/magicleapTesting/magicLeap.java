@@ -197,11 +197,11 @@ public class magicLeap {
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
             LambdaTutrial tut = new LambdaTutrial();
-            tut.Lambdacert(driver);
+            tut.Lambdacert(driver,session);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             DesignPlane plane = new DesignPlane();
-            plane.plane(driver);
+            plane.plane(driver,session);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
