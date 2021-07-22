@@ -188,8 +188,7 @@ public class magicLeap {
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
-            DesignPlane plane = new DesignPlane();
-            plane.plane(driver);
+
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
@@ -201,6 +200,8 @@ public class magicLeap {
             tut.Lambdacert(driver);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
+            DesignPlane plane = new DesignPlane();
+            plane.plane(driver);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
