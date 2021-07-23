@@ -42,7 +42,7 @@ public class LambdaTutrial {
             driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[4]/div[3]/textarea")).sendKeys("Hi This is Prateek Support Team is the best. Whatever it takes");
             JavascriptExecutor jse = (JavascriptExecutor) driver;
             jse.executeScript("window.scrollBy(0,350)");
-            driver.findElement(By.cssSelector("#file")).sendKeys("5mb.jpg");
+//            driver.findElement(By.cssSelector("#file")).sendKeys("5mb.jpg");
         } catch (Exception t) {
             System.out.println(t);
             System.out.println(t + "    " + " SessionID --->" + "  " + session);
