@@ -95,7 +95,7 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins 100 parallel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     capabilities.setCapability("console", true);
@@ -187,7 +187,7 @@ public class magicLeap {
 
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
-            ResolutionTest ResolutionTestObject = new ResolutionTest();
+            /*ResolutionTest ResolutionTestObject = new ResolutionTest();
 
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GeolocationTest geo = new GeolocationTest();
@@ -201,7 +201,7 @@ public class magicLeap {
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             DesignPlane plane = new DesignPlane();
-            plane.plane(driver,session);
+            plane.plane(driver,session);*/
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);

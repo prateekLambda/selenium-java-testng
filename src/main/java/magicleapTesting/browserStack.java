@@ -151,7 +151,7 @@ public class browserStack {
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
 
-                    hub = "";//"https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
+                    hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     System.out.println(hub);
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
@@ -187,17 +187,23 @@ public class browserStack {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
 
             SuiteStart = System.currentTimeMillis();
-
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
+
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
+            DownloadTest down = new DownloadTest();
+            down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
+            LambdaTutrial tut = new LambdaTutrial();
+            tut.Lambdacert(driver,session);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
+            DesignPlane plane = new DesignPlane();
+            plane.plane(driver,session);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
