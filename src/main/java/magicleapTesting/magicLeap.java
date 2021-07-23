@@ -87,7 +87,7 @@ public class magicLeap {
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 10; j++) {
                 try {
-
+                    String[] file = {"5mb.jpg", "10MB", "2mb"};
 
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
@@ -97,7 +97,7 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", "Jenkins 100 parallel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
-                    //   capabilities.setCapability("resolution", this.ResolutionValueCap);
+                    capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
                     capabilities.setCapability("visual", false);
@@ -197,7 +197,7 @@ public class magicLeap {
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
             LambdaTutrial tut = new LambdaTutrial();
-            tut.Lambdacert(driver,session);
+            tut.Lambdacert(driver, session);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             /*
