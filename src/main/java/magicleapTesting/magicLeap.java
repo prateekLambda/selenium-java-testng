@@ -97,7 +97,7 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", "Jenkins 60 parallel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
-                    capabilities.setCapability("lambda:userFiles", file);
+                   // capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
                     capabilities.setCapability("visual", false);
