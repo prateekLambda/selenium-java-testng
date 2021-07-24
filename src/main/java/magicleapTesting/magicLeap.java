@@ -19,9 +19,9 @@ import java.util.TimeZone;
 public class magicLeap {
 
     public String username = "prateeks";
-    public String accesskey = "lvF4drFWBItNhamTk2CP7fVioGBU4GZqaK67khwpKcQA9jeQUo";
+    public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
     public RemoteWebDriver driver;
-    public String gridURL = "hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "stage-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -87,7 +87,7 @@ public class magicLeap {
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 10; j++) {
                 try {
-                    String[] file = {"5mb.jpg", "10MB.jpg", "2mb.jpg","real time.png"};
+                    String[] file = {"5mb.jpg", "10MB.jpg", "2mb.jpg", "real time.png", "15mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "My15mb2.jpg", "My15mb3.jpg", "My15mb3.jpg"};
 
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
@@ -95,12 +95,13 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins 100 parallel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins 60 parallel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", false);
                     capabilities.setCapability("visual", false);
+                    capabilities.setCapability("selenium_version", "3.141.59");
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
