@@ -19,9 +19,10 @@ import java.util.TimeZone;
 public class magicLeap {
 
     public String username = "prateeks";
-    public String accesskey = "IuCSesD83A7LsTFzEKS0Lb6tzvEfBQ38DMkFTEpudatxxxsdjH";
+    public String accesskey = "lvF4drFWBItNhamTk2CP7fVioGBU4GZqaK67khwpKcQA9jeQUo";
     public RemoteWebDriver driver;
-    public String gridURL = "stage-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = "dark-1-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
+    //https://dark-2-hub.lambdatest.com/wd/hub/status
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -81,27 +82,30 @@ public class magicLeap {
     @BeforeTest
     public void setUp() throws Exception {
         System.out.println(this.TestName);
-        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB.jpg", "2mb.jpg", "real time.png", "15mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "My15mb2.jpg", "My15mb3.jpg", "My15mb3.jpg"};
-
+                    String region = "eu";
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins 60 parallel" + "  " + formatter.format(date) + "  " + this.PlatformValue + "  " + System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", formatter.format(date) + "  " + "  " + region);
                     capabilities.setCapability("name", this.TestName);
                    // capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
-                    capabilities.setCapability("network", false);
+                    capabilities.setCapability("network", true);
                     capabilities.setCapability("visual", false);
-                    capabilities.setCapability("selenium_version", "3.141.59");
+                 //   capabilities.setCapability("selenium_version", "3.141.59");
+                    capabilities.setCapability("region", region);
+                    capabilities.setCapability("idleTimeout", "600");
+
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
@@ -150,9 +154,14 @@ public class magicLeap {
                     driverStart.start();
 
                     hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
+                    //hub = "http://localhost:8080/wd/hub";
                     System.out.println(hub);
-
+                    System.out.println("Start Time" + " " + formatter.format(date));
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
+
+
+                    //set timeout to 5 seconds
+
                     session = driver.getSessionId();
 
                     System.out.println("====================DriverStart-up+++++++++++" + session + "+++++++++++DriverStart-up===================================");
@@ -166,10 +175,12 @@ public class magicLeap {
                     tearDown();
 
 
-                } catch (
-                        MalformedURLException e) {
+                } catch (MalformedURLException e) {
                     System.out.println("Invalid grid URL");
-                } catch (Exception f) {
+
+
+                } catch (java.net.SocketTimeoutException f) {
+                    System.out.println("Stop Time" + " " + formatter.format(date));
                     status = "failed";
                     System.out.println(f);
                     // System.out.println(f.getMessage() + browser + version + fixedIp);
@@ -188,19 +199,26 @@ public class magicLeap {
 
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
+            LambdaTutrial tut = new LambdaTutrial();
+            tut.Lambdacert(driver, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
 
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
+            GoogleSpace space = new GoogleSpace();
+            space.GSpace(driver, session);
+            TestCase SeleniumTest = new TestCase();
+            SeleniumTest.LongCase(driver, session);
+            VideoUpload test = new VideoUpload();
+            test.vidupload(driver);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
-            DownloadTest down = new DownloadTest();
+           /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
-            LambdaTutrial tut = new LambdaTutrial();
-            tut.Lambdacert(driver, session);
+
             GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver, session);
+            space.GSpace(driver, session);*/
             /*
             DesignPlane plane = new DesignPlane();
             plane.plane(driver,session);*/

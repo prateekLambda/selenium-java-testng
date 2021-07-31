@@ -26,8 +26,8 @@ public class GoogleSpace {
             slider.dragAndDropBy(daylight, 0, -100).build().perform();
             slider.dragAndDropBy(daylight, 0, -150).build().perform();
             slider.dragAndDropBy(daylight, 0, -200).build().perform();
-            slider.dragAndDropBy(daylight, -10, -250).build().perform();
-            slider.dragAndDropBy(daylight, -10, -260).build().perform();
+          /*  slider.dragAndDropBy(daylight, -10, -250).build().perform();
+            slider.dragAndDropBy(daylight, -10, -260).build().perform();*/
             //     slider.dragAndDropBy(daylight, 10, 350).build().perform();
             //   slider.dragAndDropBy(daylight, -20, 400).build().perform();
             Thread.sleep(5000);

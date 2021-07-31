@@ -1,7 +1,6 @@
 package magicleapTesting;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
@@ -50,7 +49,7 @@ public class ResolutionTest {
             ResolutionTotal = ResolutionStop - ResolutionStart;
             System.out.println("Total time took for resolution" + "  " + ResolutionTotal / 1000f + "Sec.");
           //  ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-            ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
+         //   ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
 
 
             //}

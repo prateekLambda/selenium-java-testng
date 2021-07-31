@@ -25,27 +25,22 @@ public class VideoUpload {
             Thread.sleep(1000);
             JavascriptExecutor scrollup = (JavascriptExecutor) driver;
             scrollup.executeScript("window.scrollBy(0,-5000)");
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
+
             Thread.sleep(5000);
             WebElement Videos = driver.findElement(By.cssSelector("#header > div > nav > ul > li:nth-child(3) > a"));
-            System.out.println("Before Video Click");
 
             Videos.click();
-            System.out.println("Video Clicked");
             driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
             scroll.executeScript("window.scrollBy(0,5000)");
             Thread.sleep(2000);
             scrollup.executeScript("window.scrollBy(0,-5000)");
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
+
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             driver.findElement(By.id("masthead-search__input")).sendKeys("Bill Gates");
 
 
             //   screen.Screenshot(driver, status);
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
+
 
             driver.findElement(By.className("masthead-search__submit")).click();
 
@@ -54,8 +49,7 @@ public class VideoUpload {
             scroll.executeScript("window.scrollBy(0,5000)");
             Thread.sleep(2000);
             scrollup.executeScript("window.scrollBy(0,-5000)");
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
+
 
 
             WebElement News = driver.findElement(By.cssSelector("#header > div > nav > ul > li:nth-child(1) > a"));
@@ -64,37 +58,28 @@ public class VideoUpload {
             scroll.executeScript("window.scrollBy(0,5000)");
             Thread.sleep(2000);
             scrollup.executeScript("window.scrollBy(0,-5000)");
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
             driver.findElement(By.id("masthead-search__input")).sendKeys("Donald Trump");
             driver.findElement(By.className("masthead-search__submit")).click();
             // screen.Screenshot(driver, status);
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
 
             WebElement WatchTimz = driver.findElement(By.cssSelector("#nav-showtimes > a"));
             WatchTimz.click();
             scroll.executeScript("window.scrollBy(0,5000)");
             Thread.sleep(2000);
             scrollup.executeScript("window.scrollBy(0,-5000)");
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
 
             WebElement photos = driver.findElement(By.cssSelector("#header > div > nav > ul > li:nth-child(4) > a"));
             photos.click();
             scroll.executeScript("window.scrollBy(0,5000)");
             Thread.sleep(2000);
             scrollup.executeScript("window.scrollBy(0,-5000)");
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
+
             driver.manage().timeouts().implicitlyWait(60, TimeUnit.SECONDS);
 
             driver.findElement(By.id("masthead-search__input")).sendKeys("Kanye West");
             //screen.Screenshot(driver, status);
             driver.findElement(By.className("masthead-search__submit")).click();
-            System.out.println(driver.getTitle());
-            System.out.println(driver.getCurrentUrl());
 
         } catch (Exception v) {
             System.out.println(v);

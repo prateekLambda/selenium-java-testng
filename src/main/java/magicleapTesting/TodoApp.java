@@ -21,7 +21,7 @@ public class TodoApp {
 
                     //   Actions action = new Actions(driver);
 
-            System.out.println(driver.getTitle());
+           // System.out.println(driver.getTitle());
             driver.get("https://lambdatest.github.io/sample-todo-app/");
             WebDriverWait wait = new WebDriverWait(driver, 30);
             WebElement firstItem;

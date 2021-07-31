@@ -6,6 +6,7 @@ magicleapTesting\DownloadTest.class
 magicleapTesting\GoogleSpace.class
 magicleapTesting\IpConfig.class
 magicleapTesting\Random.class
+magicleapTesting\LambdaTutrial.class
 magicleapTesting\JcPennyTestCase.class
 magicleapTesting\TakeScreenShot.class
 magicleapTesting\FakeMediaTest.class
@@ -13,6 +14,7 @@ magicleapTesting\Mark.class
 magicleapTesting\NetSpeed.class
 magicleapTesting\UserTest.class
 magicleapTesting\StreamTest.class
+magicleapTesting\DesignPlane.class
 magicleapTesting\GeolocationTest.class
 magicleapTesting\uploadTest.class
 magicleapTesting\VideoUpload.class

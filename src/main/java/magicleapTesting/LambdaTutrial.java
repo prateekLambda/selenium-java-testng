@@ -4,11 +4,14 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.LocalFileDetector;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.io.File;
 
 public class LambdaTutrial {
     public void Lambdacert(RemoteWebDriver driver, SessionId session) {
@@ -36,13 +39,17 @@ public class LambdaTutrial {
             hold.dragAndDropBy(buttondrag, 49, -6).build().perform();
             hold.dragAndDropBy(buttondrag, 109, -6).build().perform();
             hold.dragAndDropBy(buttondrag, 169, -6).build().perform();
-            hold.dragAndDropBy(buttondrag, 469, -6).build().perform();
+            //hold.dragAndDropBy(buttondrag, 469, -6).build().perform();
             // hold.dragAndDropBy(buttondrag, 589, -6).build().perform();
 
             driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[4]/div[3]/textarea")).sendKeys("Hi This is Prateek Support Team is the best. Whatever it takes");
             JavascriptExecutor jse = (JavascriptExecutor) driver;
             jse.executeScript("window.scrollBy(0,350)");
-//            driver.findElement(By.cssSelector("#file")).sendKeys("5mb.jpg");
+            driver.setFileDetector(new LocalFileDetector());
+            File file = new File("src/main/resources/5mb.jpg");
+
+            WebElement upload = driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[4]/div[3]/div/form/input"));
+            upload.sendKeys(file.getAbsolutePath());
         } catch (Exception t) {
             System.out.println(t);
             System.out.println(t + "    " + " SessionID --->" + "  " + session);
