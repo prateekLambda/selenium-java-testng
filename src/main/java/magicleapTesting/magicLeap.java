@@ -89,7 +89,7 @@ public class magicLeap {
             for (int j = 0; j < 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB.jpg", "2mb.jpg", "real time.png", "15mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "My15mb2.jpg", "My15mb3.jpg", "My15mb3.jpg"};
-                    String region = "us";
+                    String region = "eu";
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
                     //   capabilities.setCapability("version", "latest");
