@@ -1430,7 +1430,7 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
-    <!--
+
                             <test name="105">
                                 <parameter name="browser" value="Edge"/>
                                 <parameter name="version" value="16.0"/>
@@ -1573,5 +1573,5 @@
                                 </classes>
                             </test>
 
-        -->
+
 </suite>

@@ -89,7 +89,7 @@ public class magicLeap {
             for (int j = 0; j < 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB.jpg", "2mb.jpg", "real time.png", "15mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "My15mb2.jpg", "My15mb3.jpg", "My15mb3.jpg"};
-                    String region = "eu";
+                    String region = "us";
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
                     //   capabilities.setCapability("version", "latest");
@@ -98,11 +98,11 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", formatter.format(date) + "  " + "  " + region);
                     capabilities.setCapability("name", this.TestName);
-                   // capabilities.setCapability("lambda:userFiles", file);
+                    capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
                     capabilities.setCapability("visual", false);
-                 //   capabilities.setCapability("selenium_version", "3.141.59");
+                    capabilities.setCapability("selenium_version", "3.141.59");
                     capabilities.setCapability("region", region);
                     capabilities.setCapability("idleTimeout", "600");
 
