@@ -19,9 +19,9 @@ import java.util.TimeZone;
 public class magicLeap {
 
     public String username = "prateeks";
-    public String accesskey = "c5nvx3MGUzs8Lzv8NZVKbNiOeQaElnMtDp3nZEbwwhKc9NV8Qd";
+    public String accesskey = "bc6ytMB3dajkj3cChXJcXl8qhTERlBD1Nc4ACCIa8g5MlOtZfm";
     public RemoteWebDriver driver;
-    public String gridURL = "preprod-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
+    public String gridURL = "dark-1-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
     //https://dark-2-hub.lambdatest.com/wd/hub/status
     String status;
     String ResolutionValue;
@@ -89,7 +89,7 @@ public class magicLeap {
             for (int j = 0; j < 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB.jpg", "2mb.jpg", "real time.png", "15mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "My15mb2.jpg", "My15mb3.jpg", "My15mb3.jpg"};
-                    String region = "eu";
+                    String region = "us";
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
                     //   capabilities.setCapability("version", "latest");
@@ -98,12 +98,12 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", formatter.format(date) + "  " + "  " + region);
                     capabilities.setCapability("name", this.TestName);
-                //    capabilities.setCapability("lambda:userFiles", file);
+                    capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
                     capabilities.setCapability("visual", false);
                     capabilities.setCapability("selenium_version", "3.141.59");
-                  //  capabilities.setCapability("region", region);
+                    capabilities.setCapability("region", region);
                     capabilities.setCapability("idleTimeout", "600");
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
