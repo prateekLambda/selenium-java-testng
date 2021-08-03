@@ -746,7 +746,7 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
-<!--
+
     <test name="51">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="38.0"/>
@@ -1572,5 +1572,5 @@
         </classes>
     </test>
 
--->
+
 </suite>
