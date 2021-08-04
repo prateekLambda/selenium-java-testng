@@ -201,13 +201,13 @@ public class magicLeap {
             TodoAppTestObject.TodoAppTest(driver, status, session);*/
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
-           /* ResolutionTest ResolutionTestObject = new ResolutionTest();
+            ResolutionTest ResolutionTestObject = new ResolutionTest();
 
-            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);*/
-        /*    GoogleSpace space = new GoogleSpace();
+            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
+            GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);*/
+            SeleniumTest.LongCase(driver, session);
            /* VideoUpload test = new VideoUpload();
             test.vidupload(driver);
             GeolocationTest geo = new GeolocationTest();
