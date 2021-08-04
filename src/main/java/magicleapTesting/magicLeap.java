@@ -88,15 +88,15 @@ public class magicLeap {
         for (int i = 0; i < 100; i++) {
             for (int j = 0; j < 10; j++) {
                 try {
-                    String[] file = {"5mb.jpg", "10MB.jpg", "2mb.jpg", "real time.png", "15mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "My15mb2.jpg", "My15mb3.jpg", "My15mb3.jpg"};
-                    String region = "us";
+                    String[] file = {"5mb.jpg", "My15mb2.jpg", "My15mb3.jpg", "My15mb3.jpg"};
+                    String region = "eu";
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", formatter.format(date) + "  " + "  " + region);
+                    capabilities.setCapability("build", formatter.format(date) + "  " + "Dark hub with 50MB" + "  " + region);
                     capabilities.setCapability("name", this.TestName);
                     capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
@@ -105,6 +105,7 @@ public class magicLeap {
                     capabilities.setCapability("selenium_version", "3.141.59");
                     capabilities.setCapability("region", region);
                     capabilities.setCapability("idleTimeout", "600");
+
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
