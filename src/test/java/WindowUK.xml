@@ -534,7 +534,7 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
-    <test name="35">
+    <test name="Break-point">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="81.0"/>
         <parameter name="platform" value="win8.1"/>
