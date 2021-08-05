@@ -89,14 +89,14 @@ public class magicLeap {
             for (int j = 0; j < 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
-                    String region = "eu";
+                    String region = "us";
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", formatter.format(date) + "  " + "prod 105MB" + "  " + region);
+                    capabilities.setCapability("build", formatter.format(date) + "  " + "" + "  " + region);
                     capabilities.setCapability("name", this.TestName);
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
