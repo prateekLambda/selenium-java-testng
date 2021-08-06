@@ -2,6 +2,7 @@ package magicleapTesting;
 
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
@@ -9,6 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -18,8 +20,8 @@ import java.util.TimeZone;
 
 public class magicLeap {
 
-    public String username = "prateeks";
-    public String accesskey = "c5nvx3MGUzs8Lzv8NZVKbNiOeQaElnMtDp3nZEbwwhKc9NV8Qd";
+    public String username = System.getProperty("LT_USERNAME");
+    public String accesskey = System.getProperty("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
     public String gridURL = "preprod-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
     //https://dark-2-hub.lambdatest.com/wd/hub/status
@@ -66,12 +68,6 @@ public class magicLeap {
                 TestName = BrowserValue;
                 if (PlatformValue != null) {
                     TestName = BrowserValue + Space + PlatformValue;
-                    if (versionValue != null) {
-                        TestName = BrowserValue + Space + PlatformValue + Space + versionValue;
-                        if (FixedIpValue != null)
-                            TestName = BrowserValue + Space + PlatformValue + Space + versionValue + Space + FixedIpValue;
-
-                    }
                 }
             }
 
@@ -85,7 +81,7 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 6; i++) {
             for (int j = 0; j < 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
@@ -96,15 +92,21 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", formatter.format(date) + "  " + "" + "  " + region);
+                    capabilities.setCapability("build", formatter.format(date) + "Test RUN");
                     capabilities.setCapability("name", this.TestName);
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
                     capabilities.setCapability("visual", false);
-                    capabilities.setCapability("selenium_version", "3.141.59");
-                    capabilities.setCapability("region", region);
+
+                    //capabilities.setCapability("region", region);
                     capabilities.setCapability("idleTimeout", "600");
+                    if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
+                        ChromeOptions options = new ChromeOptions();
+                        options.addExtensions(new File("Extensions/System.crx"));
+                        capabilities.setCapability("selenium_version", "3.141.59");
+                        capabilities.setCapability("LT:Options", options);
+                    }
                     //  capabilities.setCapability("queueTimeout", "900");
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
@@ -198,16 +200,15 @@ public class magicLeap {
 
             SuiteStart = System.currentTimeMillis();
 
-           /* TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status, session);*/
+            TodoApp TodoAppTestObject = new TodoApp();
+            TodoAppTestObject.TodoAppTest(driver, status, session);
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
-
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
-          /*  GoogleSpace space = new GoogleSpace();
+            GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
-            TestCase SeleniumTest = new TestCase();
+          /*  TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);*/
            /* VideoUpload test = new VideoUpload();
             test.vidupload(driver);
@@ -227,9 +228,10 @@ public class magicLeap {
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
             System.out.println("=======================TestStop++++++++++++++" + session + "++++++++++++++++TestStop==============");
-
+            status = "passed";
         } catch (Exception e) {
             System.out.println(e + "    " + " SessionID --->" + "  " + session);
+            status = "failed";
         }
     }
 

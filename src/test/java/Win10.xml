@@ -4,7 +4,7 @@
 
 
     <test name="1">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="chrome"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.4.230"/>
@@ -38,7 +38,7 @@
 
 
     <test name="4">
-        <parameter name="browser" value="MicrosoftEdge"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.4.234"/>
