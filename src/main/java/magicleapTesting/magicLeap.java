@@ -92,7 +92,7 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", formatter.format(date) + "Test RUN");
+                    capabilities.setCapability("build", formatter.format(date) + "Benchmark hit 1");
                     capabilities.setCapability("name", this.TestName);
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
