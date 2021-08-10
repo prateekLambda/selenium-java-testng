@@ -23,10 +23,10 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Random {
-    public String username = System.getenv("LT_USERNAME");
-    public String accesskey = System.getenv("LT_ACCESS_KEY");
+    public String username = "akshatr";
+    public String accesskey = "RH5Gc87Nh8kb3CS5Ur98zTafHS22GWDwNdnDoWdBBdOguN3VOh";
     public RemoteWebDriver driver;
-    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    public String gridURL = "@stage-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -47,6 +47,7 @@ public class Random {
     DateTimeFormatter dtf;
     LocalDateTime now;
     String[] VersionValue = {"14.2", "14.1", "14.3", "14.4"};
+    String[] AndroidVersion = {"9", "10", "11"};
     String iOSVersion;
 
     @org.testng.annotations.Parameters(value = {"browser", "platformVersion", "platform", "fixedIp", "deviceName"})
@@ -71,8 +72,9 @@ public class Random {
     public void setUp() throws Exception {
         //  for (int i = 0; i < 100; i++) {
         if (platformValueDevice.matches("Android")) {
-
-            //  double version = 13.2;
+            for (int k = 0; k < 100; k++) {
+                for (int io = 0; io < AndroidVersion.length; io++) {
+                    //  double version = 13.2;
 
             /*capability.setCapability("os_version", "8.0");
             capability.setCapability("device", "Samsung Galaxy S9");
@@ -82,62 +84,63 @@ public class Random {
             capability.addArguments("--disable-extensions");
             capability.addArguments("--disable-popup-blocking");
             capability.setExperimentalOption("prefs", prefs);*/
-            Map<String, Object> prefs = new HashMap<String, Object>();
-            prefs.put("credentials_enable_service", true);
-            ChromeOptions capability = new ChromeOptions();
-            capability.setCapability("platformVersion", platformVersionValue);
-            capability.setCapability("platform", this.platformValueDevice); // If this cap isn't specified, it will just get the any available one
-            capability.setCapability("name", this.platformValueDevice + "   " + this.deviceNameValue + "  " + this.platformVersionValue);
-            capability.setCapability("build", "Android From local system Sanity" + dtf.format(now) + " " + this.platformValueDevice);
-            capability.setCapability("deviceName", this.deviceNameValue);
-            capability.setCapability("network", true);
-            capability.setCapability("console", true);
-            capability.setCapability("visual", true);
-            capability.setCapability("visual", true);
-            capability.setCapability("platformName", "ANY");
-            //capability.setCapability("tunnel", true);
+                    Map<String, Object> prefs = new HashMap<String, Object>();
+                    prefs.put("credentials_enable_service", true);
+                    ChromeOptions capability = new ChromeOptions();
+                    capability.setCapability("platformVersion", AndroidVersion);
+                    capability.setCapability("platform", this.platformValueDevice); // If this cap isn't specified, it will just get the any available one
+                    capability.setCapability("name", this.platformValueDevice + "   " + this.deviceNameValue + "  " + this.platformVersionValue);
+                    capability.setCapability("build", " AKSHat Mobile Testing LVMS Test-1" + dtf.format(now) + " " + this.platformValueDevice);
+                    capability.setCapability("deviceName", this.deviceNameValue);
+                    capability.setCapability("network", true);
+                    capability.setCapability("console", true);
+                    capability.setCapability("visual", true);
 
-            // capability.addArguments("--ignore-certificate-errors");
-            //    capability.setCapability("isRealMobile", true);
-            //   capability.setCapability("region", "eu");
-            //   capability.setCapability("appiumVersion", "1.5.3");
+                    //capability.setCapability("platformName", "ANY");
+                    //capability.setCapability("tunnel", true);
+
+                    // capability.addArguments("--ignore-certificate-errors");
+                    //    capability.setCapability("isRealMobile", true);
+                    //   capability.setCapability("region", "eu");
+                    //   capability.setCapability("appiumVersion", "1.5.3");
             /* capability.setCapability("fixedIP", "23.105.12.48");
             capability.setCapability("fixedPort", "8000");*/
 
-            // capability.setCapability("autoWebview", true);
+                    // capability.setCapability("autoWebview", true);
 
-            // capability.setCapability("isRealMobile", true);
-            //  capability.setCapability("tunnel", true);
-            //capability.setCapability("tunnelName", "73eea753-f3a1-4f96-9032-a875c0f37cb8");
+                    // capability.setCapability("isRealMobile", true);
+                    //  capability.setCapability("tunnel", true);
+                    //capability.setCapability("tunnelName", "73eea753-f3a1-4f96-9032-a875c0f37cb8");
 
-            try {
-                StopWatch driverStart = new StopWatch();
-                driverStart.start();
-                String url = "http://" + username + ":" + accesskey + gridURL;
-                System.out.println(url);
-                driver = new RemoteWebDriver(new URL(url), capability);
+                    try {
+                        StopWatch driverStart = new StopWatch();
+                        driverStart.start();
+                        String url = "http://" + username + ":" + accesskey + gridURL;
+                        System.out.println(url);
+                        driver = new RemoteWebDriver(new URL(url), capability);
 
-                //  sessionid = driver.getSessionId();
+                        //  sessionid = driver.getSessionId();
 
-                driverStart.stop();
-                float timeElapsed = driverStart.getTime() / 1000f;
-                System.out.println("Driver Setup time in Seconds " + "  " + timeElapsed + "Sec." + "  " + this.deviceNameValue + "  " + this.fixedIpValue);
-                MessageDigest m = MessageDigest.getInstance("MD5");
-                String s = username + ":" + accesskey;
-                m.update(s.getBytes(), 0, s.length());
-                System.out.println("MD5: " + new BigInteger(1, m.digest()).toString(16));
-                System.out.println(driver.getSessionId());
-                DesktopScript();
-                tearDown();
+                        driverStart.stop();
+                        float timeElapsed = driverStart.getTime() / 1000f;
+                        System.out.println("Driver Setup time in Seconds " + "  " + timeElapsed + "Sec." + "  " + this.deviceNameValue + "  " + this.fixedIpValue);
+                        MessageDigest m = MessageDigest.getInstance("MD5");
+                        String s = username + ":" + accesskey;
+                        m.update(s.getBytes(), 0, s.length());
+                        System.out.println("MD5: " + new BigInteger(1, m.digest()).toString(16));
+                        System.out.println(driver.getSessionId());
+                        DesktopScript();
+                        tearDown();
 
-            } catch (MalformedURLException e) {
-                System.out.println("Invalid grid URL");
-                System.out.println("Test null pointer exception");
-            } catch (Exception e) {
-                System.out.println(e.getMessage());
-                System.out.println("Test null pointer exception");
+                    } catch (MalformedURLException e) {
+                        System.out.println("Invalid grid URL");
+                        System.out.println("Test null pointer exception");
+                    } catch (Exception e) {
+                        System.out.println(e.getMessage());
+                        System.out.println("Test null pointer exception");
+                    }
+                }
             }
-
         } else {
             for (int k = 0; k < 100; k++) {
                 for (int io = 0; io < VersionValue.length; io++) {
@@ -148,14 +151,14 @@ public class Random {
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("platformVersion", iOSVersion);
                     capabilities.setCapability("platform", this.platformValueDevice); // If this cap isn't specified, it will just get the any available one
-                    capabilities.setCapability("name", this.platformValueDevice + "   " + this.deviceNameValue + "  " + this.platformVersionValue+ " " + this.fixedIpValue);
+                    capabilities.setCapability("name", this.platformValueDevice + "   " + this.deviceNameValue + "  " + this.platformVersionValue + " " + this.fixedIpValue);
                     capabilities.setCapability("build", "iOS From local system Sanity" + dtf.format(now) + " " + this.platformValueDevice);
                     capabilities.setCapability("deviceName", this.deviceNameValue);
                     capabilities.setCapability("network", true);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("visual", true);
 
-                   // capabilities.setCapability("fixedIP", this.fixedIpValue);
+                    // capabilities.setCapability("fixedIP", this.fixedIpValue);
                     // capabilities.setCapability("tunnel", true);
                     // capabilities.setCapability("appiumVersion", "1.19.1");
                     //capabilities.setCapability("isRealMobile", true);
@@ -224,13 +227,13 @@ public class Random {
 //            Thread.sleep(5000);
 //            System.out.println(driver.getTitle());
 
-            BadSslTest bad = new BadSslTest();
+          /*  BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status);
             TakeScreenShot screen = new TakeScreenShot();
             screen.Screenshot(driver, status);
 
             StreamTest stream = new StreamTest();
-            stream.TestStream(driver, status);
+            stream.TestStream(driver, status);*/
 //
 //
 

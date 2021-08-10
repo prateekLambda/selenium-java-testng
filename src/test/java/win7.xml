@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="70" name="DesktopBrowsers" parallel="tests">
+<suite thread-count="200" name="DesktopBrowsers" parallel="tests">
 
 
     <test name="1">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="latest"/>
-        <parameter name="platform" value="win7"/>
+        <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.4.230"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
@@ -23,7 +23,7 @@
     <test name="2">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="11.0"/>
-        <parameter name="platform" value="win7"/>
+        <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.4.231"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
@@ -36,7 +36,7 @@
         </classes>
     </test>
 
-
+<!--
     <test name="4">
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="latest"/>
@@ -1572,6 +1572,6 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
-
+-->
 
 </suite>

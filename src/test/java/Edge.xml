@@ -56,7 +56,7 @@
     <test name="5">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="11.0"/>
-        <parameter name="platform" value="win7"/>
+        <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.6.201"/>
         <parameter name="resolution" value="1440x900"/>
         <parameter name="timezone" value="UTC+04:00"/>

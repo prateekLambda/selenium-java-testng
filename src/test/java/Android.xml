@@ -39,7 +39,7 @@
             <class name="magicleapTesting.Random"/>
         </classes>
     </test>
-    <!--
+
         <test name="magicleapTesting.Random 5">
             <parameter name="browser" value="Chrome"/>
             <parameter name="platformVersion" value="10"/>
@@ -317,6 +317,7 @@
                 <class name="magicleapTesting.Random"/>
             </classes>
         </test>
+    <!--
         <test name="101">
             <parameter name="browser" value="Chrome"/>
             <parameter name="platformVersion" value="9"/>
@@ -473,6 +474,6 @@
                 <class name="magicleapTesting.Random"/>
             </classes>
         </test>
+-->
 
-    -->
 </suite>
