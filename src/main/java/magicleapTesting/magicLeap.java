@@ -92,7 +92,7 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", formatter.format(date) + "LVMS-Test-51-Test--akshat parallel");
+                    capabilities.setCapability("build", formatter.format(date) + System.getProperty("BUILD_NAME"));
                     capabilities.setCapability("name", this.TestName);
                     //  capabilities.setCapability("resolution", "1280x800");
                     //capabilities.setCapability("lambda:userFiles", file);
