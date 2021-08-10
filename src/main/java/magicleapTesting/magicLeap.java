@@ -99,7 +99,7 @@ public class magicLeap {
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
                     capabilities.setCapability("visual", false);
-                    capabilities.setCapability("fixedIP", "213292378");
+                    //capabilities.setCapability("fixedIP", "213292378");
                     //   capabilities.setCapability("fixedIP", "9832721.912839.0298738921.098");
 
                     //capabilities.setCapability("region", region);
@@ -209,14 +209,14 @@ public class magicLeap {
             TodoAppTestObject.TodoAppTest(driver, status, session);
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
-           /* ResolutionTest ResolutionTestObject = new ResolutionTest();
+            ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal, session);*/
-          /*  TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);*/
+            geo.Geolocation(driver, status, GeolocationTotal, session);
+            TestCase SeleniumTest = new TestCase();
+            SeleniumTest.LongCase(driver, session);
            /* VideoUpload test = new VideoUpload();
             test.vidupload(driver);
             GeolocationTest geo = new GeolocationTest();
