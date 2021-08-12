@@ -218,8 +218,7 @@ public class magicLeap {
             SeleniumTest.LongCase(driver, session);
             VideoUpload test = new VideoUpload();
             test.vidupload(driver);
-            GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal, session);
+
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
