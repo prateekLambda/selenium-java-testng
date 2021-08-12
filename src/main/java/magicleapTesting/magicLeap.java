@@ -81,8 +81,8 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 6; i++) {
-            for (int j = 0; j < 10; j++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 5; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
                     String region = "us";
@@ -92,16 +92,18 @@ public class magicLeap {
                     capabilities.setCapability("version", "latest" + "-" + j);
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", formatter.format(date) + "Benchmark hit 1");
+                    capabilities.setCapability("build", formatter.format(date) + System.getProperty("BUILD_NAME"));
                     capabilities.setCapability("name", this.TestName);
-                    capabilities.setCapability("resolution", "1280x800");
+                    //  capabilities.setCapability("resolution", "1280x800");
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
                     capabilities.setCapability("visual", false);
+                    //capabilities.setCapability("fixedIP", "213292378");
+                    //   capabilities.setCapability("fixedIP", "9832721.912839.0298738921.098");
 
                     //capabilities.setCapability("region", region);
-                    capabilities.setCapability("idleTimeout", "600");
+                    //  capabilities.setCapability("idleTimeout", "600");
                     if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
                         ChromeOptions options = new ChromeOptions();
                         options.addExtensions(new File("Extensions/System.crx"));
@@ -161,9 +163,11 @@ public class magicLeap {
                     //hub = "http://localhost:8080/wd/hub";
                     System.out.println(hub);
                     System.out.println("Start Time" + " " + formatter.format(date));
+
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
-
-
+/*
+                    aPiCalls con = new aPiCalls();
+                    con.concurrency();*/
                     //set timeout to 5 seconds
 
                     session = driver.getSessionId();
@@ -200,10 +204,10 @@ public class magicLeap {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
 
             SuiteStart = System.currentTimeMillis();
-
+            driver.get("https://www.google.com");
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
-            LambdaTutrial tut = new LambdaTutrial();
+            /*LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
@@ -211,8 +215,7 @@ public class magicLeap {
             space.GSpace(driver, session);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
-
-          /*  TestCase SeleniumTest = new TestCase();
+            TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);*/
            /* VideoUpload test = new VideoUpload();
             test.vidupload(driver);
