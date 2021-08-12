@@ -179,6 +179,7 @@ public class magicLeap {
                     System.out.println("Driver initiate time" + "   " + timeElapsed);
                     DesktopScript();
                     tearDown();
+                    driver.quit();
 
 
                 } catch (MalformedURLException e) {
@@ -251,7 +252,6 @@ public class magicLeap {
         if (driver != null) {
             System.out.println("=============" + session + "================");
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-            driver.quit();
 
 
         }
