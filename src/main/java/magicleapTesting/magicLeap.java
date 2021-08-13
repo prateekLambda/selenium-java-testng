@@ -102,7 +102,7 @@ public class magicLeap {
 
                     //capabilities.setCapability("region", region);
                     //  capabilities.setCapability("idleTimeout", "600");
-               /*     if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
+                 /*   if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
                         ChromeOptions options = new ChromeOptions();
                         options.addExtensions(new File("Extensions/System.crx"));
                         capabilities.setCapability("selenium_version", "3.141.59");
