@@ -79,7 +79,7 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 5; i++) {
+        for (int i = 0; i < 15; i++) {
             for (int j = 0; j < 5; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
@@ -212,12 +212,12 @@ public class magicLeap {
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
-            GeolocationTest geo = new GeolocationTest();
+           /* GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
             VideoUpload test = new VideoUpload();
-            test.vidupload(driver);
+            test.vidupload(driver);*/
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
