@@ -205,8 +205,12 @@ public class magicLeap {
             SuiteStart = System.currentTimeMillis();
             driver.get("https://www.google.com");
             driver.getTitle();
-           /* TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status, session);*/
+            Thread.sleep(2000000);
+//             remoteWebDriver.get(URL);
+            Thread.sleep(2000000);
+//             remoteWebDriver.get(URL);
+//             TodoApp TodoAppTestObject = new TodoApp();
+//             TodoAppTestObject.TodoAppTest(driver, status, session);*/
            /* LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
@@ -229,6 +233,8 @@ public class magicLeap {
             /*
             DesignPlane plane = new DesignPlane();
             plane.plane(driver,session);*/
+            Thread.sleep(2000000);
+            Thread.sleep(2000000);
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
