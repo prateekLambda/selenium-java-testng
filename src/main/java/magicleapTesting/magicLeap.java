@@ -215,10 +215,11 @@ public class magicLeap {
             space.GSpace(driver, session);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
+            GeolocationTest geo = new GeolocationTest();
+            geo.Geolocation(driver, status, GeolocationTotal, session);
           /*  VideoUpload test = new VideoUpload();
             test.vidupload(driver);*//*
-            GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal, session);*/
+           */
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
