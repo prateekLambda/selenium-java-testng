@@ -208,8 +208,8 @@ public class Random {
             startTest = System.currentTimeMillis();
             StopWatch teststarted = new StopWatch();
             teststarted.start();
-         /*   driver.get("https://www.google.com");
-            driver.getTitle();*/
+            driver.get("https://www.google.com");
+            driver.getTitle();
 //            ResolutionTest deviceRes = new ResolutionTest();
 //            deviceRes.Resolution(driver, ResolutionValue, status, ResolutionTotal, ResolutionValueCap);
            /* TunnelTest tunnel = new TunnelTest();
@@ -221,8 +221,8 @@ public class Random {
             AnroidVersion AVer = new AnroidVersion();
             AVer.AndVersion(driver, deviceNameValue, platformVersionValue);*/
 
-          /*  IpConfig ip = new IpConfig();
-            ip.IPData(driver);*/
+            IpConfig ip = new IpConfig();
+            ip.IPData(driver);
         /*    TodoApp Todo = new TodoApp();
             Todo.TodoAppTest(driver, status);*/
 
