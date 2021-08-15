@@ -205,9 +205,9 @@ public class magicLeap {
             SuiteStart = System.currentTimeMillis();
             driver.get("https://www.google.com");
             driver.getTitle();
-            Thread.sleep(2000000);
+            Thread.sleep(120000);
 //             remoteWebDriver.get(URL);
-            Thread.sleep(2000000);
+            Thread.sleep(120000);
 //             remoteWebDriver.get(URL);
 //             TodoApp TodoAppTestObject = new TodoApp();
 //             TodoAppTestObject.TodoAppTest(driver, status, session);*/
