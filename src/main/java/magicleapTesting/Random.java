@@ -221,8 +221,8 @@ public class Random {
             AnroidVersion AVer = new AnroidVersion();
             AVer.AndVersion(driver, deviceNameValue, platformVersionValue);*/
 
-            IpConfig ip = new IpConfig();
-            ip.IPData(driver);
+        /*    IpConfig ip = new IpConfig();
+            ip.IPData(driver);*/
         /*    TodoApp Todo = new TodoApp();
             Todo.TodoAppTest(driver, status);*/
 
