@@ -205,7 +205,7 @@ public class magicLeap {
             SuiteStart = System.currentTimeMillis();
             driver.get("https://www.google.com");
             driver.getTitle();
-          /*  TodoApp TodoAppTestObject = new TodoApp();
+            TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
@@ -216,7 +216,7 @@ public class magicLeap {
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
             GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal, session);*/
+            geo.Geolocation(driver, status, GeolocationTotal, session);
           /*  VideoUpload test = new VideoUpload();
             test.vidupload(driver);*//*
            */
