@@ -1,5 +1,5 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="500" name="DesktopBrowsers" parallel="tests">
+<suite thread-count="1000" name="DesktopBrowsers" parallel="tests">
 
 
     <test name='1'>

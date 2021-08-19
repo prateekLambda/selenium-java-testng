@@ -213,8 +213,8 @@ public class magicLeap {
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
-           /* TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);*/
+            TestCase SeleniumTest = new TestCase();
+            SeleniumTest.LongCase(driver, session);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
           /*  VideoUpload test = new VideoUpload();
