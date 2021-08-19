@@ -201,25 +201,26 @@ public class magicLeap {
     public void DesktopScript() {
         try {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
-
-            SuiteStart = System.currentTimeMillis();
-            driver.get("https://www.google.com");
-            driver.getTitle();
-            TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status, session);
-            LambdaTutrial tut = new LambdaTutrial();
-            tut.Lambdacert(driver, session);
-            ResolutionTest ResolutionTestObject = new ResolutionTest();
-            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
-            GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver, session);
-            TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);
+            for (int k = 0; k < 2; k++) {
+                SuiteStart = System.currentTimeMillis();
+                driver.get("https://www.google.com");
+                driver.getTitle();
+                TodoApp TodoAppTestObject = new TodoApp();
+                TodoAppTestObject.TodoAppTest(driver, status, session);
+                LambdaTutrial tut = new LambdaTutrial();
+                tut.Lambdacert(driver, session);
+                ResolutionTest ResolutionTestObject = new ResolutionTest();
+                ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
+                GoogleSpace space = new GoogleSpace();
+                space.GSpace(driver, session);
+            }
+         /*   TestCase SeleniumTest = new TestCase();
+            SeleniumTest.LongCase(driver, session);*/
            /* GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);*/
           /*  VideoUpload test = new VideoUpload();
             test.vidupload(driver);*//*
-           */
+             */
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
