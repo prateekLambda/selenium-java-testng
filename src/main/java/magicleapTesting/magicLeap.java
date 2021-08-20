@@ -21,7 +21,7 @@ public class magicLeap {
     public String username = System.getProperty("LT_USERNAME");
     public String accesskey = System.getProperty("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
-    public String gridURL = "preprod-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
+    public String gridURL = "hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
     //https://dark-2-hub.lambdatest.com/wd/hub/status
     String status;
     String ResolutionValue;
@@ -201,19 +201,25 @@ public class magicLeap {
     public void DesktopScript() {
         try {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
-            for (int k = 0; k < 2; k++) {
-                SuiteStart = System.currentTimeMillis();
-                driver.get("https://www.google.com");
-                driver.getTitle();
-                TodoApp TodoAppTestObject = new TodoApp();
+            driver.get("https://www.amazon.in/");
+            System.out.println(driver.getTitle());
+            for (int index = 0; index <= 50; index++) {
+                Thread.sleep(1000);
+            }
+            driver.get("https://www.amazon.in/");
+            System.out.println(driver.getTitle());
+            for (int index = 0; index <= 20; index++) {
+                Thread.sleep(1000);
+            }
+            /*    TodoApp TodoAppTestObject = new TodoApp();
                 TodoAppTestObject.TodoAppTest(driver, status, session);
                 LambdaTutrial tut = new LambdaTutrial();
                 tut.Lambdacert(driver, session);
                 ResolutionTest ResolutionTestObject = new ResolutionTest();
                 ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
                 GoogleSpace space = new GoogleSpace();
-                space.GSpace(driver, session);
-            }
+                space.GSpace(driver, session);*/
+
          /*   TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);*/
            /* GeolocationTest geo = new GeolocationTest();
