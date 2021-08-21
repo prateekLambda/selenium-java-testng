@@ -4205,7 +4205,7 @@
     </test>
 
     <test name='301'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4219,7 +4219,7 @@
         </classes>
     </test>
     <test name='302'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4233,7 +4233,7 @@
         </classes>
     </test>
     <test name='303'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4247,7 +4247,7 @@
         </classes>
     </test>
     <test name='304'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4261,7 +4261,7 @@
         </classes>
     </test>
     <test name='305'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4275,7 +4275,7 @@
         </classes>
     </test>
     <test name='306'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4289,7 +4289,7 @@
         </classes>
     </test>
     <test name='307'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4303,7 +4303,7 @@
         </classes>
     </test>
     <test name='308'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4317,7 +4317,7 @@
         </classes>
     </test>
     <test name='309'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4331,7 +4331,7 @@
         </classes>
     </test>
     <test name='310'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4345,7 +4345,7 @@
         </classes>
     </test>
     <test name='311'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4359,7 +4359,7 @@
         </classes>
     </test>
     <test name='312'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4373,7 +4373,7 @@
         </classes>
     </test>
     <test name='313'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4387,7 +4387,7 @@
         </classes>
     </test>
     <test name='314'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4401,7 +4401,7 @@
         </classes>
     </test>
     <test name='315'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4415,7 +4415,7 @@
         </classes>
     </test>
     <test name='316'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4429,7 +4429,7 @@
         </classes>
     </test>
     <test name='317'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4443,7 +4443,7 @@
         </classes>
     </test>
     <test name='318'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4457,7 +4457,7 @@
         </classes>
     </test>
     <test name='319'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4471,7 +4471,7 @@
         </classes>
     </test>
     <test name='320'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4485,7 +4485,7 @@
         </classes>
     </test>
     <test name='321'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4499,7 +4499,7 @@
         </classes>
     </test>
     <test name='322'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4513,7 +4513,7 @@
         </classes>
     </test>
     <test name='323'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4527,7 +4527,7 @@
         </classes>
     </test>
     <test name='324'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4541,7 +4541,7 @@
         </classes>
     </test>
     <test name='325'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4555,7 +4555,7 @@
         </classes>
     </test>
     <test name='326'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4569,7 +4569,7 @@
         </classes>
     </test>
     <test name='327'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4583,7 +4583,7 @@
         </classes>
     </test>
     <test name='328'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4597,7 +4597,7 @@
         </classes>
     </test>
     <test name='329'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4611,7 +4611,7 @@
         </classes>
     </test>
     <test name='330'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4625,7 +4625,7 @@
         </classes>
     </test>
     <test name='331'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4639,7 +4639,7 @@
         </classes>
     </test>
     <test name='332'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4653,7 +4653,7 @@
         </classes>
     </test>
     <test name='333'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4667,7 +4667,7 @@
         </classes>
     </test>
     <test name='334'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4681,7 +4681,7 @@
         </classes>
     </test>
     <test name='335'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4695,7 +4695,7 @@
         </classes>
     </test>
     <test name='336'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4709,7 +4709,7 @@
         </classes>
     </test>
     <test name='337'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4723,7 +4723,7 @@
         </classes>
     </test>
     <test name='338'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4737,7 +4737,7 @@
         </classes>
     </test>
     <test name='339'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4751,7 +4751,7 @@
         </classes>
     </test>
     <test name='340'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4765,7 +4765,7 @@
         </classes>
     </test>
     <test name='341'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4779,7 +4779,7 @@
         </classes>
     </test>
     <test name='342'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4793,7 +4793,7 @@
         </classes>
     </test>
     <test name='343'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4807,7 +4807,7 @@
         </classes>
     </test>
     <test name='344'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4821,7 +4821,7 @@
         </classes>
     </test>
     <test name='345'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4835,7 +4835,7 @@
         </classes>
     </test>
     <test name='346'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4849,7 +4849,7 @@
         </classes>
     </test>
     <test name='347'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4863,7 +4863,7 @@
         </classes>
     </test>
     <test name='348'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4877,7 +4877,7 @@
         </classes>
     </test>
     <test name='349'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
@@ -4891,7 +4891,7 @@
         </classes>
     </test>
     <test name='350'>
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>
         <parameter name="platform" value="Win10"/>
         <parameter name="fixedIp" value="10.92.181.179"/>
