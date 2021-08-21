@@ -6,9 +6,9 @@
     <test name="magicleapTesting.Random 1">
         <parameter name="browser" value="Chrome"/>
         <parameter name="platformVersion" value="11"/>
-        <parameter name="platform" value="Android"/>
+        <parameter name="platform" value="iOS"/>
         <parameter name="fixedIp" value="10.92.181.113"/>
-        <parameter name="deviceName" value="Galaxy S10"/>
+        <parameter name="deviceName" value="iPad (6th generation)"/>
         <parameter name="geoLocation" value="US"/>
         <classes>
             <class name="magicleapTesting.Random"/>
@@ -19,9 +19,9 @@
     <test name="magicleapTesting.Random 3">
         <parameter name="browser" value="chrome"/>
         <parameter name="platformVersion" value="10"/>
-        <parameter name="platform" value="Android"/>
+        <parameter name="platform" value="iOS"/>
         <parameter name="fixedIp" value="10.92.181.113"/>
-        <parameter name="deviceName" value="Google Pixel 3 XL"/>
+        <parameter name="deviceName" value="iPad (6th generation)"/>
         <parameter name="geoLocation" value="AU"/>
         <classes>
             <class name="magicleapTesting.Random"/>
