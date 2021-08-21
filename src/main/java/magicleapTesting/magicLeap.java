@@ -21,7 +21,7 @@ public class magicLeap {
     public String username = System.getProperty("LT_USERNAME");
     public String accesskey = System.getProperty("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
-    public String gridURL = "hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
+    public String gridURL = "preprod-hub.lambdatest.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
     //https://dark-2-hub.lambdatest.com/wd/hub/status
     String status;
     String ResolutionValue;
@@ -79,7 +79,7 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 38; i++) {
+        for (int i = 0; i < 10; i++) {
             for (int j = 0; j < 5; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
@@ -206,11 +206,11 @@ public class magicLeap {
             for (int index = 0; index <= 50; index++) {
                 Thread.sleep(1000);
             }
-            driver.get("https://www.amazon.in/");
+          /*  driver.get("https://www.amazon.in/");
             System.out.println(driver.getTitle());
             for (int index = 0; index <= 20; index++) {
                 Thread.sleep(1000);
-            }
+            }*/
             /*    TodoApp TodoAppTestObject = new TodoApp();
                 TodoAppTestObject.TodoAppTest(driver, status, session);
                 LambdaTutrial tut = new LambdaTutrial();
