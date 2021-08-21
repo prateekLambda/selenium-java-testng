@@ -28,7 +28,7 @@ public class Random {
     public String username = System.getProperty("LT_USERNAME");
     public String accesskey = System.getProperty("LT_ACCESS_KEY");
     public RemoteWebDriver driver;
-    public String gridURL = "@hub.lambdatest.com/wd/hub";
+    public String gridURL = "@eu-central-1-hub.lambdatest.com/wd/hub";
     String status;
     String ResolutionValue;
     long quitestoptime;
