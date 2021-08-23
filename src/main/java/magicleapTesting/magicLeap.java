@@ -203,9 +203,9 @@ public class magicLeap {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
             driver.get("https://www.amazon.in/");
             System.out.println(driver.getTitle());
-            for (int index = 0; index <= 50; index++) {
+           /* for (int index = 0; index <= 50; index++) {
                 Thread.sleep(1000);
-            }
+            }*/
           /*  driver.get("https://www.amazon.in/");
             System.out.println(driver.getTitle());
             for (int index = 0; index <= 20; index++) {
