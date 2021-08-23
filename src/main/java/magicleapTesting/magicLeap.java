@@ -91,7 +91,7 @@ public class magicLeap {
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", formatter.format(date) + System.getProperty("BUILD_NAME"));
-                    capabilities.setCapability("name", this.TestName);
+                    capabilities.setCapability("name", this.TestName + " " + i);
                     //  capabilities.setCapability("resolution", "1280x800");
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
