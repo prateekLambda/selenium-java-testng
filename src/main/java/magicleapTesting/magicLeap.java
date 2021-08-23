@@ -76,7 +76,7 @@ public class magicLeap {
     @BeforeTest
     public void setUp() throws Exception {
         System.out.println(this.TestName);
-        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH");
+        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
         for (int i = 0; i < 5; i++) {
