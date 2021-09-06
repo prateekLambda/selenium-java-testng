@@ -22,7 +22,8 @@ public class magicLeap {
     public String accesskey = System.getProperty("LT_ACCESS_KEY");
     ;
     public RemoteWebDriver driver;
-    public String gridURL = System.getProperty("GRID_URL");; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
+    public String gridURL = System.getProperty("GRID_URL");
+    ; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
     //https://dark-2-hub.lambdatest.com/wd/hub/status
     String status;
     String ResolutionValue;
@@ -203,7 +204,7 @@ public class magicLeap {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
             driver.get("https://www.amazon.in/");
             System.out.println(driver.getTitle());
-            for (int index = 0; index <= 20; index++) {
+            for (int index = 0; index <= 10; index++) {
                 Thread.sleep(1000);
             }
           /*  driver.get("https://www.amazon.in/");
@@ -211,22 +212,21 @@ public class magicLeap {
             for (int index = 0; index <= 20; index++) {
                 Thread.sleep(1000);
             }*/
-            /*    TodoApp TodoAppTestObject = new TodoApp();
-                TodoAppTestObject.TodoAppTest(driver, status, session);
-                LambdaTutrial tut = new LambdaTutrial();
-                tut.Lambdacert(driver, session);
-                ResolutionTest ResolutionTestObject = new ResolutionTest();
-                ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
-                GoogleSpace space = new GoogleSpace();
-                space.GSpace(driver, session);*/
+            TodoApp TodoAppTestObject = new TodoApp();
+            TodoAppTestObject.TodoAppTest(driver, status, session);
+            LambdaTutrial tut = new LambdaTutrial();
+            tut.Lambdacert(driver, session);
+            ResolutionTest ResolutionTestObject = new ResolutionTest();
+            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
+            GoogleSpace space = new GoogleSpace();
+            space.GSpace(driver, session);
 
-         /*   TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);*/
-           /* GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal, session);*/
-          /*  VideoUpload test = new VideoUpload();
-            test.vidupload(driver);*//*
-             */
+            TestCase SeleniumTest = new TestCase();
+            SeleniumTest.LongCase(driver, session);
+            GeolocationTest geo = new GeolocationTest();
+            geo.Geolocation(driver, status, GeolocationTotal, session);
+            VideoUpload test = new VideoUpload();
+            test.vidupload(driver);
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
