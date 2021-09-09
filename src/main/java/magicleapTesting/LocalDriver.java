@@ -28,7 +28,7 @@ public class LocalDriver {
         options.setProfile(profile);*/
         //  options.addArguments("--headless");
         // options.setExperimentalOption("prefs",prefs);
-        //  options.addExtensions(new File("E:\\extensions\\1.2.3_0.crx"));
+        //  options.addExtensions(new File("E:\\extensions\\CPU.crx"));
 
         // For use with ChromeDriver:
         WebDriver driver = new ChromeDriver();        //  System.setProperty("webdriver.gecko.driver", "E:\\drivers\\geckodriver.exe");

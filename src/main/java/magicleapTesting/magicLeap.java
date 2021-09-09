@@ -2,6 +2,7 @@ package magicleapTesting;
 
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
@@ -9,6 +10,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -20,10 +22,10 @@ public class magicLeap {
 
     public String username = System.getProperty("LT_USERNAME");
     public String accesskey = System.getProperty("LT_ACCESS_KEY");
-    ;
+
     public RemoteWebDriver driver;
     public String gridURL = System.getProperty("GRID_URL");
-    ; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
+    //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
     //https://dark-2-hub.lambdatest.com/wd/hub/status
     String status;
     String ResolutionValue;
@@ -82,7 +84,7 @@ public class magicLeap {
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
         for (int i = 0; i <= 5; i++) {
-            for (int j = 0; j <= 2; j++) {
+            for (int j = 0; j <= 3; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
                     String region = "us";
@@ -94,22 +96,23 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", formatter.format(date) + System.getProperty("BUILD_NAME"));
                     capabilities.setCapability("name", this.TestName + " ");
-                    //  capabilities.setCapability("resolution", "1280x800");
+                    capabilities.setCapability("resolution", "1280x1024");
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
-                    capabilities.setCapability("visual", false);
+                    capabilities.setCapability("visual", true);
+                    capabilities.setCapability("selenium_version", "3.141.59");
                     //capabilities.setCapability("fixedIP", "213292378");
                     //   capabilities.setCapability("fixedIP", "9832721.912839.0298738921.098");
 
                     //capabilities.setCapability("region", region);
                     //  capabilities.setCapability("idleTimeout", "600");
-                 /*   if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
+                    if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
                         ChromeOptions options = new ChromeOptions();
-                        options.addExtensions(new File("Extensions/System.crx"));
-                        capabilities.setCapability("selenium_version", "3.141.59");
+                        options.addExtensions(new File("Extensions/CPU.crx"));
+
                         capabilities.setCapability("LT:Options", options);
-                    }*/
+                    }
                     //  capabilities.setCapability("queueTimeout", "900");
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
@@ -202,11 +205,11 @@ public class magicLeap {
     public void DesktopScript() {
         try {
             System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
-            driver.get("https://www.amazon.in/");
-            System.out.println(driver.getTitle());
-            for (int index = 0; index <= 10; index++) {
-                Thread.sleep(1000);
-            }
+//            driver.get("https://www.amazon.in/");
+//            System.out.println(driver.getTitle());
+//            for (int index = 0; index <= 10; index++) {
+//                Thread.sleep(1000);
+//            }
           /*  driver.get("https://www.amazon.in/");
             System.out.println(driver.getTitle());
             for (int index = 0; index <= 20; index++) {
@@ -214,19 +217,40 @@ public class magicLeap {
             }*/
             TodoApp TodoAppTestObject = new TodoApp();
             TodoAppTestObject.TodoAppTest(driver, status, session);
+            TakeScreenShot shot = new TakeScreenShot();
+            shot.Screenshot(driver, status);
+            CpuExten exten = new CpuExten();
+            exten.extension(driver, status, this.BrowserValue);
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
+            shot.Screenshot(driver, status);
+            exten.extension(driver, status, this.BrowserValue);
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
+            shot.Screenshot(driver, status);
+            exten.extension(driver, status, this.BrowserValue);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
-
+            shot.Screenshot(driver, status);
+            exten.extension(driver, status, this.BrowserValue);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
+            shot.Screenshot(driver, status);
+            exten.extension(driver, status, this.BrowserValue);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
+            shot.Screenshot(driver, status);
+            exten.extension(driver, status, this.BrowserValue);
             VideoUpload test = new VideoUpload();
             test.vidupload(driver);
+            exten.extension(driver, status, this.BrowserValue);
+            shot.Screenshot(driver, status);
+            exten.extension(driver, status, this.BrowserValue);
+            BadSslTest bad = new BadSslTest();
+            bad.badSsl(driver, status);
+            shot.Screenshot(driver, status);
+            exten.extension(driver, status, this.BrowserValue);
+
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
             TestCase SeleniumTest = new TestCase();
@@ -257,6 +281,7 @@ public class magicLeap {
 
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
+            new aPiCalls(username, accesskey).getSessionDetails(session.toString());
             System.out.println("=============" + session + "================");
             ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             //    driver.quit();
