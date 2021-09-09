@@ -5,6 +5,7 @@ import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
@@ -13,7 +14,6 @@ public class UserTest {
 
     public void TestCase(RemoteWebDriver driver, String status) {
         try {
-
             driver.get("https://www.bikester.es/");
             //   ((JavascriptExecutor) driver).executeScript("lambda-name=" + getClass().getName());
             driver.manage().addCookie(new Cookie("httpOnly", "false"));
@@ -46,7 +46,7 @@ public class UserTest {
             jse.executeScript("document.querySelector(\"#ae29b201919598a5ca8315ae1a > div > div > a\").scrollIntoView();");
 
             for (int Display = 1; Display <= 13; Display++) {
-                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
             Thread.sleep(5000);
@@ -58,7 +58,7 @@ public class UserTest {
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(3) > a\").click();");
             for (int Display = 1; Display <= 13; Display++) {
-                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
             Thread.sleep(5000);
@@ -71,7 +71,7 @@ public class UserTest {
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(5) > a\").click();");
             for (int Display = 1; Display <= 13; Display++) {
-                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
             Thread.sleep(5000);
@@ -83,7 +83,7 @@ public class UserTest {
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(2) > a\").click();");
             for (int Display = 1; Display <= 13; Display++) {
-                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
             Thread.sleep(5000);
@@ -94,11 +94,39 @@ public class UserTest {
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(7) > a\").scrollIntoView();");
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(7) > a\").click();");
+            Thread.sleep(5000);
+
             for (int Display = 1; Display <= 13; Display++) {
-                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(1) > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(1) > a\").click();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").click();");
+            Thread.sleep(5000);
+            for (int Display = 1; Display <= 13; Display++) {
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
+            }
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").click();");
+            Thread.sleep(5000);
+            for (int Display = 1; Display <= 13; Display++) {
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
+
+            }
+            jse.executeScript("window.scrollBy(0,200)");
+            Thread.sleep(5000);
+            for (int Display = 13; Display <= 26; Display++) {
+                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
+
+            }
         } catch (Exception T) {
             System.out.println(T);
             status = "failed";
