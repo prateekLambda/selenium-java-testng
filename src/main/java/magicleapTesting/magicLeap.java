@@ -1,7 +1,6 @@
 package magicleapTesting;
 
 import org.apache.commons.lang3.time.StopWatch;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -219,11 +218,13 @@ public class magicLeap {
             user.TestCase(driver, status);
             TakeScreenShot shot = new TakeScreenShot();
             shot.Screenshot(driver, status);
+            LambdaTutrial tut = new LambdaTutrial();
+            tut.Lambdacert(driver, session);
+            shot.Screenshot(driver, status);
+
 
             //     exten.extension(driver, status, this.BrowserValue);
             /*
-             *//* LambdaTutrial tut = new LambdaTutrial();
-                tut.Lambdacert(driver, session);*//*
                 shot.Screenshot(driver, status);*/
             //   exten.extension(driver, status, this.BrowserValue);
 
@@ -283,9 +284,9 @@ public class magicLeap {
 
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
-            new aPiCalls(username, accesskey).getSessionDetails(session.toString());
+            //  new aPiCalls(username, accesskey).getSessionDetails(session.toString());
             System.out.println("=============" + session + "================");
-            ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            //((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             //    driver.quit();
 
         }
