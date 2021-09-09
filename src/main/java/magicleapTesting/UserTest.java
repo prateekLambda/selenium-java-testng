@@ -71,7 +71,7 @@ public class UserTest {
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(5) > a\").click();");
             Thread.sleep(5000);
-            for (int Display = 1; Display <= 13; Display++) {
+            for (int Display = 1; Display <= 9; Display++) {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
