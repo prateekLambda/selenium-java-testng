@@ -21,7 +21,7 @@
 
 
     <test name="2">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="11.0"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.4.231"/>
@@ -38,7 +38,7 @@
 
 
     <test name="4">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.4.234"/>
@@ -70,7 +70,7 @@
     </test>
 
     <test name="6">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="74.0"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.6.203"/>
@@ -87,7 +87,7 @@
 
 
     <test name="7">
-        <parameter name="browser" value="MicrosoftEdge"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="72.0"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.82.6.205"/>
@@ -103,7 +103,7 @@
 
 
     <test name="8">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="11.0"/>
         <parameter name="platform" value="macos big sur"/>
         <parameter name="fixedIp" value="10.243.32.235"/>
@@ -118,7 +118,7 @@
     </test>
 
     <test name="9">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="71.0"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.243.32.236"/>
@@ -134,7 +134,7 @@
 
 
     <test name="10">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="65.0"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.243.32.64"/>
@@ -149,7 +149,7 @@
     </test>
 
     <test name="11">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="65.0"/>
         <parameter name="platform" value="win10"/>
         <parameter name="fixedIp" value="10.243.32.62"/>

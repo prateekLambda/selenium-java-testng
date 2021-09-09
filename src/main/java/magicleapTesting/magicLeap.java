@@ -96,7 +96,7 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", formatter.format(date) + System.getProperty("BUILD_NAME"));
                     capabilities.setCapability("name", this.TestName + " ");
-                  //  capabilities.setCapability("resolution", "1280x1024");
+                    //  capabilities.setCapability("resolution", "1280x1024");
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
@@ -215,20 +215,18 @@ public class magicLeap {
             for (int index = 0; index <= 20; index++) {
                 Thread.sleep(1000);
             }*/
-            for (int l = 0; l <= 5; l++) {
-                TodoApp TodoAppTestObject = new TodoApp();
-                TodoAppTestObject.TodoAppTest(driver, status, session);
-                TakeScreenShot shot = new TakeScreenShot();
-                shot.Screenshot(driver, status);
-                CpuExten exten = new CpuExten();
-                //     exten.extension(driver, status, this.BrowserValue);
-          /*      UserTest user = new UserTest();
-                user.TestCase(driver, status);
-               *//* LambdaTutrial tut = new LambdaTutrial();
+            UserTest user = new UserTest();
+            user.TestCase(driver, status);
+            TakeScreenShot shot = new TakeScreenShot();
+            shot.Screenshot(driver, status);
+
+            //     exten.extension(driver, status, this.BrowserValue);
+            /*
+             *//* LambdaTutrial tut = new LambdaTutrial();
                 tut.Lambdacert(driver, session);*//*
                 shot.Screenshot(driver, status);*/
-                //   exten.extension(driver, status, this.BrowserValue);
-            }
+            //   exten.extension(driver, status, this.BrowserValue);
+
            /* ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             shot.Screenshot(driver, status);

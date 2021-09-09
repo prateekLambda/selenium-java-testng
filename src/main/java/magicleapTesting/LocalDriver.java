@@ -1,6 +1,5 @@
 package magicleapTesting;
 
-import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
@@ -35,7 +34,7 @@ public class LocalDriver {
         try {
 
             driver.get("https://www.bikester.es/");
-            //  ((JavascriptExecutor) driver).executeScript("lambda-name=" + getClass().getName());
+            //   ((JavascriptExecutor) driver).executeScript("lambda-name=" + getClass().getName());
             driver.manage().addCookie(new Cookie("httpOnly", "false"));
             driver.manage().addCookie(new Cookie("name", "kameleoonOptout"));
             driver.manage().addCookie(new Cookie("path", ""));
@@ -45,15 +44,12 @@ public class LocalDriver {
             driver.manage().timeouts().pageLoadTimeout(40000, TimeUnit.MICROSECONDS);
             new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
                     ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
-
-
-        //    driver.findElement(By.xpath("Ortler Berlin SUV Dual Power 1125 WH, azul")).isDisplayed();
-
-            driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[1]/div/div/div/a")).isDisplayed();
-            driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[2]/div/div/div/a")).isDisplayed();
-            driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[3]/div/div/div/a")).isDisplayed();
-          /*  driver.findElement(By.linkText("Serious Rockville 27.5\", negro/azul")).isDisplayed();
-            driver.findElement(By.linkText("Serious Rockville Disc 27.5\", blanco")).isDisplayed();*/
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            jse.executeScript("document.querySelector(\"#onetrust-accept-btn-handler\").click()");
+            jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(8) > a\").click();");//  wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("zoom-buttons")));
+            /*String click = "arguments[0].click();";
+            ((JavascriptExecutor) driver).executeScript(click, pegman);
+*/
             driver.quit();
         } catch (Exception e) {
             System.out.println(e);
