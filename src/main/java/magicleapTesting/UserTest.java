@@ -1,5 +1,6 @@
 package magicleapTesting;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -22,22 +23,33 @@ public class UserTest {
             driver.manage().addCookie(new Cookie("value", "true"));
             driver.manage().window().maximize();
             driver.manage().timeouts().pageLoadTimeout(40000, TimeUnit.MICROSECONDS);
-            new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
+            WebDriverWait wait = new WebDriverWait(driver, 60);
+            wait.until((ExpectedCondition) wd ->
                     ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
             JavascriptExecutor jse = (JavascriptExecutor) driver;
             jse.executeScript("document.querySelector(\"#onetrust-accept-btn-handler\").click()");
-            new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
+            wait.until((ExpectedCondition) wd ->
                     ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
             jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(8) > a\").click();");
-            new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
+            wait.until((ExpectedCondition) wd ->
+                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").scrollIntoView();");
+            wait.until((ExpectedCondition) wd ->
                     ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").click();");
-            new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
-                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(4) > a\").scrollIntoView();");
+            Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(4) > a\").click();");
-            new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
-                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
-            jse.executeScript("document.querySelector(\"#\\\\36 0663b53052bc3ef9c88f2009f > div > div > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#ae29b201919598a5ca8315ae1a > div > div > a\").scrollIntoView();");
+
+            for (int Display = 1; Display <= 13; Display++) {
+                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+
+            }
+
 
         } catch (Exception T) {
             System.out.println(T);
