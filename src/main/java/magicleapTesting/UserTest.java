@@ -49,6 +49,13 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
+        } catch (Exception p) {
+            System.out.println(p);
+
+        }
+        try {
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, 60);
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
             Thread.sleep(5000);
@@ -61,6 +68,13 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
+        } catch (Exception f) {
+            System.out.println(f);
+        }
+        try {
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, 60);
+
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
             Thread.sleep(5000);
@@ -75,6 +89,12 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
+        } catch (Exception m) {
+            System.out.println(m);
+        }
+        try {
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, 60);
             Thread.sleep(5000);
             driver.get("https://www.bikester.es/outlet/bicicletas/");
             Thread.sleep(5000);
@@ -86,6 +106,12 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
+        } catch (Exception k) {
+            System.out.println(k);
+        }
+        try {
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, 60);
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
             Thread.sleep(5000);
@@ -100,6 +126,12 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
+        } catch (Exception l) {
+            System.out.println(l);
+        }
+        try {
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, 60);
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(1) > a\").scrollIntoView();");
             Thread.sleep(5000);
@@ -113,6 +145,12 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
+        } catch (Exception b) {
+            System.out.println(b);
+        }
+        try {
+            JavascriptExecutor jse = (JavascriptExecutor) driver;
+            WebDriverWait wait = new WebDriverWait(driver, 60);
             Thread.sleep(5000);
             driver.get("https://www.bikester.es/bicicletas/bicicletas-de-montana/");
             for (int Display = 1; Display <= 13; Display++) {
