@@ -14,7 +14,7 @@ public class UserTest {
     public void TestCase(RemoteWebDriver driver, String status) {
         try {
 
-            driver.get("https://www.bikester.es/");
+            driver.get("https://lambdatest.github.io/sample-todo-app/");
             ((JavascriptExecutor) driver).executeScript("lambda-name=" + getClass().getName());
             driver.manage().addCookie(new Cookie("httpOnly", "false"));
             driver.manage().addCookie(new Cookie("name", "kameleoonOptout"));

@@ -1,16 +1,14 @@
 package magicleapTesting;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.io.File;
+import java.util.concurrent.TimeUnit;
 
 public class LocalDriver {
 
@@ -35,38 +33,27 @@ public class LocalDriver {
 
 
         try {
-            driver.get("https://www.lambdatest.com/automation-demos/");
+
+            driver.get("https://www.bikester.es/");
+            //  ((JavascriptExecutor) driver).executeScript("lambda-name=" + getClass().getName());
+            driver.manage().addCookie(new Cookie("httpOnly", "false"));
+            driver.manage().addCookie(new Cookie("name", "kameleoonOptout"));
+            driver.manage().addCookie(new Cookie("path", ""));
+            driver.manage().addCookie(new Cookie("secure", "false"));
+            driver.manage().addCookie(new Cookie("value", "true"));
             driver.manage().window().maximize();
-            WebElement login = driver.findElement(By.cssSelector("#newapply > div.w-360.ml-auto.text-center.smtablet\\:w-full.smtablet\\:ml-0 > button"));
-            login.isDisplayed();
-            WebDriverWait wait = new WebDriverWait(driver, 30);
-            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("#newapply > div.w-360.ml-auto.text-center.smtablet\\:w-full.smtablet\\:ml-0 > button")));
-            driver.findElement(By.id("username")).sendKeys("lambda");
-            driver.findElement(By.id("password")).sendKeys("lambda123");
-            login.click();
-            wait.until(ExpectedConditions.visibilityOfElementLocated((By.id("populate"))));
-            driver.findElement(By.id("developer-name")).sendKeys("prateeks@lambdatest.com");
-            driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[1]/p[4]/label/input")).click();
-            driver.findElement(By.id("others")).click();
-            Select dropdown = new Select(driver.findElement(By.id("preferred-payment")));
-            dropdown.selectByIndex(2);
-            driver.findElement(By.cssSelector("#tried-ecom")).click();
-            WebElement buttondrag = driver.findElement(By.cssSelector("#__next > div.wrapper > section.my-50.automationbar.smtablet\\:px-20 > div > div > div.form-bottom > div.sliderBar > div > div > div:nth-child(1) > div > div:nth-child(12)"));
-            Actions hold = new Actions(driver);
-
-            hold.dragAndDropBy(buttondrag, -11, -6).build().perform();
-            hold.dragAndDropBy(buttondrag, 49, -6).build().perform();
-            hold.dragAndDropBy(buttondrag, 109, -6).build().perform();
-            hold.dragAndDropBy(buttondrag, 169, -6).build().perform();
-            hold.dragAndDropBy(buttondrag, 469, -6).build().perform();
-            // hold.dragAndDropBy(buttondrag, 589, -6).build().perform();
-
-            driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[4]/div[3]/textarea")).sendKeys("Hi This is Prateek Support Team is the best. Whatever it takes");
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            jse.executeScript("window.scrollBy(0,350)");
+            driver.manage().timeouts().pageLoadTimeout(40000, TimeUnit.MICROSECONDS);
+            new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
+                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
 
 
+        //    driver.findElement(By.xpath("Ortler Berlin SUV Dual Power 1125 WH, azul")).isDisplayed();
 
+            driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[1]/div/div/div/a")).isDisplayed();
+            driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[2]/div/div/div/a")).isDisplayed();
+            driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[3]/div/div/div/a")).isDisplayed();
+          /*  driver.findElement(By.linkText("Serious Rockville 27.5\", negro/azul")).isDisplayed();
+            driver.findElement(By.linkText("Serious Rockville Disc 27.5\", blanco")).isDisplayed();*/
             driver.quit();
         } catch (Exception e) {
             System.out.println(e);

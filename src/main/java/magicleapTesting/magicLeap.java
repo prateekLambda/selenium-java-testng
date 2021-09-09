@@ -96,7 +96,7 @@ public class magicLeap {
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", formatter.format(date) + System.getProperty("BUILD_NAME"));
                     capabilities.setCapability("name", this.TestName + " ");
-                    capabilities.setCapability("resolution", "1280x1024");
+                  //  capabilities.setCapability("resolution", "1280x1024");
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
@@ -222,11 +222,11 @@ public class magicLeap {
                 shot.Screenshot(driver, status);
                 CpuExten exten = new CpuExten();
                 //     exten.extension(driver, status, this.BrowserValue);
-                UserTest user = new UserTest();
+          /*      UserTest user = new UserTest();
                 user.TestCase(driver, status);
-               /* LambdaTutrial tut = new LambdaTutrial();
-                tut.Lambdacert(driver, session);*/
-                shot.Screenshot(driver, status);
+               *//* LambdaTutrial tut = new LambdaTutrial();
+                tut.Lambdacert(driver, session);*//*
+                shot.Screenshot(driver, status);*/
                 //   exten.extension(driver, status, this.BrowserValue);
             }
            /* ResolutionTest ResolutionTestObject = new ResolutionTest();
