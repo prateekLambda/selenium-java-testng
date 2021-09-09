@@ -25,10 +25,12 @@ public class UserTest {
             driver.manage().timeouts().pageLoadTimeout(40000, TimeUnit.MICROSECONDS);
             new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
                     ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
-            driver.findElement(By.id("onetrust-accept-btn-handler")).isDisplayed();
-            driver.findElement(By.id("onetrust-accept-btn-handler")).click();
-            driver.findElement(By.linkText("Ortler Berlin SUV Dual Power 1125 WH, azul")).isDisplayed();
-            driver.findElement(By.linkText("Serious Rockville 27.5\", negro/azul")).click();
+
+            if (driver.findElement(By.id("onetrust-accept-btn-handler")).isDisplayed()) {
+                driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+            }
+            driver.findElement(By.xpath("/html/body/header/div/div[2]/ul/li[8]/a")).isDisplayed();
+            driver.findElement(By.linkText("/html/body/header/div/div[2]/ul/li[8]/a")).click();
             driver.findElement(By.linkText("Serious Rockville Disc 27.5\", negro")).isDisplayed();
             driver.findElement(By.linkText("Ortler Mainau Trapez, negro")).isDisplayed();
             driver.findElement(By.linkText("Ortler Van Dyck Wave, negro")).isDisplayed();

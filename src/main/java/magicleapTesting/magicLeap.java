@@ -221,13 +221,13 @@ public class magicLeap {
                 TakeScreenShot shot = new TakeScreenShot();
                 shot.Screenshot(driver, status);
                 CpuExten exten = new CpuExten();
-                exten.extension(driver, status, this.BrowserValue);
+                //     exten.extension(driver, status, this.BrowserValue);
                 UserTest user = new UserTest();
                 user.TestCase(driver, status);
-                LambdaTutrial tut = new LambdaTutrial();
-                tut.Lambdacert(driver, session);
+               /* LambdaTutrial tut = new LambdaTutrial();
+                tut.Lambdacert(driver, session);*/
                 shot.Screenshot(driver, status);
-                exten.extension(driver, status, this.BrowserValue);
+                //   exten.extension(driver, status, this.BrowserValue);
             }
            /* ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
