@@ -113,10 +113,8 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").scrollIntoView();");
             Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").click();");
-            Thread.sleep(5000);
+            driver.get("https://www.bikester.es/bicicletas/bicicletas-de-montana/");
             for (int Display = 1; Display <= 13; Display++) {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
