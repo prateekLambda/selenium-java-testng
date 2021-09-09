@@ -74,11 +74,7 @@ public class UserTest {
                 wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
 
             }
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
-            Thread.sleep(5000);
+            driver.get("https://www.bikester.es/outlet/bicicletas/");
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(2) > a\").scrollIntoView();");
             Thread.sleep(5000);
             jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(2) > a\").click();");
