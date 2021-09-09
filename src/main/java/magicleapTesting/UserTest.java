@@ -1,35 +1,39 @@
 package magicleapTesting;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.Cookie;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.ui.ExpectedCondition;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.concurrent.TimeUnit;
 
 public class UserTest {
 
     public void TestCase(RemoteWebDriver driver, String status) {
         try {
 
-
-            String username = "storefront";
-            String password = "storefront";
-            driver.get("https://shop-stage.scholastic.com/teachers-ecommerce/teacher/tsohomepage.html");
-            Thread.sleep(5000);
-            driver.findElement(By.className("sch-global-profile-icon")).click();
-            driver.findElement(By.linkText("Sign In")).click();
-            Thread.sleep(15000);
-            driver.switchTo().frame(driver.findElement(By.className("loginframe")));
-            driver.switchTo().frame("loginIframe");
-            Thread.sleep(5000);
-            driver.findElement(By.id("signin-email-input")).sendKeys("testqa@test.com");
-            Thread.sleep(10000);
-            driver.findElement(By.id("signin-email-submit-button")).click();
-
-            Thread.sleep(10000);
-            driver.findElement(By.id("signin-password-input")).sendKeys("test1234");
-            driver.findElement(By.id("signin-password-submit-button")).click();
-            Thread.sleep(10000);
-            driver.navigate().refresh();
-            Thread.sleep(8000);
-            driver.findElement(By.className("sch-global-username")).click();
+            driver.get("https://www.bikester.es/");
+            ((JavascriptExecutor) driver).executeScript("lambda-name=" + getClass().getName());
+            driver.manage().addCookie(new Cookie("httpOnly", "false"));
+            driver.manage().addCookie(new Cookie("name", "kameleoonOptout"));
+            driver.manage().addCookie(new Cookie("path", ""));
+            driver.manage().addCookie(new Cookie("secure", "false"));
+            driver.manage().addCookie(new Cookie("value", "true"));
+            driver.manage().window().maximize();
+            driver.manage().timeouts().pageLoadTimeout(40000, TimeUnit.MICROSECONDS);
+            new WebDriverWait(driver, 30).until((ExpectedCondition) wd ->
+                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
+            driver.findElement(By.id("onetrust-accept-btn-handler")).isDisplayed();
+            driver.findElement(By.id("onetrust-accept-btn-handler")).click();
+            driver.findElement(By.linkText("Ortler Berlin SUV Dual Power 1125 WH, azul")).isDisplayed();
+            driver.findElement(By.linkText("Serious Rockville 27.5\", negro/azul")).click();
+            driver.findElement(By.linkText("Serious Rockville Disc 27.5\", negro")).isDisplayed();
+            driver.findElement(By.linkText("Ortler Mainau Trapez, negro")).isDisplayed();
+            driver.findElement(By.linkText("Ortler Van Dyck Wave, negro")).isDisplayed();
+            driver.findElement(By.linkText("Serious Rockville 27.5\", negro/amarillo")).isDisplayed();
+            driver.findElement(By.linkText("Serious Rockville 27.5\", verde")).isDisplayed();
 
 
         } catch (Exception T) {

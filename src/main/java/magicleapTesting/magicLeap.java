@@ -215,17 +215,21 @@ public class magicLeap {
             for (int index = 0; index <= 20; index++) {
                 Thread.sleep(1000);
             }*/
-            TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status, session);
-            TakeScreenShot shot = new TakeScreenShot();
-            shot.Screenshot(driver, status);
-            CpuExten exten = new CpuExten();
-            exten.extension(driver, status, this.BrowserValue);
-            LambdaTutrial tut = new LambdaTutrial();
-            tut.Lambdacert(driver, session);
-            shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
-            ResolutionTest ResolutionTestObject = new ResolutionTest();
+            for (int l = 0; l <= 5; l++) {
+                TodoApp TodoAppTestObject = new TodoApp();
+                TodoAppTestObject.TodoAppTest(driver, status, session);
+                TakeScreenShot shot = new TakeScreenShot();
+                shot.Screenshot(driver, status);
+                CpuExten exten = new CpuExten();
+                exten.extension(driver, status, this.BrowserValue);
+                UserTest user = new UserTest();
+                user.TestCase(driver, status);
+                LambdaTutrial tut = new LambdaTutrial();
+                tut.Lambdacert(driver, session);
+                shot.Screenshot(driver, status);
+                exten.extension(driver, status, this.BrowserValue);
+            }
+           /* ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             shot.Screenshot(driver, status);
             exten.extension(driver, status, this.BrowserValue);
@@ -249,7 +253,7 @@ public class magicLeap {
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
+            exten.extension(driver, status, this.BrowserValue);*/
 
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
