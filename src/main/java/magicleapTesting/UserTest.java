@@ -49,7 +49,55 @@ public class UserTest {
                 driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
 
             }
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(3) > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(3) > a\").click();");
+            for (int Display = 1; Display <= 13; Display++) {
+                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
 
+            }
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
+
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(5) > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(5) > a\").click();");
+            for (int Display = 1; Display <= 13; Display++) {
+                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+
+            }
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(2) > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(2) > a\").click();");
+            for (int Display = 1; Display <= 13; Display++) {
+                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+
+            }
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(7) > a\").scrollIntoView();");
+            Thread.sleep(5000);
+            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(7) > a\").click();");
+            for (int Display = 1; Display <= 13; Display++) {
+                driver.findElement(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")).isDisplayed();
+
+            }
 
         } catch (Exception T) {
             System.out.println(T);
