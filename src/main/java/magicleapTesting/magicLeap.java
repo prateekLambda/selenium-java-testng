@@ -214,8 +214,10 @@ public class magicLeap {
             for (int index = 0; index <= 20; index++) {
                 Thread.sleep(1000);
             }*/
-            UserTest user = new UserTest();
-            user.TestCase(driver, status);
+          /*  UserTest user = new UserTest();
+            user.TestCase(driver, status);*/
+            CpuExten exten = new CpuExten();
+            exten.extension(driver, status, this.BrowserValue);
             TakeScreenShot shot = new TakeScreenShot();
             shot.Screenshot(driver, status);
             LambdaTutrial tut = new LambdaTutrial();
@@ -228,7 +230,7 @@ public class magicLeap {
                 shot.Screenshot(driver, status);*/
             //   exten.extension(driver, status, this.BrowserValue);
 
-           /* ResolutionTest ResolutionTestObject = new ResolutionTest();
+            ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             shot.Screenshot(driver, status);
             exten.extension(driver, status, this.BrowserValue);
@@ -252,7 +254,7 @@ public class magicLeap {
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);*/
+            exten.extension(driver, status, this.BrowserValue);
 
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
