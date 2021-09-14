@@ -1,7 +1,6 @@
 package magicleapTesting;
 
 import org.apache.commons.lang3.time.StopWatch;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
@@ -9,7 +8,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -106,12 +104,12 @@ public class magicLeap {
 
                     //capabilities.setCapability("region", region);
                     //  capabilities.setCapability("idleTimeout", "600");
-                    if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
+                    /*if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
                         ChromeOptions options = new ChromeOptions();
                         options.addExtensions(new File("Extensions/CPU.crx"));
 
                         capabilities.setCapability("LT:Options", options);
-                    }
+                    }*/
                     //  capabilities.setCapability("queueTimeout", "900");
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
@@ -218,7 +216,7 @@ public class magicLeap {
             user.TestCase(driver, status);*/
             Thread.sleep(30000);
             CpuExten exten = new CpuExten();
-            exten.extension(driver, status, this.BrowserValue);
+         //   exten.extension(driver, status, this.BrowserValue);
             TakeScreenShot shot = new TakeScreenShot();
             shot.Screenshot(driver, status);
             LambdaTutrial tut = new LambdaTutrial();
@@ -234,28 +232,28 @@ public class magicLeap {
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
+           // exten.extension(driver, status, this.BrowserValue);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
+            //exten.extension(driver, status, this.BrowserValue);
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
+            //exten.extension(driver, status, this.BrowserValue);
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
+           // exten.extension(driver, status, this.BrowserValue);
             VideoUpload test = new VideoUpload();
             test.vidupload(driver);
-            exten.extension(driver, status, this.BrowserValue);
+            //exten.extension(driver, status, this.BrowserValue);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
+            //exten.extension(driver, status, this.BrowserValue);
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status);
             shot.Screenshot(driver, status);
-            exten.extension(driver, status, this.BrowserValue);
+            //exten.extension(driver, status, this.BrowserValue);
 
            /* DownloadTest down = new DownloadTest();
             down.FileDownload(driver);
