@@ -99,7 +99,7 @@ public class magicLeap {
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
-                    capabilities.setCapability("visual", true);
+                //    capabilities.setCapability("visual", true);
                     capabilities.setCapability("selenium_version", "3.141.59");
                     //capabilities.setCapability("fixedIP", "213292378");
                     //   capabilities.setCapability("fixedIP", "9832721.912839.0298738921.098");
