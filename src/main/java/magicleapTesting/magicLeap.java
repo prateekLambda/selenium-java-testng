@@ -80,8 +80,8 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i <= 5; i++) {
-            for (int j = 0; j <= 5; j++) {
+        for (int i = 0; i <= 500; i++) {
+            for (int j = 0; j <= 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
                     String region = "us";
@@ -214,7 +214,7 @@ public class magicLeap {
             }*/
           /*  UserTest user = new UserTest();
             user.TestCase(driver, status);*/
-            Thread.sleep(30000);
+
             CpuExten exten = new CpuExten();
          //   exten.extension(driver, status, this.BrowserValue);
             TakeScreenShot shot = new TakeScreenShot();
