@@ -98,7 +98,7 @@ public class magicLeap {
                     capabilities.setCapability("console", true);
                     capabilities.setCapability("network", true);
                     //    capabilities.setCapability("visual", true);
-                  //  capabilities.setCapability("selenium_version", "3.141.59");
+                    //  capabilities.setCapability("selenium_version", "3.141.59");
                     //capabilities.setCapability("fixedIP", "213292378");
                     //   capabilities.setCapability("fixedIP", "9832721.912839.0298738921.098");
 
@@ -158,7 +158,7 @@ public class magicLeap {
 
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
-
+                    System.out.println(capabilities.toJson());
                     hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     //hub = "http://localhost:8080/wd/hub";
                     System.out.println(hub);
@@ -216,7 +216,7 @@ public class magicLeap {
             user.TestCase(driver, status);*/
 
             CpuExten exten = new CpuExten();
-         //   exten.extension(driver, status, this.BrowserValue);
+            //   exten.extension(driver, status, this.BrowserValue);
             TakeScreenShot shot = new TakeScreenShot();
             shot.Screenshot(driver, status);
             LambdaTutrial tut = new LambdaTutrial();
@@ -232,7 +232,7 @@ public class magicLeap {
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
             shot.Screenshot(driver, status);
-           // exten.extension(driver, status, this.BrowserValue);
+            // exten.extension(driver, status, this.BrowserValue);
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
             shot.Screenshot(driver, status);
@@ -244,7 +244,7 @@ public class magicLeap {
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
             shot.Screenshot(driver, status);
-           // exten.extension(driver, status, this.BrowserValue);
+            // exten.extension(driver, status, this.BrowserValue);
             VideoUpload test = new VideoUpload();
             test.vidupload(driver);
             //exten.extension(driver, status, this.BrowserValue);
