@@ -24,7 +24,6 @@ public class TakeScreenShot {
             TakesScreenshot scrShot = ((TakesScreenshot) driver);
             File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(SrcFile, new File(FilePath));
-            log.info("Screenshot Taken");
 
 
         } catch (Exception e) {
