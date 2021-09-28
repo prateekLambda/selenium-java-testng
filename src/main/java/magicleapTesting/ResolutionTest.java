@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 public class ResolutionTest {
@@ -54,6 +58,14 @@ public class ResolutionTest {
 
             //}
         } catch (Exception R) {
+            Date date;
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+
+            date = new Date();
+            System.out.println(R + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
             System.out.println(R+"    "+" SessionID --->"+"  "+session);
         }
 

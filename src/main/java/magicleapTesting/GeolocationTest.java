@@ -5,6 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 public class GeolocationTest {
@@ -27,6 +31,15 @@ public class GeolocationTest {
             System.out.println("Total time took for geolocation test" + " " + GeolocationTotal / 1000f + "Sec.");
         } catch (Exception t) {
             System.out.println(t+"    "+" SessionID --->"+"  "+session);
+
+            Date date;
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+
+            date = new Date();
+            System.out.println(t + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
         }
         try {
             driver.get("http://ip-api.com/json");
@@ -48,7 +61,17 @@ public class GeolocationTest {
             status = "failed";
             WebElement location = driver.findElement(By.xpath("/html/body/pre"));
             location.getAttribute("innerText");
-           // System.out.println("Location of the machine" + "  " + location.getAttribute("innerText"));
+
+
+            Date date;
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+
+            date = new Date();
+            System.out.println(g + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
+            // System.out.println("Location of the machine" + "  " + location.getAttribute("innerText"));
 
 
         }

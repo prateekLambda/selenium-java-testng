@@ -9,9 +9,10 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class TakeScreenShot {
-
+    Date date;
     public void Screenshot(RemoteWebDriver driver, String status ) {
         try {
             String FilePath;
@@ -24,8 +25,12 @@ public class TakeScreenShot {
 
 
         } catch (Exception e) {
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 
-            System.out.println(e);
+            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+
+            date = new Date();
+            System.out.println(e+"\n"+"This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+date+"\n"+"LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
         }
 
     }

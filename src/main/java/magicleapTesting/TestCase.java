@@ -4,6 +4,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
 public class TestCase {
 
     public void LongCase(RemoteWebDriver driver, SessionId session) {
@@ -44,6 +49,15 @@ public class TestCase {
         } catch (Exception L) {
 
             System.out.println(L+"    "+" SessionID --->"+"  "+session);
+
+            Date date;
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+
+            date = new Date();
+            System.out.println(L + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
         }
 //        try {
 //            driver.get("https://www.rockdoor.com/");

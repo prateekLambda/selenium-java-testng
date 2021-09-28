@@ -77,7 +77,7 @@ public class magicLeap {
     @BeforeTest
     public void setUp() throws Exception {
         System.out.println(this.TestName);
-        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
+        DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
         for (int i = 0; i <= 500; i++) {
@@ -185,10 +185,13 @@ public class magicLeap {
 
                 } catch (MalformedURLException e) {
                     System.out.println("Invalid grid URL");
+                    System.out.println(e + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
 
                 } catch (Exception f) {
                     System.out.println("Stop Time" + " " + formatter.format(date));
+                    System.out.println(f + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
                     status = "failed";
                     System.out.println(f);
                     // System.out.println(f.getMessage() + browser + version + fixedIp);
@@ -273,6 +276,8 @@ public class magicLeap {
         } catch (Exception e) {
             System.out.println(e + "    " + " SessionID --->" + "  " + session);
             status = "failed";
+            System.out.println(e + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
         }
     }
 

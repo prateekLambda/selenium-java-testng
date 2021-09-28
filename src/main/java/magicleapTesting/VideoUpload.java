@@ -4,6 +4,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
 
 public class VideoUpload {
@@ -83,6 +87,14 @@ public class VideoUpload {
 
         } catch (Exception v) {
             System.out.println(v);
+            Date date;
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+
+            date = new Date();
+            System.out.println(v + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
         }
     }
 }

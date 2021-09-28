@@ -12,8 +12,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 public class LambdaTutrial {
+    Date date;
+
     public void Lambdacert(RemoteWebDriver driver, SessionId session) {
         try {
             driver.get("https://www.lambdatest.com/automation-demos/");
@@ -52,6 +58,12 @@ public class LambdaTutrial {
 //            upload.sendKeys(file.getAbsolutePath());
         } catch (Exception t) {
             System.out.println(t);
+            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+
+            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
+
+            date = new Date();
+            System.out.println(t + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
             System.out.println(t + "    " + " SessionID --->" + "  " + session);
         }
 
