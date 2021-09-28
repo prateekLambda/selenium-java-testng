@@ -15,6 +15,8 @@ public class TakeScreenShot {
     Date date;
     public void Screenshot(RemoteWebDriver driver, String status ) {
         try {
+
+            System.out.println("ScreenShot taking Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
             String FilePath;
             DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy h-m-s");
             Date date = new Date();
@@ -22,6 +24,8 @@ public class TakeScreenShot {
             TakesScreenshot scrShot = ((TakesScreenshot) driver);
             File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(SrcFile, new File(FilePath));
+            System.out.println("ScreenShot taking Stop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +"\n"+ date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+
 
 
         } catch (Exception e) {
@@ -30,7 +34,7 @@ public class TakeScreenShot {
             formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
 
             date = new Date();
-            System.out.println(e+"\n"+"This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+date+"\n"+"LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            System.out.println(e+"\n"+"This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n"+date+"\n"+"LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
         }
 
     }

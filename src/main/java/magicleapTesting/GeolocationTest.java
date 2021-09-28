@@ -38,7 +38,7 @@ public class GeolocationTest {
             formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
 
             date = new Date();
-            System.out.println(t + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            System.out.println(t + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +"\n"+ date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
         }
         try {
@@ -69,7 +69,7 @@ public class GeolocationTest {
             formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
 
             date = new Date();
-            System.out.println(g + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            System.out.println(g + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             // System.out.println("Location of the machine" + "  " + location.getAttribute("innerText"));
 

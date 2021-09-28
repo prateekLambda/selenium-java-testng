@@ -63,7 +63,7 @@ public class LambdaTutrial {
             formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
 
             date = new Date();
-            System.out.println(t + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            System.out.println(t + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +"\n"+ date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
             System.out.println(t + "    " + " SessionID --->" + "  " + session);
         }
 

@@ -43,7 +43,7 @@ public class ResolutionTest {
 
             } else {
 
-                System.out.println("Resolution does not Matched");
+
                 status = "failed";
 
             }
@@ -51,13 +51,14 @@ public class ResolutionTest {
 
             ResolutionStop = System.currentTimeMillis();
             ResolutionTotal = ResolutionStop - ResolutionStart;
-            System.out.println("Total time took for resolution" + "  " + ResolutionTotal / 1000f + "Sec.");
+
           //  ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
          //   ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
 
 
             //}
         } catch (Exception R) {
+
             Date date;
             DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 
