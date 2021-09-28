@@ -12,15 +12,13 @@ import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.TimeZone;
+import java.util.logging.Logger;
 
 public class LambdaTutrial {
     Date date;
 
-    public void Lambdacert(RemoteWebDriver driver, SessionId session) {
+    public void Lambdacert(RemoteWebDriver driver, SessionId session, Logger log) {
         try {
             driver.get("https://www.lambdatest.com/automation-demos/");
             driver.manage().window().maximize();
@@ -57,14 +55,7 @@ public class LambdaTutrial {
 //            WebElement upload = driver.findElement(By.xpath("/html/body/div[1]/div[1]/section[2]/div/div/div[4]/div[3]/div/form/input"));
 //            upload.sendKeys(file.getAbsolutePath());
         } catch (Exception t) {
-            System.out.println(t);
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
-            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
-            date = new Date();
-            System.out.println(t + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +"\n"+ date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-            System.out.println(t + "    " + " SessionID --->" + "  " + session);
+            log.info(t.getMessage() + "    " + " SessionID --->" + "  " + session);
         }
 
     }

@@ -5,15 +5,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class ResolutionTest {
 
-    public void Resolution(RemoteWebDriver driver, String ResolutionValue, String status, long ResolutionTotal, String ResolutionValueCap, SessionId session) {
+    public void Resolution(RemoteWebDriver driver, String ResolutionValue, String status, long ResolutionTotal, String ResolutionValueCap, SessionId session, Logger log) {
         try {
 
 
@@ -35,7 +32,6 @@ public class ResolutionTest {
             ResolutionValue.trim().replaceAll("\\s", "");
 
 
-
             if (ResolutionValueCap.equalsIgnoreCase(ResolutionValue)) {
 
 
@@ -52,22 +48,14 @@ public class ResolutionTest {
             ResolutionStop = System.currentTimeMillis();
             ResolutionTotal = ResolutionStop - ResolutionStart;
 
-          //  ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
-         //   ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
+            //  ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
+            //   ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
 
 
             //}
         } catch (Exception R) {
 
-            Date date;
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
-            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
-            date = new Date();
-            System.out.println(R + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-
-            System.out.println(R+"    "+" SessionID --->"+"  "+session);
+            log.info(R.getMessage() + "    " + " SessionID --->" + "  " + session);
         }
 
     }

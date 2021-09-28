@@ -1,17 +1,15 @@
 package magicleapTesting;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.logging.Logger;
 
 public class TestCase {
 
-    public void LongCase(RemoteWebDriver driver, SessionId session) {
+    public void LongCase(RemoteWebDriver driver, SessionId session, Logger log) {
 
         try {
             driver.get("https://www.seleniumeasy.com/test/");
@@ -48,15 +46,7 @@ public class TestCase {
             driver.findElement(By.linkText("25")).click();
         } catch (Exception L) {
 
-            System.out.println(L+"    "+" SessionID --->"+"  "+session);
-
-            Date date;
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
-            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
-            date = new Date();
-            System.out.println(L + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            log.info(L.getMessage() + "    " + " SessionID --->" + "  " + session);
 
         }
 //        try {

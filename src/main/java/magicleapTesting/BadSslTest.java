@@ -5,14 +5,11 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.logging.Logger;
 
 public class BadSslTest {
 
-    public void badSsl(RemoteWebDriver driver, String status) {
+    public void badSsl(RemoteWebDriver driver, String status, Logger log) {
         try {
             driver.get("https://self-signed.badssl.com/");
             String badSslTitle = driver.getTitle();
@@ -25,16 +22,7 @@ public class BadSslTest {
                 status = "passed";
             }
         } catch (Exception b) {
-            status = "failed";
-            System.out.println(b);
-            Date date;
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
-            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
-            date = new Date();
-            System.out.println(b + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-
+            log.info(b.getMessage());
         }
         ((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
     }

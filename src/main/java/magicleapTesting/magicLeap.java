@@ -178,7 +178,6 @@ public class magicLeap {
                     DesktopScript();
                     tearDown();
                     driver.quit();
-                    //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
                     driverStart.stop();
 
                     float timeElapsed = driverStart.getTime() / 1000f;
@@ -193,8 +192,7 @@ public class magicLeap {
                 } catch (Exception f) {
                     log.info(f.getMessage());
                     status = "failed";
-                    System.out.println(f);
-                    // System.out.println(f.getMessage() + browser + version + fixedIp);
+
                 }
             }
         }
@@ -204,7 +202,7 @@ public class magicLeap {
     @Test
     public void DesktopScript() {
         try {
-            System.out.println("==================TestStart+++++++++++++" + session + "\n" + date + "++++++++++++++++TestStart==================");
+            log.info("==================TestStart+++++++++++++" + session + "\n" + date + "++++++++++++++++TestStart==================");
 //            driver.get("https://www.amazon.in/");
 //            System.out.println(driver.getTitle());
 //            for (int index = 0; index <= 10; index++) {
@@ -223,68 +221,61 @@ public class magicLeap {
             TakeScreenShot shot = new TakeScreenShot();
             shot.Screenshot(driver, status, log);
 
-
+            log.info("LambdaTest Tutorial Test initiated");
             LambdaTutrial tut = new LambdaTutrial();
-            tut.Lambdacert(driver, session);
+            tut.Lambdacert(driver, session, log);
             shot.Screenshot(driver, status, log);
+            log.info("LambdaTest Tutorial Test Stopped");
 
 
             //     exten.extension(driver, status, this.BrowserValue);
             /*
                 shot.Screenshot(driver, status);*/
             //   exten.extension(driver, status, this.BrowserValue);
-
+            log.info("Resolution Test initiated");
             ResolutionTest ResolutionTestObject = new ResolutionTest();
-            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
+            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
             shot.Screenshot(driver, status, log);
+            log.info("Resolution Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
-
+            log.info("Google Space Test initiated");
             GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver, session);
-
+            space.GSpace(driver, session, log);
             shot.Screenshot(driver, status, log);
+            log.info("Google Space Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
-
+            log.info("Selenium Test Started");
             TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);
+            SeleniumTest.LongCase(driver, session, log);
             shot.Screenshot(driver, status, log);
+            log.info("Selenium Test Stopped");
 
             //exten.extension(driver, status, this.BrowserValue);
-
+            log.info("Geolocation Test Started");
             GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal, session);
+            geo.Geolocation(driver, status, GeolocationTotal, session, log);
             shot.Screenshot(driver, status, log);
+            log.info("Geolocation Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
-
+            log.info("VideoUpload Test Started");
             VideoUpload test = new VideoUpload();
-            test.vidupload(driver);
+            test.vidupload(driver, log);
 
             //exten.extension(driver, status, this.BrowserValue);
             shot.Screenshot(driver, status, log);
-
+            log.info("VideoUpload Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
-
+            log.info("BadSSl Test Started");
             BadSslTest bad = new BadSslTest();
-            bad.badSsl(driver, status);
+            bad.badSsl(driver, status, log);
             shot.Screenshot(driver, status, log);
+            log.info("BadSSl Test Stopped");
 
-            //exten.extension(driver, status, this.BrowserValue);
-
-           /* DownloadTest down = new DownloadTest();
-            down.FileDownload(driver);
-            TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);
-
-            GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver, session);*/
-            /*
-            DesignPlane plane = new DesignPlane();
-            plane.plane(driver,session);*/
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
-            System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
+            log.info("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
             log.info(session.toString());
             status = "passed";
         } catch (Exception e) {

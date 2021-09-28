@@ -1,18 +1,16 @@
 package magicleapTesting;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class VideoUpload {
 
-    public void vidupload(RemoteWebDriver driver) {
+    public void vidupload(RemoteWebDriver driver, Logger log) {
         try {
             driver.get("https://www.tmz.com/");
             driver.manage().deleteAllCookies();
@@ -55,7 +53,6 @@ public class VideoUpload {
             scrollup.executeScript("window.scrollBy(0,-5000)");
 
 
-
             WebElement News = driver.findElement(By.cssSelector("#header > div > nav > ul > li:nth-child(1) > a"));
             News.click();
             driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -86,14 +83,7 @@ public class VideoUpload {
             driver.findElement(By.className("masthead-search__submit")).click();
 
         } catch (Exception v) {
-            System.out.println(v);
-            Date date;
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
-            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
-            date = new Date();
-            System.out.println(v + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            log.info(v.getMessage());
 
         }
     }

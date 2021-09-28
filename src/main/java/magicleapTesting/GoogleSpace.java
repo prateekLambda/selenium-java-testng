@@ -1,17 +1,15 @@
 package magicleapTesting;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.TimeZone;
+import java.util.logging.Logger;
 
 public class GoogleSpace {
-    public void GSpace(RemoteWebDriver driver, SessionId session) {
+    public void GSpace(RemoteWebDriver driver, SessionId session, Logger log) {
         try {
             driver.get("https://mrdoob.com/projects/chromeexperiments/google-space/");
 
@@ -37,15 +35,8 @@ public class GoogleSpace {
             //   slider.dragAndDropBy(daylight, -20, 400).build().perform();
             Thread.sleep(5000);
         } catch (Exception G) {
-            Date date;
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
 
-            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
-            date = new Date();
-            System.out.println(G + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-
-            System.out.println(G+"    "+" SessionID --->"+"  "+session);
+            log.info(G.getMessage() + "    " + " SessionID --->" + "  " + session);
         }
 
     }

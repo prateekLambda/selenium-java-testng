@@ -231,9 +231,9 @@ public class Random {
 //            // driver.findElement(MobileBy.id("com.android.packageinstaller:id/permission_allow_button")).click();
 //            Thread.sleep(5000);
 //            System.out.println(driver.getTitle());
-
-            BadSslTest bad = new BadSslTest();
-            bad.badSsl(driver, status);
+//
+//            BadSslTest bad = new BadSslTest();
+//            bad.badSsl(driver, status);
 
 
             StreamTest stream = new StreamTest();
