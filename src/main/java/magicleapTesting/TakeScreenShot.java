@@ -9,32 +9,26 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.TimeZone;
+import java.util.logging.Logger;
 
 public class TakeScreenShot {
     Date date;
-    public void Screenshot(RemoteWebDriver driver, String status ) {
+
+    public void Screenshot(RemoteWebDriver driver, String status, Logger log) {
         try {
 
-            System.out.println("ScreenShot taking Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
             String FilePath;
             DateFormat dateFormat = new SimpleDateFormat("dd-mm-yyyy h-m-s");
             Date date = new Date();
-            FilePath="Screenshots\\"+dateFormat.format(date)+"\\"+".png ";
+            FilePath = "Screenshots\\" + dateFormat.format(date) + "\\" + ".png ";
             TakesScreenshot scrShot = ((TakesScreenshot) driver);
             File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
             FileUtils.copyFile(SrcFile, new File(FilePath));
-            System.out.println("ScreenShot taking Stop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" +"\n"+ date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-
+            log.info("Screenshot Taken");
 
 
         } catch (Exception e) {
-            DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-
-            formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
-
-            date = new Date();
-            System.out.println(e+"\n"+"This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n"+date+"\n"+"LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            log.info(e.getMessage());
         }
 
     }

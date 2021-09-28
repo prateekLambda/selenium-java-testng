@@ -234,8 +234,7 @@ public class Random {
 
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status);
-            TakeScreenShot screen = new TakeScreenShot();
-            screen.Screenshot(driver, status);
+
 
             StreamTest stream = new StreamTest();
             stream.TestStream(driver, status);

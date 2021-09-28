@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class TodoApp {
     float ClickCommandTime;
@@ -21,7 +22,7 @@ public class TodoApp {
     long SendKeysStop;
 
 
-    public void TodoAppTest(RemoteWebDriver driver, String status, SessionId session) {
+    public void TodoAppTest(RemoteWebDriver driver, String status, SessionId session, Logger log) {
         try {
 
                     //   Actions action = new Actions(driver);
@@ -53,7 +54,7 @@ public class TodoApp {
             secondItem.click();
             secondItem.isDisplayed();
             TakeScreenShot todo = new TakeScreenShot();
-            todo.Screenshot(driver, status);
+            todo.Screenshot(driver, status, log);
             thirdItem.click();
             thirdItem.isDisplayed();
             fifthElement.click();
@@ -70,7 +71,8 @@ public class TodoApp {
             driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).isDisplayed();
             driver.findElement(By.xpath("//*[@id=\"addbutton\"]")).click();
         } catch (Exception t) {
-            System.out.println(t +"    "+" SessionID --->"+"  "+session);
+            log.info(t +"    "+" SessionID --->"+"  "+session);
+
         }
     }
 

@@ -5,8 +5,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import java.util.logging.Logger;
+
 public class NetSpeed {
-    public void NetSpeed(RemoteWebDriver driver, String status, long Nettotalspeedtest) {
+    public void NetSpeed(RemoteWebDriver driver, String status, long Nettotalspeedtest, Logger log) {
         try {
             long NetSpeedteststart;
             long NetSpeedteststop;
@@ -29,7 +31,7 @@ public class NetSpeed {
 
             WebElement DownloadSPeed = driver.findElement(By.xpath("/html/body/section/div[2]/div/div[1]/table/tbody/tr/td/div[2]/div[2]/div/div[1]/h3"));
             TakeScreenShot shot = new TakeScreenShot();
-            shot.Screenshot(driver, status);
+            shot.Screenshot(driver, status, log);
             System.out.println("Download speed of machine" + "  " + DownloadSPeed.getAttribute("innerText"));
             WebElement UploadSpeed = driver.findElement(By.xpath("/html/body/section/div[2]/div/div[1]/table/tbody/tr/td/div[2]/div[2]/div/div[2]/h3"));
             System.out.println("Upload Speed of the machine" + "  " + UploadSpeed.getAttribute("innerText"));
@@ -44,7 +46,7 @@ public class NetSpeed {
         } catch (Exception e) {
 
             status = "failed";
-            System.out.println(e.getMessage());
+            log.info(e.getMessage());
         }
         //System.out.println(driver.getCapabilities());
 

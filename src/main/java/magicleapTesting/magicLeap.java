@@ -14,6 +14,8 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
+import java.util.logging.Logger;
+
 
 public class magicLeap {
 
@@ -50,6 +52,7 @@ public class magicLeap {
     long SuiteTotalTime;
     Long AllVersions = null;
     Date date;
+    Logger log = Logger.getLogger(magicLeap.class.getName());
 
 
     @org.testng.annotations.Parameters(value = {"browser", "version", "platform", "fixedIp", "resolution", "timezone", "geoLocation", "tunnel"})
@@ -158,10 +161,10 @@ public class magicLeap {
 
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
-                    System.out.println(capabilities.toJson() + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+                    log.info(capabilities.toString());
                     hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     //hub = "http://localhost:8080/wd/hub";
-                    System.out.println(hub);
+                    log.info(hub);
                     System.out.println("Start Time" + " " + formatter.format(date));
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
@@ -171,8 +174,7 @@ public class magicLeap {
                     //set timeout to 5 seconds
 
                     session = driver.getSessionId();
-
-                    System.out.println("====================DriverStart-up+++++++++++" + session + date + "+++++++++++DriverStart-up===================================");
+                    log.info(session.toString());
                     DesktopScript();
                     tearDown();
                     driver.quit();
@@ -185,13 +187,11 @@ public class magicLeap {
 
                 } catch (MalformedURLException e) {
                     System.out.println("Invalid grid URL");
-                    System.out.println(e + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+                    log.info(e.getMessage());
 
 
                 } catch (Exception f) {
-                    System.out.println("Stop Time" + " " + formatter.format(date));
-                    System.out.println(f + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
-
+                    log.info(f.getMessage());
                     status = "failed";
                     System.out.println(f);
                     // System.out.println(f.getMessage() + browser + version + fixedIp);
@@ -204,7 +204,7 @@ public class magicLeap {
     @Test
     public void DesktopScript() {
         try {
-            System.out.println("==================TestStart+++++++++++++" + session +"\n"+ date + "++++++++++++++++TestStart==================");
+            System.out.println("==================TestStart+++++++++++++" + session + "\n" + date + "++++++++++++++++TestStart==================");
 //            driver.get("https://www.amazon.in/");
 //            System.out.println(driver.getTitle());
 //            for (int index = 0; index <= 10; index++) {
@@ -221,68 +221,54 @@ public class magicLeap {
             CpuExten exten = new CpuExten();
             //   exten.extension(driver, status, this.BrowserValue);
             TakeScreenShot shot = new TakeScreenShot();
-            shot.Screenshot(driver, status);
+            shot.Screenshot(driver, status, log);
 
-            System.out.println("Lambdatest Tutorial Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session);
-            shot.Screenshot(driver, status);
-            System.out.println("Lambdatest Tutorial Test Stop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            shot.Screenshot(driver, status, log);
 
 
             //     exten.extension(driver, status, this.BrowserValue);
             /*
                 shot.Screenshot(driver, status);*/
             //   exten.extension(driver, status, this.BrowserValue);
-            System.out.println("Resolution Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
-            shot.Screenshot(driver, status);
-            System.out.println("Resolution Test Stop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            shot.Screenshot(driver, status, log);
 
             // exten.extension(driver, status, this.BrowserValue);
-            System.out.println("GoogleSpace Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session);
-            System.out.println("GoogleSpace Test Stop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
-            shot.Screenshot(driver, status);
+            shot.Screenshot(driver, status, log);
             //exten.extension(driver, status, this.BrowserValue);
-            System.out.println("LongTest Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session);
-            shot.Screenshot(driver, status);
-            System.out.println("LongTest Test Stop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            shot.Screenshot(driver, status, log);
 
             //exten.extension(driver, status, this.BrowserValue);
-            System.out.println("Geolocation Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session);
-            shot.Screenshot(driver, status);
-            System.out.println("Geolocation Test Stop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            shot.Screenshot(driver, status, log);
 
             // exten.extension(driver, status, this.BrowserValue);
-            System.out.println("Video Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             VideoUpload test = new VideoUpload();
             test.vidupload(driver);
 
             //exten.extension(driver, status, this.BrowserValue);
-            shot.Screenshot(driver, status);
-            System.out.println("Video Test STop" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            shot.Screenshot(driver, status, log);
 
             //exten.extension(driver, status, this.BrowserValue);
-            System.out.println("BadSSl Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status);
-            shot.Screenshot(driver, status);
-            System.out.println("Video Test Start" + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + "\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
+            shot.Screenshot(driver, status, log);
 
             //exten.extension(driver, status, this.BrowserValue);
 
@@ -299,12 +285,12 @@ public class magicLeap {
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
-            System.out.println("=======================TestStop++++++++++++++" + session +"\n"+ date + "++++++++++++++++TestStop==============");
+            log.info(session.toString());
             status = "passed";
         } catch (Exception e) {
-            System.out.println(e + "    " + " SessionID --->" + "  " + session);
+            log.info(e.getMessage());
+            log.info(session.toString());
             status = "failed";
-            System.out.println(e + "\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT"+"\n" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
 
         }
     }
@@ -319,7 +305,7 @@ public class magicLeap {
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
             //  new aPiCalls(username, accesskey).getSessionDetails(session.toString());
-            System.out.println("=============" + session +"\n"+ date + "================");
+            log.info(session.toString());
             //((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             //    driver.quit();
 
