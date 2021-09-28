@@ -158,7 +158,7 @@ public class magicLeap {
 
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
-                    System.out.println(capabilities.toJson());
+                    System.out.println(capabilities.toJson()+"\n" + "This is the Time TTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTTT" + date + "\n" + "LLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLLL");
                     hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     //hub = "http://localhost:8080/wd/hub";
                     System.out.println(hub);
@@ -174,7 +174,7 @@ public class magicLeap {
                     DesktopScript();
                     tearDown();
                     driver.quit();
-                    System.out.println("====================DriverStart-up+++++++++++" + session + "+++++++++++DriverStart-up===================================");
+                    System.out.println("====================DriverStart-up+++++++++++" + session + date + "+++++++++++DriverStart-up===================================");
 
                     //   System.out.println(driver + "Session ID" + "  " + session.toString() + "\n" + browser + version + "\n" + fixedIp);
                     driverStart.stop();
@@ -204,7 +204,7 @@ public class magicLeap {
     @Test
     public void DesktopScript() {
         try {
-            System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
+            System.out.println("==================TestStart+++++++++++++" + session + date+ "++++++++++++++++TestStart==================");
 //            driver.get("https://www.amazon.in/");
 //            System.out.println(driver.getTitle());
 //            for (int index = 0; index <= 10; index++) {
@@ -271,7 +271,7 @@ public class magicLeap {
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
             System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
-            System.out.println("=======================TestStop++++++++++++++" + session + "++++++++++++++++TestStop==============");
+            System.out.println("=======================TestStop++++++++++++++" + session + date+ "++++++++++++++++TestStop==============");
             status = "passed";
         } catch (Exception e) {
             System.out.println(e + "    " + " SessionID --->" + "  " + session);
@@ -291,7 +291,7 @@ public class magicLeap {
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
             //  new aPiCalls(username, accesskey).getSessionDetails(session.toString());
-            System.out.println("=============" + session + "================");
+            System.out.println("=============" + session + date+ "================");
             //((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             //    driver.quit();
 
