@@ -2,11 +2,9 @@ package magicleapTesting;
 
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.util.logging.Logger;
-
 public class CpuExten {
 
-    public void extension(RemoteWebDriver driver, String status, String BrowserValue, Logger log) {
+    public void extension(RemoteWebDriver driver, String status, String BrowserValue, org.apache.log4j.Logger log) {
         try {
 
             if (BrowserValue.matches("chrome") || BrowserValue.matches("Chrome")) {

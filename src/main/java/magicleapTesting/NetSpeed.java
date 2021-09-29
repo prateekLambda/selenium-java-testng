@@ -5,10 +5,8 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.util.logging.Logger;
-
 public class NetSpeed {
-    public void NetSpeed(RemoteWebDriver driver, String status, long Nettotalspeedtest, Logger log) {
+    public void NetSpeed(RemoteWebDriver driver, String status, long Nettotalspeedtest, org.apache.log4j.Logger log) {
         try {
             long NetSpeedteststart;
             long NetSpeedteststop;
