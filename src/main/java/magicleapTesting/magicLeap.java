@@ -162,10 +162,10 @@ public class magicLeap {
 
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
-                    log.info(capabilities.toString());
+                    log.trace(capabilities.toString());
                     hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     //hub = "http://localhost:8080/wd/hub";
-                    log.info(hub);
+                    log.trace(hub);
                     System.out.println("Start Time" + " " + formatter.format(date));
 
                     driver = new RemoteWebDriver(new URL(hub), capabilities);
@@ -175,7 +175,7 @@ public class magicLeap {
                     //set timeout to 5 seconds
 
                     session = driver.getSessionId();
-                    log.info(session.toString());
+                    log.trace(session.toString());
                     DesktopScript();
                     tearDown();
                     driver.quit();
@@ -187,11 +187,11 @@ public class magicLeap {
 
                 } catch (MalformedURLException e) {
                     System.out.println("Invalid grid URL");
-                    log.info(e.getMessage());
+                    log.trace(e.getMessage());
 
 
                 } catch (Exception f) {
-                    log.info(f.getMessage());
+                    log.trace(f.getMessage());
                     status = "failed";
 
                 }
@@ -203,7 +203,7 @@ public class magicLeap {
     @Test
     public void DesktopScript() {
         try {
-            log.info("==================TestStart+++++++++++++" + session + "\n" + date + "++++++++++++++++TestStart==================");
+            log.trace("==================TestStart+++++++++++++" + session + "\n" + date + "++++++++++++++++TestStart==================");
 //            driver.get("https://www.amazon.in/");
 //            System.out.println(driver.getTitle());
 //            for (int index = 0; index <= 10; index++) {
@@ -222,66 +222,66 @@ public class magicLeap {
             TakeScreenShot shot = new TakeScreenShot();
             shot.Screenshot(driver, status, log);
 
-            log.info("LambdaTest Tutorial Test initiated");
+            log.trace("LambdaTest Tutorial Test initiated");
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session, log);
             shot.Screenshot(driver, status, log);
-            log.info("LambdaTest Tutorial Test Stopped");
+            log.trace("LambdaTest Tutorial Test Stopped");
 
 
             //     exten.extension(driver, status, this.BrowserValue);
             /*
                 shot.Screenshot(driver, status);*/
             //   exten.extension(driver, status, this.BrowserValue);
-            log.info("Resolution Test initiated");
+            log.trace("Resolution Test initiated");
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
             shot.Screenshot(driver, status, log);
-            log.info("Resolution Test Stopped");
+            log.trace("Resolution Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
-            log.info("Google Space Test initiated");
+            log.trace("Google Space Test initiated");
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session, log);
             shot.Screenshot(driver, status, log);
-            log.info("Google Space Test Stopped");
+            log.trace("Google Space Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
-            log.info("Selenium Test Started");
+            log.trace("Selenium Test Started");
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session, log);
             shot.Screenshot(driver, status, log);
-            log.info("Selenium Test Stopped");
+            log.trace("Selenium Test Stopped");
 
             //exten.extension(driver, status, this.BrowserValue);
-            log.info("Geolocation Test Started");
+            log.trace("Geolocation Test Started");
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session, log);
             shot.Screenshot(driver, status, log);
-            log.info("Geolocation Test Stopped");
+            log.trace("Geolocation Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
-            log.info("VideoUpload Test Started");
+            log.trace("VideoUpload Test Started");
             VideoUpload test = new VideoUpload();
             test.vidupload(driver, log);
 
             //exten.extension(driver, status, this.BrowserValue);
             shot.Screenshot(driver, status, log);
-            log.info("VideoUpload Test Stopped");
+            log.trace("VideoUpload Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
-            log.info("BadSSl Test Started");
+            log.trace("BadSSl Test Started");
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status, log);
             shot.Screenshot(driver, status, log);
-            log.info("BadSSl Test Stopped");
+            log.trace("BadSSl Test Stopped");
 
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
-            log.info("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
-            log.info(session.toString());
+            log.trace("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
+            log.trace(session.toString());
             status = "passed";
         } catch (Exception e) {
-            log.info(e.getMessage());
-            log.info(session.toString());
+            log.trace(e.getMessage());
+            log.trace(session.toString());
             status = "failed";
 
         }
@@ -297,7 +297,7 @@ public class magicLeap {
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
             //  new aPiCalls(username, accesskey).getSessionDetails(session.toString());
-            log.info(session.toString());
+            log.trace(session.toString());
             //((JavascriptExecutor) driver).executeScript("lambda-status=" + status);
             //    driver.quit();
 

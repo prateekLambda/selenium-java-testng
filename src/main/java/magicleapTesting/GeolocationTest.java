@@ -26,7 +26,7 @@ public class GeolocationTest {
             GeolocationTotal = GeolocationStop - Geolocationstart;
             log.info("Total time took for geolocation test" + " " + GeolocationTotal / 1000f + "Sec.");
         } catch (Exception t) {
-            log.info(t.getMessage() + "    " + " SessionID --->" + "  " + session);
+            log.trace(t.getMessage() + "    " + " SessionID --->" + "  " + session);
 
         }
         try {
@@ -50,7 +50,7 @@ public class GeolocationTest {
             WebElement location = driver.findElement(By.xpath("/html/body/pre"));
             location.getAttribute("innerText");
 
-            log.info(g.getMessage() + "    " + " SessionID --->" + "  " + session);
+            log.trace(g.getMessage() + "    " + " SessionID --->" + "  " + session);
             // System.out.println("Location of the machine" + "  " + location.getAttribute("innerText"));
 
 

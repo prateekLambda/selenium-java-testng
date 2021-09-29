@@ -83,6 +83,7 @@ public class VideoUpload {
 
         } catch (Exception v) {
             log.isTraceEnabled();
+            log.trace(v.getMessage());
 
         }
     }
