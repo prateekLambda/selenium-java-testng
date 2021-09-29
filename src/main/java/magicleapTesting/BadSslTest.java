@@ -5,11 +5,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
-import java.util.logging.Logger;
-
 public class BadSslTest {
 
-    public void badSsl(RemoteWebDriver driver, String status, Logger log) {
+    public void badSsl(RemoteWebDriver driver, String status, org.apache.log4j.Logger log) {
         try {
             driver.get("https://self-signed.badssl.com/");
             String badSslTitle = driver.getTitle();

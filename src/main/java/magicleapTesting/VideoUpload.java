@@ -6,11 +6,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 public class VideoUpload {
 
-    public void vidupload(RemoteWebDriver driver, Logger log) {
+    public void vidupload(RemoteWebDriver driver, org.apache.log4j.Logger log) {
         try {
             driver.get("https://www.tmz.com/");
             driver.manage().deleteAllCookies();
@@ -83,7 +82,7 @@ public class VideoUpload {
             driver.findElement(By.className("masthead-search__submit")).click();
 
         } catch (Exception v) {
-            log.info(v.getMessage());
+            log.isTraceEnabled();
 
         }
     }

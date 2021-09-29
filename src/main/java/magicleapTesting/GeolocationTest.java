@@ -6,10 +6,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
 import java.util.concurrent.TimeUnit;
-import java.util.logging.Logger;
 
 public class GeolocationTest {
-    public void Geolocation(RemoteWebDriver driver, String status, long GeolocationTotal, SessionId session, Logger log) {
+    public void Geolocation(RemoteWebDriver driver, String status, long GeolocationTotal, SessionId session, org.apache.log4j.Logger log) {
 
         try {
 

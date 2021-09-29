@@ -13,12 +13,11 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.io.File;
 import java.util.Date;
-import java.util.logging.Logger;
 
 public class LambdaTutrial {
     Date date;
 
-    public void Lambdacert(RemoteWebDriver driver, SessionId session, Logger log) {
+    public void Lambdacert(RemoteWebDriver driver, SessionId session, org.apache.log4j.Logger log) {
         try {
             driver.get("https://www.lambdatest.com/automation-demos/");
             driver.manage().window().maximize();

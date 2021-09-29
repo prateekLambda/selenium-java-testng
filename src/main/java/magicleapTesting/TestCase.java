@@ -5,11 +5,9 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
-import java.util.logging.Logger;
-
 public class TestCase {
 
-    public void LongCase(RemoteWebDriver driver, SessionId session, Logger log) {
+    public void LongCase(RemoteWebDriver driver, SessionId session, org.apache.log4j.Logger log) {
 
         try {
             driver.get("https://www.seleniumeasy.com/test/");
