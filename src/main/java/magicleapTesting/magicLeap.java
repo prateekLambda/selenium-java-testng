@@ -1,7 +1,6 @@
 package magicleapTesting;
 
 import org.apache.commons.lang3.time.StopWatch;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
@@ -15,7 +14,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
-
+import java.util.logging.Logger;
 
 
 public class magicLeap {

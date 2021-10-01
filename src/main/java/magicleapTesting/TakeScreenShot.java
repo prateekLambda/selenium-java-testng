@@ -9,11 +9,12 @@ import java.io.File;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.logging.Logger;
 
 public class TakeScreenShot {
     Date date;
 
-    public void Screenshot(RemoteWebDriver driver, String status, org.apache.log4j.Logger log) {
+    public void Screenshot(RemoteWebDriver driver, String status, Logger log) {
         try {
 
             String FilePath;

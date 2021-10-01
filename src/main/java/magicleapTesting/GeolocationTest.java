@@ -6,9 +6,10 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class GeolocationTest {
-    public void Geolocation(RemoteWebDriver driver, String status, long GeolocationTotal, SessionId session, org.apache.log4j.Logger log) {
+    public void Geolocation(RemoteWebDriver driver, String status, long GeolocationTotal, SessionId session, Logger log) {
 
         try {
 
@@ -26,7 +27,7 @@ public class GeolocationTest {
             GeolocationTotal = GeolocationStop - Geolocationstart;
             log.info("Total time took for geolocation test" + " " + GeolocationTotal / 1000f + "Sec.");
         } catch (Exception t) {
-            log.trace(t.getMessage() + "    " + " SessionID --->" + "  " + session);
+            log.info(t.getMessage() + "    " + " SessionID --->" + "  " + session);
 
         }
         try {
@@ -50,7 +51,7 @@ public class GeolocationTest {
             WebElement location = driver.findElement(By.xpath("/html/body/pre"));
             location.getAttribute("innerText");
 
-            log.trace(g.getMessage() + "    " + " SessionID --->" + "  " + session);
+            log.info(g.getMessage() + "    " + " SessionID --->" + "  " + session);
             // System.out.println("Location of the machine" + "  " + location.getAttribute("innerText"));
 
 

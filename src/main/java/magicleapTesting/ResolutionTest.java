@@ -6,10 +6,11 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class ResolutionTest {
 
-    public void Resolution(RemoteWebDriver driver, String ResolutionValue, String status, long ResolutionTotal, String ResolutionValueCap, SessionId session, org.apache.log4j.Logger log) {
+    public void Resolution(RemoteWebDriver driver, String ResolutionValue, String status, long ResolutionTotal, String ResolutionValueCap, SessionId session, Logger log) {
         try {
 
 

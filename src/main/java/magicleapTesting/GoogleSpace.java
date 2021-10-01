@@ -6,8 +6,10 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
 
+import java.util.logging.Logger;
+
 public class GoogleSpace {
-    public void GSpace(RemoteWebDriver driver, SessionId session, org.apache.log4j.Logger log) {
+    public void GSpace(RemoteWebDriver driver, SessionId session, Logger log) {
         try {
             driver.get("https://mrdoob.com/projects/chromeexperiments/google-space/");
 

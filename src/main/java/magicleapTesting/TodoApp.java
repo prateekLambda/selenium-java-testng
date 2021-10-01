@@ -11,6 +11,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class TodoApp {
     float ClickCommandTime;
@@ -21,7 +22,7 @@ public class TodoApp {
     long SendKeysStop;
 
 
-    public void TodoAppTest(RemoteWebDriver driver, String status, SessionId session, org.apache.log4j.Logger log) {
+    public void TodoAppTest(RemoteWebDriver driver, String status, SessionId session, Logger log) {
         try {
 
                     //   Actions action = new Actions(driver);
