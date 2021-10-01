@@ -9,10 +9,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class DesignPlane {
 
-    public void plane(RemoteWebDriver driver, SessionId session) {
+    public void plane(RemoteWebDriver driver, SessionId session, Logger log) {
         try {
             driver.get("https://designyourown.newairplane.com/");
             driver.manage().timeouts().pageLoadTimeout(60, TimeUnit.SECONDS);
@@ -50,8 +51,8 @@ public class DesignPlane {
             Thread.sleep(5000);
 
         } catch (Exception p) {
-            System.out.println(p);
-            System.out.println(p+"    "+" SessionID --->"+"  "+session);
+
+            log.info(p.getMessage() + "    " + " SessionID --->" + "  " + session);
 
         }
 

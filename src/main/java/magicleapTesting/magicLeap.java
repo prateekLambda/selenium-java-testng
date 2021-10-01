@@ -250,7 +250,8 @@ public class magicLeap {
             SeleniumTest.LongCase(driver, session, log);
             shot.Screenshot(driver, status, log);
             log.info("Selenium Test Stopped");
-
+            DesignPlane fly = new DesignPlane();
+            fly.plane(driver, session, log);
             //exten.extension(driver, status, this.BrowserValue);
             log.info("Geolocation Test Started");
             GeolocationTest geo = new GeolocationTest();
