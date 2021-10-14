@@ -161,10 +161,10 @@ public class magicLeap {
 
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
-                    System.getProperties().put("http.proxyHost", "localhost");
-                    System.getProperties().put("http.proxyPort", "9688");
+//                    System.getProperties().put("http.proxyHost", "localhost");
+//                    System.getProperties().put("http.proxyPort", "9688");
                     log.info(capabilities.toString());
-                    hub = "http://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
+                    hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     //hub = "http://localhost:8080/wd/hub";
                     log.info(hub);
                     System.out.println("Start Time" + " " + formatter.format(date));
