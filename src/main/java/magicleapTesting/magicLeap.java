@@ -107,12 +107,12 @@ public class magicLeap {
 
                     //capabilities.setCapability("region", region);
                     //  capabilities.setCapability("idleTimeout", "600");
-                    /*if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
-                        ChromeOptions options = new ChromeOptions();
-                        options.addExtensions(new File("Extensions/CPU.crx"));
-
-                        capabilities.setCapability("LT:Options", options);
-                    }*/
+//                    if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
+//                        ChromeOptions options = new ChromeOptions();
+//                        options.addExtensions(new File("Extensions/CPU.crx"));
+//
+//                        capabilities.setCapability("LT:Options", options);
+//                    }
                     //  capabilities.setCapability("queueTimeout", "900");
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
