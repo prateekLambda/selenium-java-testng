@@ -115,7 +115,7 @@ public class magicLeap {
 //                    }
                     //  capabilities.setCapability("queueTimeout", "900");
 
-                    capabilities.setCapability("fixedIP", this.FixedIpValue);
+                   // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
 
