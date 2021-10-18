@@ -95,7 +95,7 @@ public class magicLeap {
                     capabilities.setCapability("platform", this.PlatformValue);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
                     capabilities.setCapability("build", formatter.format(date) + System.getProperty("BUILD_NAME"));
-                    capabilities.setCapability("name", this.TestName + " ");
+                    capabilities.setCapability("name", this.TestName + " " + FixedIpValue);
                     //  capabilities.setCapability("resolution", "1280x1024");
                     //capabilities.setCapability("lambda:userFiles", file);
                     capabilities.setCapability("console", true);
@@ -115,7 +115,7 @@ public class magicLeap {
 //                    }
                     //  capabilities.setCapability("queueTimeout", "900");
 
-                    // capabilities.setCapability("fixedIP", this.FixedIpValue);
+                    capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
 
