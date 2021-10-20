@@ -161,8 +161,8 @@ public class magicLeap {
 
                     StopWatch driverStart = new StopWatch();
                     driverStart.start();
-                 /*   System.getProperties().put("http.proxyHost", "localhost");
-                    System.getProperties().put("http.proxyPort", "9688");*/
+                    System.getProperties().put("http.proxyHost", "localhost");
+                    System.getProperties().put("http.proxyPort", "9688");
                     log.info(capabilities.toString());
                     hub = "http://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     //hub = "http://localhost:8080/wd/hub";
@@ -220,13 +220,13 @@ public class magicLeap {
 
             CpuExten exten = new CpuExten();
             //   exten.extension(driver, status, this.BrowserValue);
-            TakeScreenShot shot = new TakeScreenShot();
-            shot.Screenshot(driver, status, log);
+            /*TakeScreenShot shot = new TakeScreenShot();
+            shot.Screenshot(driver, status, log);*/
 
             log.info("LambdaTest Tutorial Test initiated");
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session, log);
-            shot.Screenshot(driver, status, log);
+          //  shot.Screenshot(driver, status, log);
             log.info("LambdaTest Tutorial Test Stopped");
 
 
@@ -237,20 +237,20 @@ public class magicLeap {
             log.info("Resolution Test initiated");
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
-            shot.Screenshot(driver, status, log);
+           // shot.Screenshot(driver, status, log);
             log.info("Resolution Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
             log.info("Google Space Test initiated");
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session, log);
-            shot.Screenshot(driver, status, log);
+           // shot.Screenshot(driver, status, log);
             log.info("Google Space Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
             log.info("Selenium Test Started");
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session, log);
-            shot.Screenshot(driver, status, log);
+         //   shot.Screenshot(driver, status, log);
             log.info("Selenium Test Stopped");
 //            DesignPlane fly = new DesignPlane();
 //            fly.plane(driver, session, log);
@@ -258,7 +258,7 @@ public class magicLeap {
             log.info("Geolocation Test Started");
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session, log);
-            shot.Screenshot(driver, status, log);
+         //   shot.Screenshot(driver, status, log);
             log.info("Geolocation Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
@@ -267,13 +267,13 @@ public class magicLeap {
             test.vidupload(driver, log);
 
             //exten.extension(driver, status, this.BrowserValue);
-            shot.Screenshot(driver, status, log);
+          //  shot.Screenshot(driver, status, log);
             log.info("VideoUpload Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
             log.info("BadSSl Test Started");
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status, log);
-            shot.Screenshot(driver, status, log);
+         //   shot.Screenshot(driver, status, log);
             log.info("BadSSl Test Stopped");
 
             SuiteStop = System.currentTimeMillis();
