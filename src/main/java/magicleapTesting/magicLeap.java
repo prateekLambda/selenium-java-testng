@@ -1,9 +1,12 @@
 package magicleapTesting;
 
+import com.google.common.collect.ImmutableMap;
 import org.apache.commons.lang3.time.StopWatch;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.HttpCommandExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
+import org.openqa.selenium.remote.http.HttpClient;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -12,7 +15,9 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.Duration;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.TimeZone;
 import java.util.logging.Logger;
 
@@ -115,7 +120,7 @@ public class magicLeap {
 //                    }
                     //  capabilities.setCapability("queueTimeout", "900");
 
-                   // capabilities.setCapability("fixedIP", this.FixedIpValue);
+                    // capabilities.setCapability("fixedIP", this.FixedIpValue);
             /*capabilities.setCapability("safari.cookies", true);
             capabilities.setCapability("safari.popups", true);*/
 
@@ -168,8 +173,31 @@ public class magicLeap {
                     //hub = "http://localhost:8080/wd/hub";
                     log.info(hub);
                     System.out.println("Start Time" + " " + formatter.format(date));
+                    HttpClient.Factory factory = HttpClient.Factory.createDefault();
+                    HttpClient.Builder builder = factory.builder()
+                            .readTimeout(Duration.ofSeconds(1800))
+                            .connectionTimeout(Duration.ofSeconds(1800));
 
-                    driver = new RemoteWebDriver(new URL(hub), capabilities);
+                    new HttpCommandExecutor(ImmutableMap.of(), new URL(hub), new HttpClient.Factory() {
+                        @Override
+                        public HttpClient.Builder builder() {
+                            return new HttpClient.Builder() {
+                                @Override
+                                public HttpClient createClient(URL url) {
+                                    return builder.createClient(url);
+                                }
+                            };
+                        }
+
+                        @Override
+                        public void cleanupIdleClients() {
+                            factory.cleanupIdleClients();
+                        }
+                    });
+                    HttpCommandExecutor executor = new HttpCommandExecutor(new HashMap<>(), new URL(hub), factory);
+                    driver = new RemoteWebDriver(executor, capabilities);
+
+//                    driver = new RemoteWebDriver(new URL(hub), capabilities);
 /*
                     aPiCalls con = new aPiCalls();
                     con.concurrency();*/
@@ -226,7 +254,7 @@ public class magicLeap {
             log.info("LambdaTest Tutorial Test initiated");
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session, log);
-          //  shot.Screenshot(driver, status, log);
+            //  shot.Screenshot(driver, status, log);
             log.info("LambdaTest Tutorial Test Stopped");
 
 
@@ -237,20 +265,20 @@ public class magicLeap {
             log.info("Resolution Test initiated");
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
-           // shot.Screenshot(driver, status, log);
+            // shot.Screenshot(driver, status, log);
             log.info("Resolution Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
             log.info("Google Space Test initiated");
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session, log);
-           // shot.Screenshot(driver, status, log);
+            // shot.Screenshot(driver, status, log);
             log.info("Google Space Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
             log.info("Selenium Test Started");
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session, log);
-         //   shot.Screenshot(driver, status, log);
+            //   shot.Screenshot(driver, status, log);
             log.info("Selenium Test Stopped");
 //            DesignPlane fly = new DesignPlane();
 //            fly.plane(driver, session, log);
@@ -258,7 +286,7 @@ public class magicLeap {
             log.info("Geolocation Test Started");
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session, log);
-         //   shot.Screenshot(driver, status, log);
+            //   shot.Screenshot(driver, status, log);
             log.info("Geolocation Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
@@ -267,13 +295,13 @@ public class magicLeap {
             test.vidupload(driver, log);
 
             //exten.extension(driver, status, this.BrowserValue);
-          //  shot.Screenshot(driver, status, log);
+            //  shot.Screenshot(driver, status, log);
             log.info("VideoUpload Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
             log.info("BadSSl Test Started");
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status, log);
-         //   shot.Screenshot(driver, status, log);
+            //   shot.Screenshot(driver, status, log);
             log.info("BadSSl Test Stopped");
 
             SuiteStop = System.currentTimeMillis();
