@@ -1,16 +1,10 @@
 package magicleapTesting;
 
 
-
 import org.apache.commons.lang3.time.StopWatch;
-import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.remote.SessionId;
-import org.openqa.selenium.support.ui.ExpectedCondition;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -21,14 +15,15 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.TimeZone;
-import java.util.concurrent.TimeUnit;
+import java.util.logging.Logger;
 
 public class browserStack {
 
-    public String username = "falconmagicleap_vci1oa";
-    public String accesskey = "JxzszpGVzPndo6ySxp3r";
+    public String username = System.getProperty("LT_USERNAME");
+    public String accesskey = System.getProperty("LT_ACCESS_KEY");
+
     public RemoteWebDriver driver;
-    public String gridURL = "hub-cloud.browserstack.com"; //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";
+    public String gridURL = System.getProperty("GRID_URL");
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -55,7 +50,7 @@ public class browserStack {
     long SuiteTotalTime;
     Long AllVersions = null;
     Date date;
-
+    Logger log = Logger.getLogger(magicLeap.class.getName());
 
     @org.testng.annotations.Parameters(value = {"browser", "version", "os_version", "os", "resolution", "timezone", "geoLocation", "tunnel"})
     public browserStack(String browser, String version, String os_version, String os, String resolution, String timezone, String geoLocation, String tunnel) {
@@ -91,19 +86,19 @@ public class browserStack {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i < 10; i++) {
-            for (int j = 0; j < 5; j++) {
+        for (int i = 0; i <= 200; i++) {
+            for (int j = 0; j <= 10; j++) {
                 try {
 
 
                     DesiredCapabilities capabilities = new DesiredCapabilities();
                     capabilities.setCapability("browserName", this.BrowserValue);
-                    capabilities.setCapability("os_version",this.BSos_version);
+                    capabilities.setCapability("os_version", this.BSos_version);
                     //   capabilities.setCapability("version", "latest");
                     capabilities.setCapability("browser_version", "latest" + "-" + j);
                     capabilities.setCapability("os", this.Bsos);
                     //capabilities.setCapability("build", date +"  "+this.PlatformValue + System.getenv("LT_BUILD_NAME"));
-                    capabilities.setCapability("build", "Jenkins"+"  " + formatter.format(date) + "  " + this.BSos_version +"  "+ System.getProperty("BUILD_NUMBER"));
+                    capabilities.setCapability("build", "Jenkins" + "  " + formatter.format(date) + "  " + this.BSos_version + "  " + System.getProperty("BUILD_NUMBER"));
                     capabilities.setCapability("name", this.TestName);
                     //   capabilities.setCapability("resolution", this.ResolutionValueCap);
                     /*capabilities.setCapability("console", true);
@@ -171,6 +166,7 @@ public class browserStack {
                     System.out.println("Driver initiate time" + "   " + timeElapsed);
                     DesktopScript();
                     tearDown();
+                    driver.quit();
 
 
                 } catch (
@@ -189,183 +185,90 @@ public class browserStack {
     @Test
     public void DesktopScript() {
         try {
-            System.out.println("==================TestStart+++++++++++++" + session + "++++++++++++++++TestStart==================");
+            log.info("==================TestStart+++++++++++++" + session + "\n" + date + "++++++++++++++++TestStart==================");
+//            driver.get("https://www.amazon.in/");
+//            System.out.println(driver.getTitle());
+//            for (int index = 0; index <= 10; index++) {
+//                Thread.sleep(1000);
+//            }
+          /*  driver.get("https://www.amazon.in/");
+            System.out.println(driver.getTitle());
+            for (int index = 0; index <= 20; index++) {
+                Thread.sleep(1000);
+            }*/
+          /*  UserTest user = new UserTest();
+            user.TestCase(driver, status);*/
 
-            SuiteStart = System.currentTimeMillis();
-            driver.get("https://www.bikester.es/");
-            //((JavascriptExecutor) driver).executeScript("lambda-name=" + getClass().getName());
-        /*    driver.manage().addCookie(new Cookie("httpOnly", "false"));
-            driver.manage().addCookie(new Cookie("name", "kameleoonOptout"));
-            driver.manage().addCookie(new Cookie("path", ""));
-            driver.manage().addCookie(new Cookie("secure", "false"));
-            driver.manage().addCookie(new Cookie("value", "true"));*/
-            driver.manage().window().maximize();
-            driver.manage().timeouts().pageLoadTimeout(40000, TimeUnit.MICROSECONDS);
-            WebDriverWait wait = new WebDriverWait(driver, 60);
-            wait.until((ExpectedCondition) wd ->
-                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            jse.executeScript("document.querySelector(\"#onetrust-accept-btn-handler\").click()");
-            wait.until((ExpectedCondition) wd ->
-                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
-            jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(8) > a\").click();");
-            wait.until((ExpectedCondition) wd ->
-                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").scrollIntoView();");
-            wait.until((ExpectedCondition) wd ->
-                    ((JavascriptExecutor) wd).executeScript("return document.readyState").equals("complete"));
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").click();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(4) > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(4) > a\").click();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#ae29b201919598a5ca8315ae1a > div > div > a\").scrollIntoView();");
+            CpuExten exten = new CpuExten();
+            //   exten.extension(driver, status, this.BrowserValue);
+            /*TakeScreenShot shot = new TakeScreenShot();
+            shot.Screenshot(driver, status, log);*/
 
-            for (int Display = 1; Display <= 13; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-        } catch (Exception p) {
-            System.out.println(p);
-
-        }
-        try {
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            WebDriverWait wait = new WebDriverWait(driver, 60);
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(3) > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(3) > a\").click();");
-            for (int Display = 1; Display <= 13; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-        } catch (Exception f) {
-            System.out.println(f);
-        }
-        try {
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            WebDriverWait wait = new WebDriverWait(driver, 60);
-
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
-
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(5) > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(5) > a\").click();");
-            Thread.sleep(5000);
-            for (int Display = 1; Display <= 9; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-        } catch (Exception m) {
-            System.out.println(m);
-        }
-        try {
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            WebDriverWait wait = new WebDriverWait(driver, 60);
-            Thread.sleep(5000);
-            driver.get("https://www.bikester.es/outlet/bicicletas/");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(2) > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(2) > a\").click();");
-            Thread.sleep(5000);
-            for (int Display = 1; Display <= 13; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-        } catch (Exception k) {
-            System.out.println(k);
-        }
-        try {
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            WebDriverWait wait = new WebDriverWait(driver, 60);
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#main > div > div > div.scroll-pivot > div.js-searchbreadcrumbs.breadbrumbs-wrapper > ul > li:nth-child(4) > span > a\").click();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(7) > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(7) > a\").click();");
-            Thread.sleep(5000);
-
-            for (int Display = 1; Display <= 13; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-        } catch (Exception l) {
-            System.out.println(l);
-        }
-        try {
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            WebDriverWait wait = new WebDriverWait(driver, 60);
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(1) > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"body > header > div > div.header__nav.only-from-lg.js-headerNav > ul > li:nth-child(1) > a\").click();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").scrollIntoView();");
-            Thread.sleep(5000);
-            jse.executeScript("document.querySelector(\"#category-level-0 > ul > li:nth-child(1) > a\").click();");
-            Thread.sleep(5000);
-            for (int Display = 1; Display <= 13; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-        } catch (Exception b) {
-            System.out.println(b);
-        }
-        try {
-            JavascriptExecutor jse = (JavascriptExecutor) driver;
-            WebDriverWait wait = new WebDriverWait(driver, 60);
-            Thread.sleep(5000);
-            driver.get("https://www.bikester.es/bicicletas/bicicletas-de-montana/");
-            for (int Display = 1; Display <= 13; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-            jse.executeScript("window.scrollBy(0,200)");
-            Thread.sleep(5000);
-            for (int Display = 13; Display <= 26; Display++) {
-                wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("/html/body/div[5]/div/main/div/div/div[2]/div[3]/div[1]/div[2]/div[6]/div[" + Display + "]/div/div")));
-
-            }
-         /*   TodoApp TodoAppTestObject = new TodoApp();
-            TodoAppTestObject.TodoAppTest(driver, status, session);
-            ResolutionTest ResolutionTestObject = new ResolutionTest();
-
-            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session);
-            GeolocationTest geo = new GeolocationTest();
-            geo.Geolocation(driver, status, GeolocationTotal, session);
-            DownloadTest down = new DownloadTest();
-            down.FileDownload(driver);
-            TestCase SeleniumTest = new TestCase();
-            SeleniumTest.LongCase(driver, session);
+            log.info("LambdaTest Tutorial Test initiated");
             LambdaTutrial tut = new LambdaTutrial();
-            tut.Lambdacert(driver,session);
+            tut.Lambdacert(driver, session, log);
+            //  shot.Screenshot(driver, status, log);
+            log.info("LambdaTest Tutorial Test Stopped");
+
+
+            //     exten.extension(driver, status, this.BrowserValue);
+            /*
+                shot.Screenshot(driver, status);*/
+            //   exten.extension(driver, status, this.BrowserValue);
+            log.info("Resolution Test initiated");
+            ResolutionTest ResolutionTestObject = new ResolutionTest();
+            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
+            // shot.Screenshot(driver, status, log);
+            log.info("Resolution Test Stopped");
+
+            // exten.extension(driver, status, this.BrowserValue);
+            log.info("Google Space Test initiated");
             GoogleSpace space = new GoogleSpace();
-            space.GSpace(driver, session);
-            DesignPlane plane = new DesignPlane();
-            plane.plane(driver,session);*/
+            space.GSpace(driver, session, log);
+            // shot.Screenshot(driver, status, log);
+            log.info("Google Space Test Stopped");
+            //exten.extension(driver, status, this.BrowserValue);
+            log.info("Selenium Test Started");
+            TestCase SeleniumTest = new TestCase();
+            SeleniumTest.LongCase(driver, session, log);
+            //   shot.Screenshot(driver, status, log);
+            log.info("Selenium Test Stopped");
+//            DesignPlane fly = new DesignPlane();
+//            fly.plane(driver, session, log);
+            //exten.extension(driver, status, this.BrowserValue);
+            log.info("Geolocation Test Started");
+            GeolocationTest geo = new GeolocationTest();
+            geo.Geolocation(driver, status, GeolocationTotal, session, log);
+            //   shot.Screenshot(driver, status, log);
+            log.info("Geolocation Test Stopped");
+
+            // exten.extension(driver, status, this.BrowserValue);
+            log.info("VideoUpload Test Started");
+            VideoUpload test = new VideoUpload();
+            test.vidupload(driver, log);
+
+            //exten.extension(driver, status, this.BrowserValue);
+            //  shot.Screenshot(driver, status, log);
+            log.info("VideoUpload Test Stopped");
+            //exten.extension(driver, status, this.BrowserValue);
+            log.info("BadSSl Test Started");
+            BadSslTest bad = new BadSslTest();
+            bad.badSsl(driver, status, log);
+            //   shot.Screenshot(driver, status, log);
+            log.info("BadSSl Test Stopped");
+
             SuiteStop = System.currentTimeMillis();
             SuiteTotalTime = SuiteStop - SuiteStart;
-            System.out.println("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
-            System.out.println("=======================TestStop++++++++++++++" + session + "++++++++++++++++TestStop==============");
+            log.info("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
+            log.info(session.toString());
+            status = "passed";
+        } catch (Exception p) {
+            log.info(p.getMessage());
+            log.info(session.toString());
+            status = "failed";
 
-        } catch (Exception e) {
-            System.out.println(e + "    " + " SessionID --->" + "  " + session);
         }
+
     }
 
 
@@ -378,9 +281,7 @@ public class browserStack {
         quitetimestart = System.currentTimeMillis();
         if (driver != null) {
             System.out.println("=============" + session + "================");
-            ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
-            driver.quit();
-
+            //    ((JavascriptExecutor) driver).executeScript("browserstack_executor: {\"action\": \"setSessionStatus\", \"arguments\": {\"status\": \""+status+"\"}}");
 
 
         }

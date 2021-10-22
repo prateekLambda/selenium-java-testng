@@ -19,14 +19,17 @@ magicleapTesting\GeolocationTest.class
 magicleapTesting\uploadTest.class
 magicleapTesting\VideoUpload.class
 magicleapTesting\RunTunnelListener.class
+magicleapTesting\magicLeap$1$1.class
 magicleapTesting\browserStack.class
 magicleapTesting\AnroidVersion.class
 magicleapTesting\BasicAuth.class
 magicleapTesting\BadSslTest.class
+magicleapTesting\magicLeap$1.class
 magicleapTesting\TestCase.class
 magicleapTesting\LambdaTestLogin.class
 magicleapTesting\LocalDriver.class
 magicleapTesting\TodoApp.class
+magicleapTesting\CpuExten.class
 magicleapTesting\APIRequest.class
 magicleapTesting\ServiceWorkerTest.class
 magicleapTesting\magicLeap.class
