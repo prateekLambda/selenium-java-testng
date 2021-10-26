@@ -107,7 +107,7 @@ public class magicLeap {
                     capabilities.setCapability("network", true);
                     //    capabilities.setCapability("visual", true);
                     //  capabilities.setCapability("selenium_version", "3.141.59");
-                    capabilities.setCapability("fixedIP", "213292378");
+                  //  capabilities.setCapability("fixedIP", "213292378");
                     //   capabilities.setCapability("fixedIP", "9832721.912839.0298738921.098");
 
                     //capabilities.setCapability("region", region);
