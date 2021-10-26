@@ -88,7 +88,7 @@ public class magicLeap {
         DateFormat formatter = new SimpleDateFormat("dd-MM-yyyy");
         formatter.setTimeZone(TimeZone.getTimeZone("Asia/Kolkata"));
         date = new Date();
-        for (int i = 0; i <= 200; i++) {
+        for (int i = 0; i <= 50; i++) {
             for (int j = 0; j <= 10; j++) {
                 try {
                     String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
@@ -169,7 +169,7 @@ public class magicLeap {
                   /*  System.getProperties().put("http.proxyHost", "localhost");
                     System.getProperties().put("http.proxyPort", "9688");*/
                     log.info(capabilities.toString());
-                    hub = "http://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
+                    hub = "https://" + username + ":" + accesskey + "@" + gridURL + "/wd/hub";
                     //hub = "http://localhost:8080/wd/hub";
                     log.info(hub);
                     System.out.println("Start Time" + " " + formatter.format(date));
