@@ -2,6 +2,7 @@ package magicleapTesting;
 
 import com.google.common.collect.ImmutableMap;
 import org.apache.commons.lang3.time.StopWatch;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.HttpCommandExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -11,6 +12,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -107,17 +109,17 @@ public class magicLeap {
                     capabilities.setCapability("network", true);
                     //    capabilities.setCapability("visual", true);
                     //  capabilities.setCapability("selenium_version", "3.141.59");
-                    //capabilities.setCapability("fixedIP", "213292378");
+                    capabilities.setCapability("fixedIP", "213292378");
                     //   capabilities.setCapability("fixedIP", "9832721.912839.0298738921.098");
 
                     //capabilities.setCapability("region", region);
                     //  capabilities.setCapability("idleTimeout", "600");
-//                    if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
-//                        ChromeOptions options = new ChromeOptions();
-//                        options.addExtensions(new File("Extensions/CPU.crx"));
-//
-//                        capabilities.setCapability("LT:Options", options);
-//                    }
+                    if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
+                        ChromeOptions options = new ChromeOptions();
+                        options.addExtensions(new File("Extensions/CPU.crx"));
+
+                        capabilities.setCapability("LT:Options", options);
+                    }
                     //  capabilities.setCapability("queueTimeout", "900");
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
@@ -248,13 +250,13 @@ public class magicLeap {
 
             CpuExten exten = new CpuExten();
             //   exten.extension(driver, status, this.BrowserValue);
-            /*TakeScreenShot shot = new TakeScreenShot();
-            shot.Screenshot(driver, status, log);*/
+            TakeScreenShot shot = new TakeScreenShot();
+            shot.Screenshot(driver, status, log);
 
             log.info("LambdaTest Tutorial Test initiated");
             LambdaTutrial tut = new LambdaTutrial();
             tut.Lambdacert(driver, session, log);
-            //  shot.Screenshot(driver, status, log);
+            shot.Screenshot(driver, status, log);
             log.info("LambdaTest Tutorial Test Stopped");
 
 
@@ -265,20 +267,20 @@ public class magicLeap {
             log.info("Resolution Test initiated");
             ResolutionTest ResolutionTestObject = new ResolutionTest();
             ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
-            // shot.Screenshot(driver, status, log);
+            shot.Screenshot(driver, status, log);
             log.info("Resolution Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
             log.info("Google Space Test initiated");
             GoogleSpace space = new GoogleSpace();
             space.GSpace(driver, session, log);
-            // shot.Screenshot(driver, status, log);
+            shot.Screenshot(driver, status, log);
             log.info("Google Space Test Stopped");
             //exten.extension(driver, status, this.BrowserValue);
             log.info("Selenium Test Started");
             TestCase SeleniumTest = new TestCase();
             SeleniumTest.LongCase(driver, session, log);
-            //   shot.Screenshot(driver, status, log);
+            shot.Screenshot(driver, status, log);
             log.info("Selenium Test Stopped");
 //            DesignPlane fly = new DesignPlane();
 //            fly.plane(driver, session, log);
@@ -286,7 +288,7 @@ public class magicLeap {
             log.info("Geolocation Test Started");
             GeolocationTest geo = new GeolocationTest();
             geo.Geolocation(driver, status, GeolocationTotal, session, log);
-            //   shot.Screenshot(driver, status, log);
+            shot.Screenshot(driver, status, log);
             log.info("Geolocation Test Stopped");
 
             // exten.extension(driver, status, this.BrowserValue);
@@ -301,7 +303,7 @@ public class magicLeap {
             log.info("BadSSl Test Started");
             BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status, log);
-            //   shot.Screenshot(driver, status, log);
+            shot.Screenshot(driver, status, log);
             log.info("BadSSl Test Stopped");
 
             SuiteStop = System.currentTimeMillis();
