@@ -2,7 +2,6 @@ package magicleapTesting;
 
 import com.google.common.collect.ImmutableMap;
 import org.apache.commons.lang3.time.StopWatch;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.HttpCommandExecutor;
 import org.openqa.selenium.remote.RemoteWebDriver;
@@ -12,7 +11,6 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -114,12 +112,12 @@ public class magicLeap {
 
                     //capabilities.setCapability("region", region);
                     //  capabilities.setCapability("idleTimeout", "600");
-                    if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
+                  /*  if (this.BrowserValue.matches("chrome") || this.BrowserValue.matches("Chrome")) {
                         ChromeOptions options = new ChromeOptions();
                         options.addExtensions(new File("Extensions/CPU.crx"));
 
                         capabilities.setCapability("LT:Options", options);
-                    }
+                    }*/
                     //  capabilities.setCapability("queueTimeout", "900");
 
                     // capabilities.setCapability("fixedIP", this.FixedIpValue);
