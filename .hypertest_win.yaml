@@ -5,7 +5,7 @@ runson: win
 autosplit: true
 concurrency: 100
 testDiscoverer: grep 'test name' src/test/java/Win10.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-testRunnerCommand: mvn test `-DselectedTests="$test" `-DLT_USERNAME=prateeks `-DLT_ACCESS_KEY=bc6ytMB3dajkj3cChXJcXl8qhTERlBD1Nc4ACCIa8g5MlOtZfm `-DGRID_URL=hub.lambdatest.com `-DBUILD_NAME=HYperTest-stage-firefox-1
+testRunnerCommand: mvn test `-DselectedTests="$test" `-Dsurefire.suiteXmlFiles=src/test/java/Catalina.xml `-DLT_USERNAME=prateeks `-DLT_ACCESS_KEY=bc6ytMB3dajkj3cChXJcXl8qhTERlBD1Nc4ACCIa8g5MlOtZfm `-DGRID_URL=hub.lambdatest.com `-DBUILD_NAME=HYperTest-stage-firefox-1
 #pre:
 #  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 #cacheKey: '{{ checksum "pom.xml" }}'

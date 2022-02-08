@@ -4,8 +4,8 @@ testSuiteStep: 90
 runson: win
 autosplit: true
 concurrency: 20
-testDiscoverer: grep 'test name' src/test/java/Win10.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/.$//' | sed 's/.$//'
-testRunnerCommand: mvn test -DselectedTests="$test" -DLT_USERNAME=prateeks -DLT_ACCESS_KEY=lOiW0XI8oQxV1qas94ZjNnDZTvRYJnkykgteocvs7p7U9I8cqE -DGRID_URL=stage-hub.lambdatest.com -DBUILD_NAME=HYperTest-1
+testDiscoverer: grep 'test name' src/test/java/Catalina.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/.$//' | sed 's/.$//'
+testRunnerCommand: mvn test -DselectedTests="$test" -Dsurefire.suiteXmlFiles=src/test/java/Catalina.xml -DLT_USERNAME=prateeks -DLT_ACCESS_KEY=lOiW0XI8oQxV1qas94ZjNnDZTvRYJnkykgteocvs7p7U9I8cqE -DGRID_URL=stage-hub.lambdatest.com -DBUILD_NAME=HYperTest-1
 #pre:
 #  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 #cacheKey: '{{ checksum "pom.xml" }}'
