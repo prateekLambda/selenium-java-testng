@@ -1,5 +1,7 @@
 magicleapTesting\SessionTest.class
+magicleapTesting\TestCommands.class
 magicleapTesting\aPiCalls.class
+magicleapTesting\WebAppTest.class
 magicleapTesting\ResolutionTest.class
 magicleapTesting\ChromeBrowserVersion.class
 magicleapTesting\DownloadTest.class
@@ -19,12 +21,10 @@ magicleapTesting\GeolocationTest.class
 magicleapTesting\uploadTest.class
 magicleapTesting\VideoUpload.class
 magicleapTesting\RunTunnelListener.class
-magicleapTesting\magicLeap$1$1.class
 magicleapTesting\browserStack.class
 magicleapTesting\AnroidVersion.class
 magicleapTesting\BasicAuth.class
 magicleapTesting\BadSslTest.class
-magicleapTesting\magicLeap$1.class
 magicleapTesting\TestCase.class
 magicleapTesting\LambdaTestLogin.class
 magicleapTesting\LocalDriver.class

@@ -226,7 +226,7 @@
             <class name="magicleapTesting.magicLeap"/>
         </classes>
     </test>
-    <!--
+    
         <test name="16">
             <parameter name="browser" value="MicrosoftEdge"/>
             <parameter name="version" value="90.0"/>
@@ -295,7 +295,7 @@
         <test name="20">
             <parameter name="browser" value="MicrosoftEdge"/>
             <parameter name="version" value="90.0"/>
-            <parameter name="platform" value="win7"/>
+            <parameter name="platform" value="macos catalina"/>
             <parameter name="fixedIp" value="10.80.102.100"/>
             <parameter name="resolution" value="1280x1024"/>
             <parameter name="timezone" value="UTC+04:00"/>
@@ -1459,7 +1459,7 @@
         </test>
 
         <test name="107">
-            <parameter name="browser" value="Internet Explorer"/>
+            <parameter name="browser" value="Firefox"/>
             <parameter name="version" value="11.0"/>
             <parameter name="platform" value="macos catalina"/>
             <parameter name="fixedIp" value="10.92.181.176"/>
@@ -1516,7 +1516,7 @@
         </test>
 
         <test name="111">
-            <parameter name="browser" value="Internet Explorer"/>
+            <parameter name="browser" value="Firefox"/>
             <parameter name="version" value="11.0"/>
             <parameter name="platform" value="macos catalina"/>
             <parameter name="fixedIp" value="10.92.181.176"/>
@@ -1545,7 +1545,7 @@
         </test>
 
         <test name="113">
-            <parameter name="browser" value="Internet explorer"/>
+            <parameter name="browser" value="Firefox"/>
             <parameter name="version" value="11.0"/>
             <parameter name="platform" value="macos catalina"/>
             <parameter name="fixedIp" value="10.92.181.176"/>
@@ -1572,5 +1572,5 @@
             </classes>
         </test>
 
-    -->
+    
 </suite>
