@@ -5,10 +5,10 @@
 
     <test name="1">
         <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="latest"/>
-        <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1024x768"/>
+        <parameter name="version" value="latest-2"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="4.0.0"/>
+        <parameter name="resolution" value="1680x1050"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="CA"/>
         <parameter name="tunnelName" value="prateekSignh"/>
@@ -19,12 +19,12 @@
         </classes>
     </test>
     <test name="2">
-        <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="latest-1"/>
-        <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1280x800"/>
-        <parameter name="timezone" value="UTC+04:00"/>
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="version" value="latest-2"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="4.1.0"/>
+        <parameter name="resolution" value="1600x1200"/>
+        <parameter name="timezone" value="UTC+03:30"/>
         <parameter name="geoLocation" value="DK"/>
         <parameter name="tunnelName" value="prateekSignh"/>
         <parameter name="tunnel" value="false"/>
@@ -34,12 +34,12 @@
         </classes>
     </test>
     <test name="3">
-        <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="latest-2"/>
-        <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1280x1024"/>
-        <parameter name="timezone" value="UTC+04:00"/>
+        <parameter name="browser" value="Edge"/>
+        <parameter name="version" value="latest-1"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="4.1.2"/>
+        <parameter name="resolution" value="1920x1200"/>
+        <parameter name="timezone" value="UTC+05:00"/>
         <parameter name="geoLocation" value="US"/>
         <parameter name="tunnelName" value="prateekSignh"/>
         <parameter name="tunnel" value="false"/>
@@ -51,10 +51,10 @@
     <test name="4">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="latest-3"/>
-        <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1366x768"/>
-        <parameter name="timezone" value="UTC+04:00"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="3.141.59"/>
+        <parameter name="resolution" value="2048x1536"/>
+        <parameter name="timezone" value="UTC+08:00"/>
         <parameter name="geoLocation" value="UK"/>
         <parameter name="tunnelName" value="prateekSignh"/>
         <parameter name="tunnel" value="false"/>
@@ -64,11 +64,11 @@
         </classes>
     </test>
     <test name="5">
-        <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="latest-4"/>
-        <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1440x900"/>
+        <parameter name="browser" value="Firefox"/>
+        <parameter name="version" value="latest-3"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="3.141.0"/>
+        <parameter name="resolution" value="2560x1440"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="UK"/>
         <parameter name="tunnelName" value="prateekSignh"/>

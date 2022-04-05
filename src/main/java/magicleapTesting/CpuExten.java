@@ -12,6 +12,7 @@ public class CpuExten {
             if (BrowserValue.matches("chrome") || BrowserValue.matches("Chrome")) {
 
                 driver.get("chrome-extension://abhdadadmefcinkehbogolpfocgjkkgb/html/popup.html");
+                Thread.sleep(10000);
                 TakeScreenShot shot = new TakeScreenShot();
                 shot.Screenshot(driver, status, log);
             }

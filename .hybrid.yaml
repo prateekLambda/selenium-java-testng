@@ -1,0 +1,46 @@
+version: 0.1
+::
+autosplit: true
+matrix:
+  os: ["win", "mac"]
+
+runson: ${matrix.os}
+
+parallelism:  6
+
+
+testDiscovery:
+  type: raw
+  mode: dynamic
+  command: grep 'test name' src/test/java/testng.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+
+testRunnerCommand: mvn test `-DselectedTests="$test" `-DLT_USERNAME=prateeks `-DLT_ACCESS_KEY=lOiW0XI8oQxV1qas94ZjNnDZTvRYJnkykgteocvs7p7U9I8cqE `-DGRID_URL=stage-hub.lambdatest.com `-DBUILD_NAME=HYperTest-3
+
+
+
+#    ::::SYNTAX::::
+#
+#    parallelism:
+#    winParallelism:
+#    macParallelism:
+#    linuxParallelism:
+#
+#    testDiscovery:
+#      type: raw | automatic
+#      mode: dynamic | static
+#      command:
+#        winCommand:
+#        macCommand:
+#        linuxCommand:
+#      args:
+#        featureFilePath: src/**/a
+#        framework: java
+#      autosubset: true // Current Dynamic, More pref
+#      range:
+#        offset: Where to start //Useful in case of hybrid mode default: 0
+#        limit: Where to end // Useful in case of hybrid mode default -1
+#
+#    testRunnerCommand:
+#    winTestRunnerCommand:
+#    macTestRunnerCommand:
+#    linuxTestRunnerCommand:

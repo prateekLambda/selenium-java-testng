@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite thread-count="25" name="DesktopBrowsers" parallel="tests">
 
-    <!--
+
         <test name='1'>
             <parameter name="browser" value="Chrome"/>
             <parameter name="version" value="17.0"/>
@@ -4372,7 +4372,7 @@
             <classes>
                 <class name="magicleapTesting.magicLeap"/>
             </classes>
-        </test-->
+        </test>
     <test name='313'>
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="17.0"/>

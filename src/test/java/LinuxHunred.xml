@@ -6,8 +6,8 @@
     <test name="1">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="latest"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.82.4.230"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.82.4.230"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="IN"/>
@@ -23,8 +23,8 @@
     <test name="2">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="11.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.82.4.231"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.82.4.231"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="RO"/>
@@ -40,8 +40,8 @@
     <test name="4">
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="latest"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.82.4.234"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.82.4.234"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="RO"/>
@@ -57,7 +57,7 @@
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="11.0"/>
         <parameter name="platform" value="win7"/>
-        <parameter name="fixedIp" value="10.82.6.201"/>
+        <parameter name="SeleniumVersion" value="10.82.6.201"/>
         <parameter name="resolution" value="1440x900"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="HN"/>
@@ -73,7 +73,7 @@
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="74.0"/>
         <parameter name="platform" value="win7"/>
-        <parameter name="fixedIp" value="10.82.6.203"/>
+        <parameter name="SeleniumVersion" value="10.82.6.203"/>
         <parameter name="resolution" value="1440x900"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NI"/>
@@ -90,7 +90,7 @@
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="72.0"/>
         <parameter name="platform" value="win7"/>
-        <parameter name="fixedIp" value="10.82.6.205"/>
+        <parameter name="SeleniumVersion" value="10.82.6.205"/>
         <parameter name="resolution" value="1280x1024"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MA"/>
@@ -106,7 +106,7 @@
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="11.0"/>
         <parameter name="platform" value="macos big sur"/>
-        <parameter name="fixedIp" value="10.243.32.235"/>
+        <parameter name="SeleniumVersion" value="10.243.32.235"/>
         <parameter name="resolution" value="1600x1200"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MY"/>
@@ -121,7 +121,7 @@
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="71.0"/>
         <parameter name="platform" value="macos big sur"/>
-        <parameter name="fixedIp" value="10.243.32.236"/>
+        <parameter name="SeleniumVersion" value="10.243.32.236"/>
         <parameter name="resolution" value="1440x900"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NZ"/>
@@ -137,7 +137,7 @@
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="65.0"/>
         <parameter name="platform" value="macos big sur"/>
-        <parameter name="fixedIp" value="10.243.32.64"/>
+        <parameter name="SeleniumVersion" value="10.243.32.64"/>
         <parameter name="resolution" value="1600x1200"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="RU"/>
@@ -152,7 +152,7 @@
         <parameter name="browser" value="safari"/>
         <parameter name="version" value="65.0"/>
         <parameter name="platform" value="macos big sur"/>
-        <parameter name="fixedIp" value="10.243.32.62"/>
+        <parameter name="SeleniumVersion" value="10.243.32.62"/>
         <parameter name="resolution" value="2048x1536"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="ES"/>
@@ -168,7 +168,7 @@
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="70.0"/>
         <parameter name="platform" value="macos big sur"/>
-        <parameter name="fixedIp" value="10.243.32.60"/>
+        <parameter name="SeleniumVersion" value="10.243.32.60"/>
         <parameter name="resolution" value="1280x960"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="CH"/>
@@ -183,7 +183,7 @@
         <parameter name="browser" value="safari"/>
         <parameter name="version" value="78.0"/>
         <parameter name="platform" value="macos big sur"/>
-        <parameter name="fixedIp" value="10.243.32.238"/>
+        <parameter name="SeleniumVersion" value="10.243.32.238"/>
         <parameter name="resolution" value="1600x1200"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="GB"/>
@@ -198,8 +198,8 @@
     <test name="14">
         <parameter name="browser" value="firefox"/>
         <parameter name="version" value="latest-1"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.82.3.220"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.82.3.220"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="RO"/>
@@ -214,8 +214,8 @@
     <test name="15">
         <parameter name="browser" value="chrome"/>
         <parameter name="version" value="latest-15"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.82.3.196"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.82.3.196"/>
         <parameter name="resolution" value="1680x1050"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NI"/>
@@ -230,8 +230,8 @@
     <test name="16">
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="90.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.80.26.214"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.80.26.214"/>
         <parameter name="resolution" value="1920x1080"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="RO"/>
@@ -246,8 +246,8 @@
     <test name="17">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="90.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.80.26.214"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.80.26.214"/>
         <parameter name="resolution" value="1440x900"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="HN"/>
@@ -262,8 +262,8 @@
     <test name="18">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="74.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.80.100.111"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.80.100.111"/>
         <parameter name="resolution" value="1440x900"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NI"/>
@@ -277,10 +277,10 @@
 
 
     <test name="19">
-        <parameter name="browser" value="IE"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="11.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.80.100.111"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.80.100.111"/>
         <parameter name="resolution" value="1440x900"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="AE"/>
@@ -296,7 +296,7 @@
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="90.0"/>
         <parameter name="platform" value="win7"/>
-        <parameter name="fixedIp" value="10.80.102.100"/>
+        <parameter name="SeleniumVersion" value="10.80.102.100"/>
         <parameter name="resolution" value="1280x1024"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MA"/>
@@ -311,8 +311,8 @@
     <test name="21">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="90.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.80.102.100"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.80.102.100"/>
         <parameter name="resolution" value="1680x1050"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MY"/>
@@ -326,8 +326,8 @@
     <test name="22">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="71.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.0.231"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.0.231"/>
         <parameter name="resolution" value="1600x1200"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NZ"/>
@@ -341,8 +341,8 @@
     <test name="23">
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="latest"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.0.231"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.0.231"/>
         <parameter name="resolution" value="1280x1024"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NO"/>
@@ -357,8 +357,8 @@
     <test name="24">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="65.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.100.82"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.100.82"/>
         <parameter name="resolution" value="1280x1024"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="RU"/>
@@ -372,8 +372,8 @@
     <test name="25">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="65.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.100.82"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.100.82"/>
         <parameter name="resolution" value="2048x1536"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="ES"/>
@@ -387,8 +387,8 @@
     <test name="26">
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="latest"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.5.0.34"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.5.0.34"/>
         <parameter name="resolution" value="1280x1024"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="SE"/>
@@ -403,7 +403,7 @@
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="macos big sur"/>
-        <parameter name="fixedIp" value="10.81.100.114"/>
+        <parameter name="SeleniumVersion" value="10.81.100.114"/>
         <parameter name="resolution" value="1280x960"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="CH"/>
@@ -418,7 +418,7 @@
         <parameter name="browser" value="MicrosoftEdge"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="macos catalina"/>
-        <parameter name="fixedIp" value="10.81.100.114"/>
+        <parameter name="SeleniumVersion" value="10.81.100.114"/>
         <parameter name="resolution" value="1680x1050"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="GB"/>
@@ -432,8 +432,8 @@
     <test name="29">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="84.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.80.31.115"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.80.31.115"/>
         <parameter name="resolution" value="1680x1050"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="IT"/>
@@ -447,8 +447,8 @@
     <test name="30">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="83.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.80.31.115"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.80.31.115"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="JP"/>
@@ -463,8 +463,8 @@
     <test name="31">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="79.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.6.0.11"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.6.0.11"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="AU"/>
@@ -478,8 +478,8 @@
     <test name="32">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="80.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.6.0.18"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.6.0.18"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="SE"/>
@@ -493,8 +493,8 @@
     <test name="33">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="81.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.6.0.33"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.6.0.33"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MY"/>
@@ -508,8 +508,8 @@
     <test name="34">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="79.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.16"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.16"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MY"/>
@@ -523,8 +523,8 @@
     <test name="35">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="81.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.2"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.2"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -538,8 +538,8 @@
     <test name="36">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="76.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.3"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.3"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -554,8 +554,8 @@
     <test name="38">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="63.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.4"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.4"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -569,8 +569,8 @@
     <test name="39">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="66.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.5"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.5"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -584,8 +584,8 @@
     <test name="40">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="61.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.6"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.6"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -599,8 +599,8 @@
     <test name="41">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="62.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.7"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.7"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -614,8 +614,8 @@
     <test name="42">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="63.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.8"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.8"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -629,8 +629,8 @@
     <test name="43">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="62.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.71.9"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.71.9"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
@@ -645,8 +645,8 @@
     <test name="44">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="61.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.8.0.133"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.8.0.133"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -660,8 +660,8 @@
     <test name="45">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="60.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.8.0.132"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.8.0.132"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -675,8 +675,8 @@
     <test name="46">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="62.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.81.68.195"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.81.68.195"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -690,8 +690,8 @@
     <test name="47">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="60.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.23"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.23"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -705,8 +705,8 @@
     <test name="48">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="76.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.24"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.24"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -720,8 +720,8 @@
     <test name="49">
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="83.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.26"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.26"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -735,8 +735,8 @@
     <test name="50">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="56.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.27"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.27"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -750,8 +750,8 @@
     <test name="51">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="38.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.28"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.28"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -765,8 +765,8 @@
     <test name="52">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="37.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.29"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.29"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -780,8 +780,8 @@
     <test name="53">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="36.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.30"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.30"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -795,8 +795,8 @@
     <test name="54">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="35.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.31"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.31"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -810,8 +810,8 @@
     <test name="55">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="34.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.32"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.32"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -825,8 +825,8 @@
     <test name="56">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="33.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.33"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.33"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -840,8 +840,8 @@
     <test name="57">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="32.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.34"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.34"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -855,8 +855,8 @@
     <test name="58">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="31.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.25"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.25"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -870,8 +870,8 @@
     <test name="59">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="30.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.155"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.155"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -885,8 +885,8 @@
     <test name="60">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="55.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.156"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.156"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -900,8 +900,8 @@
     <test name="61">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="54.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.157"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.157"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -915,8 +915,8 @@
     <test name="62">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="53.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.158"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.158"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="tunnelName" value="prateekSingh"/>
@@ -930,8 +930,8 @@
     <test name="63">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="52.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.159"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.159"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -944,8 +944,8 @@
     <test name="64">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="51.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.160"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.160"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -958,8 +958,8 @@
     <test name="65">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="50.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -972,8 +972,8 @@
     <test name="66">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="33.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -987,8 +987,8 @@
     <test name="67">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="32.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.102"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.102"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1001,8 +1001,8 @@
     <test name="68">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="31.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.103"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.103"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1015,8 +1015,8 @@
     <test name="69">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="30.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.104"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.104"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1029,8 +1029,8 @@
     <test name="70">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="29.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.105"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.105"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1043,8 +1043,8 @@
     <test name="71">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="28.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.106"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.106"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1057,8 +1057,8 @@
     <test name="72">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="27.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.107"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.107"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1071,8 +1071,8 @@
     <test name="73">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="71.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.108"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.108"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1085,8 +1085,8 @@
     <test name="74">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="61.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.109"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.109"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1099,8 +1099,8 @@
     <test name="75">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="61.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.47.240.110"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.47.240.110"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1113,8 +1113,8 @@
     <test name="76">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="62.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.22"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.22"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1127,8 +1127,8 @@
     <test name="77">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="63.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.23"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.23"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1141,8 +1141,8 @@
     <test name="78">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="61.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.24"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.24"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1154,8 +1154,8 @@
     <test name="79">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="66.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.26"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.26"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1168,8 +1168,8 @@
     <test name="80">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="62.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.27"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.27"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="VN"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1182,8 +1182,8 @@
     <test name="81">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="74.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.28"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.28"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="US"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1196,8 +1196,8 @@
     <test name="82">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="75.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.29"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.29"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="GB"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1210,8 +1210,8 @@
     <test name="89">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="76.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.30"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.30"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="UA"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1224,8 +1224,8 @@
     <test name="90">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="74.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.31"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.31"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="TR"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1238,8 +1238,8 @@
     <test name="91">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="73.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.32"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.32"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="TH"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1252,8 +1252,8 @@
     <test name="92">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="75.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.33"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.33"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="TW"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1266,8 +1266,8 @@
     <test name="93">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="71.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.34"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.34"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="CH"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1280,8 +1280,8 @@
     <test name="94">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="74.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.51.0.25"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.51.0.25"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="SE"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1294,8 +1294,8 @@
     <test name="95">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="76.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.155"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.155"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="ES"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1308,8 +1308,8 @@
     <test name="96">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="73.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.156"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.156"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="KR"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1322,8 +1322,8 @@
     <test name="97">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="76.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.157"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.157"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="ZA"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1336,8 +1336,8 @@
     <test name="98">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="72.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.158"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.158"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="SG"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1350,8 +1350,8 @@
     <test name="99">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="75.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.159"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.159"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="RU"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1364,8 +1364,8 @@
     <test name="100">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="74.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.160"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.160"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="PT"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1378,8 +1378,8 @@
     <test name="101">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="72.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="PL"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1392,8 +1392,8 @@
     <test name="102">
         <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="71.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="PH"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1406,8 +1406,8 @@
     <test name="103">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="15.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NO"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1420,8 +1420,8 @@
     <test name="104">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="17.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NG"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1434,8 +1434,8 @@
     <test name="105">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="16.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NZ"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1448,8 +1448,8 @@
     <test name="106">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="16.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="NL"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1460,10 +1460,10 @@
     </test>
 
     <test name="107">
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="11.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MA"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1476,8 +1476,8 @@
     <test name="108">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="15.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MX"/>
         <parameter name="tunnel" value="false"/>
@@ -1491,8 +1491,8 @@
     <test name="109">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="17.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="MY"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1505,8 +1505,8 @@
     <test name="110">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="16.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="JP"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1517,10 +1517,10 @@
     </test>
 
     <test name="111">
-        <parameter name="browser" value="Internet Explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="11.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="FI"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1534,8 +1534,8 @@
     <test name="112">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="15.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="IT"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1546,10 +1546,10 @@
     </test>
 
     <test name="113">
-        <parameter name="browser" value="Internet explorer"/>
+        <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="11.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.176"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.176"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="IL"/>
         <parameter name="resolution" value="1024x768"/>
@@ -1562,8 +1562,8 @@
     <test name="114">
         <parameter name="browser" value="Edge"/>
         <parameter name="version" value="17.0"/>
-        <parameter name="platform" value="win8"/>
-        <parameter name="fixedIp" value="10.92.181.179"/>
+        <parameter name="platform" value="linux"/>
+        <parameter name="SeleniumVersion" value="10.92.181.179"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="DE"/>
         <parameter name="resolution" value="1024x768"/>

@@ -13,7 +13,6 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <selectedTests>1</selectedTests>
-        <suiteXmlFile></suiteXmlFile>
 
     </properties>
     <dependencies>
@@ -128,7 +127,7 @@
 
     </dependencies>
 
-   <!-- <build>
+    <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -152,15 +151,14 @@
                 </executions>
                 <configuration>
                     <suiteXmlFiles>
-                        &lt;!&ndash;suppress UnresolvedMavenProperty &ndash;&gt;
+                        <!--suppress UnresolvedMavenProperty -->
                         <suiteXmlFile>${suiteXmlFile}</suiteXmlFile>
                     </suiteXmlFiles>
                 </configuration>
             </plugin>
         </plugins>
     </build>
--->
-    <build>
+   <!-- <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -185,19 +183,18 @@
                 <version>2.22.1</version>
                 <configuration>
                     <classesDirectory>${project.build.outputDirectory}</classesDirectory>
-                    <suiteXmlFiles>${suiteXmlFile}</suiteXmlFiles>
+                    <suiteXmlFiles>src/test/java/Test.xml</suiteXmlFiles>
                     <reuseForks>true</reuseForks>
                     <forkCount>1</forkCount>
                     <properties>
                         <property>
                             <name>testnames</name>
                             <value>${selectedTests}</value>
+
                         </property>
                     </properties>
                 </configuration>
             </plugin>
         </plugins>
-
-
-    </build>
+    </build>-->
 </project>

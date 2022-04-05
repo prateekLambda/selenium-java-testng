@@ -22,6 +22,7 @@ public class ResolutionTest {
             ArrayList<String> tabs = new ArrayList<String>(driver.getWindowHandles());
             driver.switchTo().window(tabs.get(2));*/
             driver.get("http://whatismyscreenresolution.net/");
+            Thread.sleep(15000);
             // for (int i = 0; i < 50; i++) {
             driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
             driver.findElement(By.xpath("//*[@id=\"resolution\"]")).isDisplayed();
