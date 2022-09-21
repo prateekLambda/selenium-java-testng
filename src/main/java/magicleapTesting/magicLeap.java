@@ -20,13 +20,11 @@ import java.util.logging.Logger;
 
 public class magicLeap {
 
-    public String username = System.getProperty("LT_USERNAME");
-    public String accesskey = System.getProperty("LT_ACCESS_KEY");
+    public String username = System.getenv("LT_USERNAME");
+    public String accesskey = System.getenv("LT_ACCESS_KEY");
 
     public RemoteWebDriver driver;
     public String gridURL = System.getProperty("GRID_URL");
-    //hub-virginia.lambdatest.com/wd/hub"@eu-central-1-hub.lambdatest.com/wd/hub";https://dark-1-hub.lambdatest.com/wd/hub/status
-    //https://dark-2-hub.lambdatest.com/wd/hub/status
     String status;
     String ResolutionValue;
     long quitestoptime;
@@ -90,17 +88,21 @@ public class magicLeap {
             String[] file = {"5mb.jpg", "10MB1.jpg", "10MB2.jpg", "10MB3.jpg", "10MB4.jpg", "10MB5.jpg", "10MB6.jpg", "10MB7.jpg", "10MB8.jpg", "10MB9.jpg", "10MB10.jpg"};
             String region = "us";
             DesiredCapabilities capabilities = new DesiredCapabilities();
-            capabilities.setCapability("browserName", this.BrowserValue);
-            capabilities.setCapability("version", "latest-1");
+            capabilities.setCapability("browserName", "chrome");
+            capabilities.setCapability("version", "latest");
+
+
             //capabilities.setCapability("version", "latest" + "-" + j);
-            capabilities.setCapability("platform", this.PlatformValue);
-            capabilities.setCapability("build", formatter.format(date) + " " + System.getProperty("BUILD_NAME"));
+            capabilities.setCapability("platform", System.getenv("HYPEREXECUTE_PLATFORM"));
+            capabilities.setCapability("build", formatter.format(date) + " " + System.getProperty("BUILD_NAME") + " " + System.getenv("JOB_ID"));
             capabilities.setCapability("name", this.TestName + " " + this.PlatformValue);
+            //capabilities.setCapability("driver_version", "93.0");
+
             //  capabilities.setCapability("resolution", this.ResolutionValueCap);
             //capabilities.setCapability("lambda:userFiles", file);
             capabilities.setCapability("console", true);
             capabilities.setCapability("network", true);
-            capabilities.setCapability("visual", false);
+            capabilities.setCapability("visual", true);
             String[] buildTagList = {"Tag1", "Tag2", "Tag3", "BuildTag"};
             capabilities.setCapability("buildTags", buildTagList);
             capabilities.setCapability("timezone", this.TimeZoneValue);
@@ -130,7 +132,7 @@ public class magicLeap {
 
             //      capabilities.setCapability("tunnel", true);
 
-            //  capabilities.setCapability("selenium_version", this.SeleniumVersionValue);
+        //    capabilities.setCapability("selenium_version", "4.0.0");
 
           /*  System.out.println(Tunnel);
             if (this.Tunnel.matches("true")) {
@@ -148,7 +150,7 @@ public class magicLeap {
         /*capabilities.setCapability("ie.driver","3.4.0");
         capabilities.setCapability("ie.compatibility",11001);*/
             //     capabilities.setCapability("tunnelName", "prateek");
-            //           capabilities.setCapability("geoLocation", geoLocation);
+            // capabilities.setCapability("geoLocation", this.GeoLocationValue);
             //    capabilities.setCapability("unboundRegion", "PUSE-EU");
             // capabilities.setCapability("timezone", this.TimeZoneValue);
             //      capabilities.setCapability("geoLocation", this.GeoLocationValue);
@@ -200,28 +202,41 @@ public class magicLeap {
     public void DesktopScript() {
 
         try {
-            GeolocationTest Geo = new GeolocationTest();
-            Geo.Geolocation(driver, status, GeolocationTotal, session, log);
+            TunnelTest test = new TunnelTest();
+            test.tunnelTest(driver, status, totaltimeforlocaltest);
+//            GeolocationTest Geo = new GeolocationTest();
+//            Geo.Geolocation(driver, status, GeolocationTotal, session, log);
             //driver.get("https://www.google.com");
-            BadSslTest bad = new BadSslTest();
-            bad.badSsl(driver, status, log);
+//            BadSslTest bad = new BadSslTest();
+//            bad.badSsl(driver, status, log);
+//            TakeScreenShot shot = new TakeScreenShot();
+//            shot.Screenshot(driver, status, log);
         /*    CpuExten extension = new CpuExten();
             extension.extension(driver, status, BrowserValue, log);*/
-            NetSpeed test = new NetSpeed();
-            test.NetSpeed(driver, status, Nettotalspeedtest, log);
-            AnroidVersion timezone = new AnroidVersion();
-            timezone.AndVersion(driver);
-            TestCommands TC = new TestCommands();
-            TC.commands(driver);
-            WebAppTest cat = new WebAppTest();
-            cat.test(driver);
-            LambdaTutrial tutorial = new LambdaTutrial();
-            tutorial.Lambdacert(driver, session, log);
-            NetSpeed net = new NetSpeed();
-            net.NetSpeed(driver, status, Nettotalspeedtest, log);
-            ResolutionTest ResolutionTestObject = new ResolutionTest();
-            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
-
+//            NetSpeed test = new NetSpeed();
+//            test.NetSpeed(driver, status, Nettotalspeedtest, log);
+//            shot.Screenshot(driver, status, log);
+//            AnroidVersion timezone = new AnroidVersion();
+//            shot.Screenshot(driver, status, log);
+//            timezone.AndVersion(driver);
+//            TestCommands TC = new TestCommands();
+//            shot.Screenshot(driver, status, log);
+//            TC.commands(driver);
+//            WebAppTest cat = new WebAppTest();
+//            cat.test(driver);
+//            shot.Screenshot(driver, status, log);
+//            LambdaTutrial tutorial = new LambdaTutrial();
+//            tutorial.Lambdacert(driver, session, log);
+//            shot.Screenshot(driver, status, log);
+//            NetSpeed net = new NetSpeed();
+//            net.NetSpeed(driver, status, Nettotalspeedtest, log);
+//            shot.Screenshot(driver, status, log);
+//            ResolutionTest ResolutionTestObject = new ResolutionTest();
+//            ResolutionTestObject.Resolution(driver, ResolutionValue, status, ResolutionTotal, this.ResolutionValueCap, session, log);
+//            shot.Screenshot(driver, status, log);
+//            for (int i = 0; i <= 10; i++) {
+//                shot.Screenshot(driver, status, log);
+//            }
           /*  BadSslTest bad = new BadSslTest();
             bad.badSsl(driver, status, log);*/
           /*  FakeMediaTest fake = new FakeMediaTest();
@@ -245,7 +260,7 @@ public class magicLeap {
             SuiteTotalTime = SuiteStop - SuiteStart;
             log.info("Total Time Took for Test suite execute" + "   " + SuiteTotalTime / 1000f);
             log.info(session.toString());
-            status = "passed";
+            // status = "passed";
         } catch (Exception e) {
             log.info(e.getMessage());
             log.info(session.toString());

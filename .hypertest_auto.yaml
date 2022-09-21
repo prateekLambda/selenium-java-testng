@@ -3,7 +3,7 @@ testSuiteTimeout: 90
 testSuiteStep: 90
 runson: mac
 autosplit: true
-concurrency: 114
+concurrency: 2
 testDiscoverer: grep 'test name' src/test/java/Catalina.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g' | sed 's/>//g'
 testRunnerCommand: mvn test -DselectedTests="$test" -Dsurefire.suiteXmlFiles=src/test/java/Catalina.xml -DLT_USERNAME=prateeks -DLT_ACCESS_KEY= -DGRID_URL=hub.lambdatest.com -DBUILD_NAME=HYperTest-1
 #pre:

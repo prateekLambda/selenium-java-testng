@@ -3,10 +3,14 @@ testSuiteTimeout: 90
 testSuiteStep: 90
 runson: linux
 autosplit: true
-concurrency: 114
+concurrency: 5
 joblable: ["TestSHeet"]
-testDiscoverer: grep 'test name' src/test/java/LinuxHunred.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-testRunnerCommand: mvn test -DselectedTests="$test" -Dsurefire.suiteXmlFiles=src/test/java/LinuxHunred.xml -DLT_USERNAME=prateeks -DLT_ACCESS_KEY= -DGRID_URL=stage-hub.lambdatest.com -DBUILD_NAME=HYperTest-Linux-SmallTest-SeleniumVersion
+pre:
+  - echo ${AccessKey}
+
+p/a/src/test/java/Linux.xml
+testDiscoverer: grep 'test name' src/test/java/Linux.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+testRunnerCommand: mvn test -DselectedTests="$test" -Dsurefire.suiteXmlFiles=src/test/java/Linux.xml -DGRID_URL=stage-hub.lambdatest.com -DBUILD_NAME=HYperTest-Linux-SmallTest-SeleniumVersion
 #pre:
 #  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
 #cacheKey: '{{ checksum "pom.xml" }}'

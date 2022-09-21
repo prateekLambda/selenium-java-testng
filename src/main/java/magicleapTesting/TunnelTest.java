@@ -15,7 +15,7 @@ public class TunnelTest {
 
         try {
             driver.get("http://localhost:3000/iframes");
-            Thread.sleep(10000);
+           // Thread.sleep(10000);
             String TitleValue = "IFrames";
             String title = driver.getTitle();
             if (TitleValue.matches(title)) {

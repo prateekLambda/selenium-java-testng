@@ -7,7 +7,7 @@
         <parameter name="browser" value="Chrome"/>
         <parameter name="version" value="latest"/>
         <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
+        <parameter name="SeleniumVersion" value="4.1.2"/>
         <parameter name="resolution" value="1024x768"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="CA"/>
@@ -19,10 +19,10 @@
         </classes>
     </test>
     <test name="2">
-        <parameter name="browser" value="Chrome"/>
+        <parameter name="browser" value="Firefox"/>
         <parameter name="version" value="latest-1"/>
         <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
+        <parameter name="SeleniumVersion" value="4.1.0"/>
         <parameter name="resolution" value="1280x800"/>
         <parameter name="timezone" value="UTC+04:00"/>
         <parameter name="geoLocation" value="DK"/>
@@ -34,43 +34,13 @@
         </classes>
     </test>
     <test name="3">
-        <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="latest-2"/>
+        <parameter name="browser" value="edge"/>
+        <parameter name="version" value="latest-1"/>
         <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1280x1024"/>
+        <parameter name="SeleniumVersion" value="3.141.59"/>
+        <parameter name="resolution" value="1280x800"/>
         <parameter name="timezone" value="UTC+04:00"/>
-        <parameter name="geoLocation" value="US"/>
-        <parameter name="tunnelName" value="prateekSignh"/>
-        <parameter name="tunnel" value="false"/>
-        <classes>
-            <class name="magicleapTesting.magicLeap"/>
-
-        </classes>
-    </test>
-    <test name="4">
-        <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="latest-3"/>
-        <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1366x768"/>
-        <parameter name="timezone" value="UTC+04:00"/>
-        <parameter name="geoLocation" value="UK"/>
-        <parameter name="tunnelName" value="prateekSignh"/>
-        <parameter name="tunnel" value="false"/>
-        <classes>
-            <class name="magicleapTesting.magicLeap"/>
-
-        </classes>
-    </test>
-    <test name="5">
-        <parameter name="browser" value="Chrome"/>
-        <parameter name="version" value="latest-4"/>
-        <parameter name="platform" value="win10"/>
-        <parameter name="SeleniumVersion" value="10.82.4.230"/>
-        <parameter name="resolution" value="1440x900"/>
-        <parameter name="timezone" value="UTC+04:00"/>
-        <parameter name="geoLocation" value="UK"/>
+        <parameter name="geoLocation" value="DK"/>
         <parameter name="tunnelName" value="prateekSignh"/>
         <parameter name="tunnel" value="false"/>
         <classes>

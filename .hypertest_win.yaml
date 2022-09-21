@@ -1,15 +1,37 @@
+
+version: 0.1
 globalTimeout: 90
 testSuiteTimeout: 90
 testSuiteStep: 90
 runson: win
 autosplit: true
-concurrency: 114
-testDiscoverer: grep 'test name' src/test/java/Win10.xml | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
-testRunnerCommand: mvn test `-DselectedTests="$test" `-DLT_USERNAME=prateeks `-DLT_ACCESS_KEY= `-DGRID_URL=stage-hub.lambdatest.com `-DBUILD_NAME=HYperTest-win
-#pre:
-#  - mvn -Dmaven.repo.local=./.m2 dependency:resolve
-#cacheKey: '{{ checksum "pom.xml" }}'
+concurrency: 100
+vars:
+  path: src/test/java/MixWin500.xml
+#
+tunnel: true
+tunnelOpts:
+  global: true
+#####  #  tunnelNames: ["prateeks"]
+#  args: ["--verbose"]
+  systemProxy: true
+testDiscovery:
+  type: raw
+  mode: static
+  command: grep 'test name' ${path} | awk '{print$2}' | sed 's/name=//g' | sed 's/\x3e//g'
+testRunnerCommand: mvn clean test `-DsuiteXmlFiles=src/test/java/MixWin500.xml `-Dmaven.repo.local=./.m2 dependency:resolve `-DselectedTests=$test `-DGRID_URL=hub.lambdatest.com `-DBUILD_NAME=HYperExecute-win-79 `-DproxyHost=%LT_PROXY_HOST% `-DproxyPort=%LT_PROXY_PORT% `-Dhttp.nonProxyHosts=hub.lambdatest.com
+#testRunnerCommand: mvn clean test -DsuiteXmlFiles=src/test/java/MixWin500.xml -Dmaven.repo.local=./.m2 dependency:resolve -DselectedTests=$test -DGRID_URL=hub.lambdatest.com -DBUILD_NAME=HYperExecute-win-6
+
+pre:
+ # - ls
+  - mvn clean -Dmaven.repo.local=./.m2 dependency:resolve
+#
+cacheKey: '{{ checksum "pom.xml" }}'
 cacheDirectories:
   - .m2
-
-  
+#uploadArtefacts:
+#  - name: target
+#    path:
+#      - target/
+#env:
+#  Accesskey: ${{ .secrets.AccessKey }}
