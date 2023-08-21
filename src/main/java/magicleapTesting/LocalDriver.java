@@ -169,10 +169,7 @@ public class LocalDriver {
             homePageLogin.click();
             Thread.sleep(2000);
             WebElement username= driver.findElement(By.name("email"));
-            username.sendKeys("prateeks@lambdatest.com");
-            Thread.sleep(2000);
-            WebElement password= driver.findElement(By.name("password"));
-            password.sendKeys("9582334806");
+        
             Thread.sleep(2000);
             WebElement loginPlatform= driver.findElement(By.xpath("/html/body/div[1]/div/div/div/div/form/div[3]/button"));
             loginPlatform.click();
